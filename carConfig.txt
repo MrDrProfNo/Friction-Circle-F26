@@ -1,0 +1,16 @@
+# Car weight
+M=345
+# Driver weight
+D=180
+# Weight Distribution
+W_d=0.469
+# CG height
+CG=11.7
+# Wheelbase
+WB=65
+# Track Width
+TW=45
+# Aero
+A=465
+# Aero Distribution
+A_d=0.44
