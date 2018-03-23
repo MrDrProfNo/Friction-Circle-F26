@@ -93,4 +93,6 @@ class Car:
 		#     return s
 
 def init(configFile):
+	print("Loading car from file: " + configFile)
 	car = Car(configFile)
+	return car
