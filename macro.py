@@ -18,6 +18,8 @@ def macroMain(dim_force_dfs):
 	:return:
 	"""
 
+
+	sleep(4)
 	pressToFront = ("down", "right", "enter")
 	pressToRear =  ("down", "down", "right", "enter")
 
@@ -71,6 +73,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 	:param rOutput Filepath to send rear output file to
 	:return:
 	"""
+
 
 	df_MCPFx, df_MCPFy, df_MCPFz = dim_force_dfs
 	dataSize = df_MCPFx.shape[0]

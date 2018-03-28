@@ -45,38 +45,28 @@ def createDataframe(car, loadCases):
 			"RR_Fy", 	"Fy", 		"LaG",		"LF_c", 	"RF_c", 	"LR_c",
 			"RR_c"]
 
-	# in special case 1, only generate the 1 case
-	if(loadCases == 1):
-		calculateForCaseN(datadict, car, 1)
-		theta_coef_all.append( Decimal(1) )
-		df = DataFrame(data=datadict, index=theta_coef_all, columns=columns)
-		return df
-	else:
-		for case in range(0, loadCases): # endpoint will be loadcases - 1
+	# Load case 0 is always included
+	theta_coef_all.append( Decimal(0) )
+
+	for case in range(1, loadCases + 1): # endpoint will be loadcases
 
 
-			# dividing by loadcases - 1 ensures we're on range [0, 1]
-			theta_coef = Decimal(case / (loadCases - 1 ) )
-			if(theta_coef == Decimal(.5) ):
-				theta_coef_all.append(theta_coef - theta_coef / 1000)
-				theta_coef_all.append(theta_coef + theta_coef / 1000)
-				continue
-			theta_coef_all.append( Decimal( case / (loadCases - 1) ) )
+		# dividing by loadcases ensures we're on range [0, 1]
+		theta_coef = Decimal(case / loadCases )
+		if(theta_coef == Decimal(.5) ):
+			# Special case for theta coef .5 to avoid division by 0 error
+			theta_coef_all.append(theta_coef - ( theta_coef / 1000) )
+			theta_coef_all.append(theta_coef + ( theta_coef / 1000) )
+			continue
+
+		# Put the theta coefficient for this case into the array
+		theta_coef_all.append( Decimal( case / loadCases ) )
 
 
 
 
 	for coef in theta_coef_all:
-
-		# run calculations for this n. Output goes directly into datadict, no
-		# return. If n == .5, run for cases slightly on either side of it.
-		# if(coef == Decimal(.5) ):
-		# 	mod = coef / Decimal(100)
-		# 	calculateForCaseN(datadict, car, coef - mod)
-		# 	calculateForCaseN(datadict, car, coef + mod)
-
-		# else:
-			calculateForCaseN(datadict, car, coef)
+		calculateForCaseN(datadict, car, coef)
 
 
 	df = DataFrame(data=datadict, index=theta_coef_all, columns=columns)
@@ -87,7 +77,7 @@ def calculateForCaseN(datadict, car, n):
 	"""
 	Runs calculations for all values for the given theta-coefficient n. Uses
 	default values for the Car as given by the car object, which should have read
-	them from carConfig.txt
+	them from car_config.txt
 
 	Some values require division by cos(n * pi). In the .5 case, this evaluates
 	to zero. Such cases are substituted with a value extremely close to n.
