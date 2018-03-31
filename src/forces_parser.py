@@ -241,7 +241,6 @@ def replaceMitchellVariables(var, rear=False):
 	Q
 	W
 
-
 	:param var: string from the above list of valid mitchell variables
 	:param rear: boolean; true to use rear-axle phrase associations
 	:return: The string to replace the passed variable with

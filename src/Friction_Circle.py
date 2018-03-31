@@ -33,14 +33,15 @@ win32_____: Manipulating open windows so that keyboard targets the correct one
  and managing the system clipboard.
 """
 
+import subprocess
+
+from df_to_excel import full_dump, formatted_dump
+from force_calculator import createDataframe
+from forces_parser import parse, readParseToExcel
+from macro import macroMain
 from pandas import DataFrame
 
-from forces_parser import parse, readParseToExcel
-from force_calculator import createDataframe
-from friction_circle_init import init
-from df_to_excel import full_dump, formatted_dump
-from macro import macroMain
-import subprocess
+from src.friction_circle_init import init
 
 ## Constants
 OUTPUT_FOLDER_PATH = "./Friction_Circle_F26_Output/"
