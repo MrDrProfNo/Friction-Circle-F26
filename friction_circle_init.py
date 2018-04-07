@@ -1,4 +1,5 @@
-from decimal import Decimal
+from decimal import Decimal # special import because I hate writing decimal.Decimal
+import decimal				# But want to keep the decimal reference for readability
 from path_reader import PathCollection
 
 
@@ -104,6 +105,15 @@ def init(pathConfigFile):
 	:param configFile:
 	:return:
 	"""
+
+	# Get the decimal library's context object
+	decimal_context = decimal.getcontext()
+
+	# Set the decimal library's precision to 20 places
+	decimal_context.prec = 15
+
+	# set rounding to work like most people use it
+	decimal_context.rounding = decimal.ROUND_HALF_UP
 
 	# load the PathCollection object with filepaths to use.
 	paths = PathCollection(pathConfigFile)

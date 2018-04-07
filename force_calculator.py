@@ -1,5 +1,6 @@
 
 from decimal import Decimal
+import decimal
 from pandas import DataFrame
 
 import math as m
@@ -48,11 +49,14 @@ def createDataframe(car, loadCases):
 	# Load case 0 is always included
 	theta_coef_all.append( Decimal(0) )
 
+	# Generate list of all theta coefficients
 	for case in range(1, loadCases + 1): # endpoint will be loadcases
 
+		# dividing by loadcases ensures we're on range [0, 1];
+		theta_coef = Decimal( case / loadCases )
 
-		# dividing by loadcases ensures we're on range [0, 1]
-		theta_coef = Decimal(case / loadCases )
+		# quantize rounds it at the specified digit (8th place currently)
+		theta_coef = theta_coef.quantize( Decimal("0.00000001") )
 		if(theta_coef == Decimal(.5) ):
 			# Special case for theta coef .5 to avoid division by 0 error
 			theta_coef_all.append(theta_coef - ( theta_coef / 1000) )
@@ -60,11 +64,11 @@ def createDataframe(car, loadCases):
 			continue
 
 		# Put the theta coefficient for this case into the array
-		theta_coef_all.append( Decimal( case / loadCases ) )
+		theta_coef_all.append( theta_coef )
 
 
 
-
+	# run calculations for all values of theta
 	for coef in theta_coef_all:
 		calculateForCaseN(datadict, car, coef)
 

@@ -74,11 +74,12 @@ def getDimensionForceDataframes(fullDF):
 def main():
 	print("########  Friction_Circle.py  ########")
 
+	car, paths = init(PATH_CONFIG_FILE) # init returns a Car object with attr. loaded from config
+
+
 	loadCases = int(input("Number of load cases to distribute evenly on the "
 						  "range [0, pi]. 0 Case will be added, but not counted  \n"
 						  "Enter # Load cases: "))
-
-	car, paths = init(PATH_CONFIG_FILE) # init returns a Car object with attr. loaded from config
 	fullDF = createDataframe(car, loadCases)
 
 	print("Resulting dataframe will contain", fullDF.shape[0], " load cases." +
@@ -100,7 +101,7 @@ def main():
 	pid = subprocess.Popen(paths.VDosPlus_path).pid
 	print("Generated vDosPlus process with PID:", pid)
 	# Run the macro
-	macroMain(dim_force_dfs)
+	# macroMain(dim_force_dfs)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)
