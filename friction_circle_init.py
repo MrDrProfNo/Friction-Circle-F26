@@ -1,4 +1,6 @@
 from decimal import Decimal
+from path_reader import PathCollection
+
 
 class Car:
 	def __init__(self, cfg):
@@ -18,8 +20,10 @@ class Car:
 		# a and b (max long accel, max lat accel)
 		self.a, self.b, self.fz_f, self.fz_r = self.secondaryParams(params)
 
+		print("Parsed car data from config: ", cfg)
 
-	def ParamsFromConfig(self, cfg):
+	@staticmethod
+	def ParamsFromConfig(cfg):
 		"""
 		Draws initial car parameters from a config file, whose path is given
 		by cfg. Any additional parameters will need to be hardcoded in here
@@ -39,7 +43,8 @@ class Car:
 		params["Lat_WT"] = Decimal(CG / TW)
 		return params
 
-	def secondaryParams(self, params):
+	@staticmethod
+	def secondaryParams(params):
 		"""
 		Generates the secondary set of constant parameters based on those read
 		from the config file.
@@ -54,6 +59,7 @@ class Car:
 		D = params["D"]
 		A = params["A"]
 		A_d = params["A_d"]
+
 		# In order for math-related operations to work, Decimal cannot be
 		# multiplied by a float. Separate Decimals are kept around for pi
 		Fz_f = Decimal((W_d * (M + D)) / 2)  # Front Static Corner weight
@@ -92,7 +98,17 @@ class Car:
 		#          f"    Lat_WT={self.Lat_WT}\n")
 		#     return s
 
-def init(configFile):
-	print("Loading car from file: " + configFile)
-	car = Car(configFile)
-	return car
+def init(pathConfigFile):
+	"""
+	Initializes the PathCollection and Car objects
+	:param configFile:
+	:return:
+	"""
+
+	# load the PathCollection object with filepaths to use.
+	paths = PathCollection(pathConfigFile)
+
+	# Grab the car config file from the paths and use it to create a new Car
+	car = Car(paths.car_config_path)
+
+	return car, paths

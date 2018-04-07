@@ -44,21 +44,8 @@ from friction_circle_init import init
 from macro import macroMain
 
 ## Constants
-OUTPUT_FOLDER_PATH = "./Friction_Circle_F26_Output/"
-CAR_CONFIG_FILE = "car_config.txt"
 PATH_CONFIG_FILE = "path_config.txt"
 
-MITCHELL_COPY_OUTPUT_F = "tmpF.txt"
-MITCHELL_COPY_OUTPUT_R = "tmpR.txt"
-
-PARSED_OUTPUT_F = "FOutput.txt"
-PARSED_OUTPUT_R = "ROutput.txt"
-
-DUMP_EXCEL_OUTPUT = "dump.xlsx"
-FORMAT_EXCEL_OUTPUT = "formatting.xlsx"
-PARSED_EXCEL_OUTPUT = "Parsed_Forces.xlsx"
-
-VDOSPLUS_PATH = '.\Suspension Project\\vDosPlus\\vDosPlus.exe'
 
 def getDimensionForceDataframes(fullDF):
 	"""
@@ -91,8 +78,8 @@ def main():
 						  "range [0, pi]. 0 Case will be added, but not counted  \n"
 						  "Enter # Load cases: "))
 
-	car = init(CAR_CONFIG_FILE) # init returns a Car object with attr. loaded from config
-	fullDF= createDataframe(car, loadCases)
+	car, paths = init(PATH_CONFIG_FILE) # init returns a Car object with attr. loaded from config
+	fullDF = createDataframe(car, loadCases)
 
 	print("Resulting dataframe will contain", fullDF.shape[0], " load cases." +
 		" Number was increased by 1 to add case 0, and may have been increased by" +
@@ -101,26 +88,26 @@ def main():
 	dim_force_dfs = getDimensionForceDataframes(fullDF)
 
 
-	outputFolderPath = OUTPUT_FOLDER_PATH
-	full_dump(outputFolderPath, DUMP_EXCEL_OUTPUT, fullDF)
-	formatted_dump(outputFolderPath, FORMAT_EXCEL_OUTPUT, dim_force_dfs)
+	full_dump(paths.output_folder, paths.dump_excel_path, fullDF)
+	formatted_dump(paths.output_folder, paths.format_excel_path, dim_force_dfs)
 
 	input("Ensure that vDosPlus running Mitchell is open before continuing.\n"
 		  "Press Enter to continue:")
 
 	print("---TEMP: Opening vDosPlus automatically ---")
 
-	pid = subprocess.Popen(VDOSPLUS_PATH).pid
+	# Creates a new subprocess running VDosPlus
+	pid = subprocess.Popen(paths.VDosPlus_path).pid
 	print("Generated vDosPlus process with PID:", pid)
 	# Run the macro
 	macroMain(dim_force_dfs)
 
-	parse(MITCHELL_COPY_OUTPUT_F, PARSED_OUTPUT_F)
-	parse(MITCHELL_COPY_OUTPUT_R, PARSED_OUTPUT_R)
+	parse(paths.temp_front, paths.front_parsed)
+	parse(paths.temp_rear, paths.rear_parsed)
 
-	readParseToExcel(PARSED_OUTPUT_F,
-					 PARSED_OUTPUT_R,
-					 OUTPUT_FOLDER_PATH + PARSED_EXCEL_OUTPUT,
+	readParseToExcel(paths.front_parsed,
+					 paths.rear_parsed,
+					 paths.output_folder + "/" + paths.parsed_excel_path,
 					 fullDF)
 
 
