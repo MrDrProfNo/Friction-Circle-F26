@@ -101,14 +101,14 @@ def main():
 	pid = subprocess.Popen(paths.VDosPlus_path).pid
 	print("Generated vDosPlus process with PID:", pid)
 	# Run the macro
-	# macroMain(dim_force_dfs)
+	macroMain(dim_force_dfs)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)
 
 	readParseToExcel(paths.front_parsed,
 					 paths.rear_parsed,
-					 paths.output_folder + "/" + paths.parsed_excel_path,
+					 paths.parsed_excel_path,
 					 fullDF)
 
 

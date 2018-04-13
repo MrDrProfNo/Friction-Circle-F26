@@ -19,17 +19,16 @@ def full_dump(dirpath, filename, dataframe):
 		except:
 			traceback.print_exc()
 			print("Error in makedirs(", dirpath, ")")
-	dataframe.to_excel(dirpath + filename)
+	dataframe.to_excel(filename)
 
 def formatted_dump(dirpath, filename, dataframes):
 	### Separate out Max Contact Patch Forces ###
 	df_MCPFx, df_MCPFy, df_MCPFz = dataframes
 	# Set the filepath for the target file by appending to path to output
 	# folder
-	formattedPath = dirpath + filename
 
 	# Define the pandas ExcelWriter using xlsxwriter as the engine
-	writer = ExcelWriter(formattedPath, engine='xlsxwriter')
+	writer = ExcelWriter(filename, engine='xlsxwriter')
 
 	# Dump each of the above dataFrames to the spreadsheet.
 	# NOTE: This will not work if there is a variable currently assigned to

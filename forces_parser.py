@@ -153,14 +153,13 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 						startcol=leftMargin + (
 						displacement * (tablewidth + xspacing)),
 						startrow=topMargin + (
-						(count // 2) * (yspacing + tableheight))
+						(caseIDX) * (yspacing + tableheight))
 						)
 
-			case = (count // 2)
 
 			# occasionally spits a message into console, but never crashes
 			# message roughly "non-integers will soon cease to be supported"
-			case_theta_coef = df_full.index[case]
+			case_theta_coef = df_full.index[caseIDX]
 
 			titleText += case_theta_coef.to_eng_string()
 			ws = writer.sheets["Sheet 1"]

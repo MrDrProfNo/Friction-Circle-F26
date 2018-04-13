@@ -16,14 +16,27 @@ PARSED_EXCEL_OUTPUT = "Parsed_Forces.xlsx"
 
 VDOSPLUS_PATH = '.\Suspension Project\vDosPlus\vDosPlus.exe'
 
+
+## Constants (attribute names)
+OUTPUT_FOLDER_ATTR = "output_folder"
+CAR_CONFIG_PATH_ATTR = "car_config_path"
+DUMP_EXCEL_PATH_ATTR = "dump_excel_path"
+FORMAT_EXCEL_PATH_ATTR = "format_excel_path"
+PARSED_EXCEL_ATTR = "parsed_excel_path"
+TEMP_FRONT_ATTR = "temp_front"
+TEMP_REAR_ATTR = "temp_rear"
+FRONT_PARSED_ATTR = "front_parsed"
+REAR_PARSED_ATTR = "rear_parsed"
+VDOSPLUS_PATH_ATTR = "VDosPlus_path"
+
 class PathCollection:
 
 	def __init__(self, configFile):
 
-		expectedAttr = ["output_folder", "car_config_path", "dump_excel_path",
-						"format_excel_path", "parsed_excel_path", "temp_front",
-						"temp_rear", "front_parsed", "rear_parsed",
-						"VDosPlus_path"]
+		expectedAttr = [OUTPUT_FOLDER_ATTR, CAR_CONFIG_PATH_ATTR, DUMP_EXCEL_PATH_ATTR,
+						FORMAT_EXCEL_PATH_ATTR, PARSED_EXCEL_ATTR, TEMP_FRONT_ATTR,
+						TEMP_REAR_ATTR, FRONT_PARSED_ATTR, REAR_PARSED_ATTR,
+						VDOSPLUS_PATH_ATTR]
 
 		# declare empty dictionary for the path
 		pathDict = {}
@@ -55,18 +68,35 @@ class PathCollection:
 				else: # y or yes answered
 					break # exit the input request loop and set values
 
-		self.output_folder = pathDict["output_folder"]
-		self.car_config_path = pathDict["car_config_path"]
-		self.dump_excel_path = pathDict["dump_excel_path"]
-		self.format_excel_path = pathDict["format_excel_path"]
-		self.parsed_excel_path = pathDict["parsed_excel_path"]
-		self.temp_front = pathDict["temp_front"]
-		self.temp_rear = pathDict["temp_rear"]
-		self.front_parsed = pathDict["front_parsed"]
-		self.rear_parsed = pathDict["rear_parsed"]
-		self.VDosPlus_path = pathDict["VDosPlus_path"]
+		self.output_folder = pathDict[OUTPUT_FOLDER_ATTR]
+		self.output_folder = self.output_folder.strip(r"\/.")
+		self.output_folder = "./" + self.output_folder
 
-		print("Parsed filepaths from file:", configFile)
+		self.car_config_path = pathDict[CAR_CONFIG_PATH_ATTR]
+
+		self.dump_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+							   "/" + \
+							   pathDict[DUMP_EXCEL_PATH_ATTR]
+
+		self.format_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+							   "/" + \
+							   pathDict[FORMAT_EXCEL_PATH_ATTR]
+
+		self.parsed_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+							   "/" + \
+							   pathDict[PARSED_EXCEL_ATTR]
+
+		self.temp_front = pathDict[TEMP_FRONT_ATTR]
+
+		self.temp_rear = pathDict[TEMP_REAR_ATTR]
+
+		self.front_parsed = pathDict[FRONT_PARSED_ATTR]
+
+		self.rear_parsed = pathDict[REAR_PARSED_ATTR]
+
+		self.VDosPlus_path = pathDict[VDOSPLUS_PATH_ATTR]
+
+		print("Successfully parsed filepaths from file:", configFile)
 
 
 
@@ -113,25 +143,25 @@ class PathCollection:
 	def defaultValue(self, key):
 		key = str(key).replace("\'", "")
 
-		if(key == "output_folder"):
+		if(key == OUTPUT_FOLDER_ATTR):
 			return OUTPUT_FOLDER_PATH
-		elif(key == "car_config_path"):
+		elif(key == CAR_CONFIG_PATH_ATTR):
 			return CAR_CONFIG_FILE
-		elif(key == "dump_excel_path"):
+		elif(key == DUMP_EXCEL_PATH_ATTR):
 			return DUMP_EXCEL_OUTPUT
-		elif(key == "format_excel_path"):
+		elif(key == FORMAT_EXCEL_PATH_ATTR):
 			return FORMAT_EXCEL_OUTPUT
-		elif(key == "parsed_excel_path"):
+		elif(key == PARSED_EXCEL_ATTR):
 			return PARSED_EXCEL_OUTPUT
-		elif(key == "temp_front"):
+		elif(key == TEMP_FRONT_ATTR):
 			return MITCHELL_COPY_OUTPUT_F
-		elif(key == "temp_rear"):
+		elif(key == TEMP_REAR_ATTR):
 			return MITCHELL_COPY_OUTPUT_R
-		elif(key == "front_parsed"):
+		elif(key == FRONT_PARSED_ATTR):
 			return PARSED_OUTPUT_F
-		elif(key == "rear_parsed"):
+		elif(key == REAR_PARSED_ATTR):
 			return PARSED_OUTPUT_R
-		elif(key == "VDosPlus_path"):
+		elif(key == VDOSPLUS_PATH_ATTR):
 			return VDOSPLUS_PATH
 		else:
 			raise ValueError("Unrecognized attribute passed to PathCollection.defaultValue()")
