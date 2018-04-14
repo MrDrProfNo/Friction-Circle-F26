@@ -101,9 +101,12 @@ class Car:
 
 def init(pathConfigFile):
 	"""
-	Initializes the PathCollection and Car objects
-	:param configFile:
-	:return:
+	Initializes the PathCollection and Car objects, and sets up the context
+	variable for the decimal library to use the correct precision and rounding
+	rules (global)
+	:param configFile: filepath to the config file storing all of the filepaths
+	:return: 2-tuple, with the Car object as the first element, and the PathCollection
+	as the second element.
 	"""
 
 	# Get the decimal library's context object

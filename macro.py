@@ -27,11 +27,13 @@ def macroMain(dim_force_dfs):
 
 	macroRunAxle(dim_force_dfs, "F", "tmpF.txt")
 
+	# The steps to quit, except say "no" when asked if finished with the program
 	keyboard.send("q")
 	keyboard.send("q")
 	keyboard.send("n")
 	keyboard.send("n")
 
+	# Setup with the rear profile
 	macroSetup(pressToRear)
 
 	macroRunAxle(dim_force_dfs, "R", "tmpR.txt")
@@ -41,6 +43,15 @@ def macroMain(dim_force_dfs):
 
 
 def macroSetup(configSteps):
+	"""
+	Assumes that VDosPlus is open with Mitchell's on its start screen.
+
+	Pulls VDosPlus to the front of the screen, making it the active window, and
+	runs through the commands required to select a config from the menu
+
+	:param configSteps: Array of Strings, the steps to select the desired profile
+						using the arrow keys
+	"""
 	# Should be "vdosplus", may change when testing
 	wg.EnumWindows(pullToFront, "vdosplus")
 	sleep(1)
@@ -214,6 +225,14 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 	file.close()
 
 def macroQuit():
+	"""
+	Assumes that VDosPlus is running, and the active window, and that Mitchell
+	is on the blue screen asking if the user wants to enter more information
+
+	Executes the combination of keypresses required to quit the program from
+	this position (includes closing vDosPlus)
+	:return:
+	"""
 	sleep(.5)
 	keyboard.send("q")
 	sleep(.5)

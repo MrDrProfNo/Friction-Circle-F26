@@ -61,6 +61,9 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 	except:
 		print("Error in opening file:", fromFileFront,
 			  "\n Could not find file.")
+		raise
+
+
 	line = f.readline()
 	# Skip leading newlines in input file
 	while (line == "\n"):
@@ -180,8 +183,9 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 				try:
 					f = open(fromFileRear)
 				except:
-					print("Error in opening file:", fromFileRear, "\n "
-																  "File may not exist")
+					print("Error in opening file:", fromFileRear,
+						  "\nFile may not exist")
+					raise
 
 				count = 0
 				displacement = 3

@@ -28,6 +28,7 @@ def full_dump(dirpath, filename, fullDF):
 		except OSError:
 			traceback.print_exc()
 			print("Error in makedirs(", dirpath, ")", sep="")
+			raise
 
 	fullDF.to_excel(filename)
 
@@ -58,6 +59,7 @@ def formatted_dump(dirpath, filename, dataframes):
 		except:
 			traceback.print_exc()
 			print("Error in makedirs(", dirpath, ")", sep="")
+			raise
 
 	# Define the pandas ExcelWriter using xlsxwriter as the engine
 	writer = ExcelWriter(filename, engine="xlsxwriter")

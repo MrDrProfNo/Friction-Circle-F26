@@ -31,7 +31,14 @@ VDOSPLUS_PATH_ATTR = "VDosPlus_path"
 class PathCollection:
 
 	def __init__(self, configFile):
+		"""
+		The constructor for PathCollection has extensive responsibilities;
+		all of the individual filepaths are constructed here. If the filepath is
+		missing a path, the user will be given the option to use defaults.
 
+		:param configFile: filepath to config file that all other paths will be read
+		from
+		"""
 		expectedAttr = [OUTPUT_FOLDER_ATTR, CAR_CONFIG_PATH_ATTR, DUMP_EXCEL_PATH_ATTR,
 						FORMAT_EXCEL_PATH_ATTR, PARSED_EXCEL_ATTR, TEMP_FRONT_ATTR,
 						TEMP_REAR_ATTR, FRONT_PARSED_ATTR, REAR_PARSED_ATTR,
@@ -49,6 +56,11 @@ class PathCollection:
 
 		# if any attributes are missing
 		if( len(missedAttr) > 0 ):
+
+			print("The following filepaths were not found: ")
+			for attr in missedAttr:
+				print(attr)
+
 			while(True):
 				useDefaults = input(
 					"Do you want to use the defaults for any missing"
@@ -74,8 +86,9 @@ class PathCollection:
 		if( not os.path.exists(self.output_folder) ):
 			try:
 				os.makedirs(self.output_folder)
-			except:
+			except OSError:
 				print("Error in makedirs(", self.output_folder, ")", sep="")
+				raise
 
 
 		self.car_config_path = pathDict[CAR_CONFIG_PATH_ATTR]
