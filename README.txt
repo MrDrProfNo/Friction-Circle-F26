@@ -20,8 +20,8 @@ then exported into an MS Excel table.
 
 ### Installation Instructions ###
 
-The code was designed to run on a Windows OS and python 3.5.2; failure to do so
-may result in problems.
+The code was designed to run on a Windows OS and python 3.5.2; I make no guarantee
+that it will work elsewhere.
 
 
 Step 1: Install Python 3.5.2

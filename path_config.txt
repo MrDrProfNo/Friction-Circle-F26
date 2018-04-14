@@ -18,7 +18,7 @@
 
 # Output Folder: The name of the folder which contains all output Excel
 # files. If it does not exist, it will be created
-output_folder=Friction_Circle_F26_Output
+output_folder=./Friction_Circle_F26_Output/
 
 # Car config file: the file containing car configuration information. This file
 # must exist, or the program will not execute.

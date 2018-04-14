@@ -2,7 +2,6 @@
 ## Constants (all defaults)
 OUTPUT_FOLDER_PATH = "./Friction_Circle_F26_Output/"
 CAR_CONFIG_FILE = "car_config.txt"
-PATH_CONFIG_FILE = "path_config.txt"
 
 MITCHELL_COPY_OUTPUT_F = "tmpF.txt"
 MITCHELL_COPY_OUTPUT_R = "tmpR.txt"
@@ -55,13 +54,13 @@ class PathCollection:
 					"Do you want to use the defaults for any missing"
 					" fields (Y/N). N will quit the program.")
 
-				if (useDefaults.lower() == "n" or # n or no answered
+				if(useDefaults.lower() == "n" or # n or no answered
 							useDefaults.lower() == "no"):
 
 					raise ValueError(" Failed to find values for some attributes,",
 								   "Quit requested by user")
 
-				elif (not (useDefaults.lower() == "y" or # not y or yes
+				elif(not (useDefaults.lower() == "y" or # not y or yes
 							  useDefaults.lower() == "yes") ):
 					print("Unrecognized answer. Try again?\n")
 					continue
@@ -70,7 +69,6 @@ class PathCollection:
 
 		self.output_folder = pathDict[OUTPUT_FOLDER_ATTR]
 		self.output_folder = self.output_folder.strip(r"\/.")
-		self.output_folder = "./" + self.output_folder
 
 		self.car_config_path = pathDict[CAR_CONFIG_PATH_ATTR]
 
@@ -100,7 +98,7 @@ class PathCollection:
 
 
 
-	def parseFile(self, configFile, pathDict, expectedInputs):
+	def parseFile(self, configFile, pathDict, expectedAttr):
 		"""
 		Reads the contents of configFile, assuming they are of the correct format,
 		and puts them into the dictionary, mapping the attribute to the value
@@ -110,7 +108,7 @@ class PathCollection:
 
 		:param configFile: File to read path attributes from
 		:param pathDict: dictionary to store the paths in
-		:param expectedInputs: list of expected attribute inputs
+		:param expectedAttr: list of expected attribute inputs
 		:return:
 		"""
 
@@ -124,8 +122,9 @@ class PathCollection:
 				elif(line[0] == '#'):
 					continue
 				else:
+
 					line = line.strip().split("=")
-					if( not line[0] in expectedInputs ):
+					if(not line[0] in expectedAttr):
 						print("Encountered unexpected path attribute in",
 							  "path_config.txt:", line[0], "; this attribute may",
 							  "not be used")
@@ -134,7 +133,7 @@ class PathCollection:
 						foundAttr.append(line[0])
 
 		missedAttr = []
-		for attr in expectedInputs:
+		for attr in expectedAttr:
 			if(not attr in foundAttr):
 				missedAttr.append(attr)
 

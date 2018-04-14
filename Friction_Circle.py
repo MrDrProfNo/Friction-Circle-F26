@@ -43,6 +43,8 @@ from forces_parser import parse, readParseToExcel
 from friction_circle_init import init
 from macro import macroMain
 
+import os
+
 ## Constants
 PATH_CONFIG_FILE = "path_config.txt"
 
@@ -74,11 +76,15 @@ def getDimensionForceDataframes(fullDF):
 def main():
 	print("########  Friction_Circle.py  ########")
 
-	car, paths = init(PATH_CONFIG_FILE) # init returns a Car object with attr. loaded from config
+	directory = os.path.dirname(__file__)
+	os.chdir(directory)
 
+	# init returns a Car object with attr. loaded from config
+	car, paths = init(PATH_CONFIG_FILE)
 
 	loadCases = int(input("Number of load cases to distribute evenly on the "
 						  "range [0, pi]. 0 Case will be added, but not counted  \n"
+						  "Estimated runtime of the program is ~50sec per load case\n"
 						  "Enter # Load cases: "))
 	fullDF = createDataframe(car, loadCases)
 
@@ -92,14 +98,16 @@ def main():
 	full_dump(paths.output_folder, paths.dump_excel_path, fullDF)
 	formatted_dump(paths.output_folder, paths.format_excel_path, dim_force_dfs)
 
-	input("Ensure that vDosPlus running Mitchell is open before continuing.\n"
-		  "Press Enter to continue:")
+	input("Friction_Circle.py is going to open vDosPlus. While the program is"
+		  " open, do not attempt to change windows. Expected runtime is ~50sec"
+		  "per load case. \nPress Enter when ready: ")
 
-	print("---TEMP: Opening vDosPlus automatically ---")
+	print("--- Opening vDosPlus, give me a minute ---")
 
 	# Creates a new subprocess running VDosPlus
 	pid = subprocess.Popen(paths.VDosPlus_path).pid
 	print("Generated vDosPlus process with PID:", pid)
+
 	# Run the macro
 	macroMain(dim_force_dfs)
 
@@ -111,6 +119,7 @@ def main():
 					 paths.parsed_excel_path,
 					 fullDF)
 
+	input("Press Enter when done")
 
 if __name__ == "__main__":
 	main()
