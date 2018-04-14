@@ -74,6 +74,17 @@ def getDimensionForceDataframes(fullDF):
 
 
 def main():
+	"""
+	Main controls the program, walking through the steps in order:
+	1. Load from config files
+	2. Ask user for number of load cases
+	3. Generate full dataset using force_calculator.py
+	4. Generate dump and formatted excel spreadsheets using df_to_excel.py
+	5. Open VDosPlus, which should default to running Mitchell's Racing by the Numbers
+	6. Run macro.py to put formatted dataset through Mitchell's
+	7. Run forces_parser.py to take Mitchell's copied output and make it readable
+	8. Continue running forces_parser.py to export the parsed Mitchell output to Excel
+	"""
 	print("########  Friction_Circle.py  ########")
 
 	directory = os.path.dirname(__file__)

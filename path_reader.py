@@ -1,4 +1,4 @@
-
+import os
 ## Constants (all defaults)
 OUTPUT_FOLDER_PATH = "./Friction_Circle_F26_Output/"
 CAR_CONFIG_FILE = "car_config.txt"
@@ -68,19 +68,27 @@ class PathCollection:
 					break # exit the input request loop and set values
 
 		self.output_folder = pathDict[OUTPUT_FOLDER_ATTR]
+
 		self.output_folder = self.output_folder.strip(r"\/.")
+
+		if( not os.path.exists(self.output_folder) ):
+			try:
+				os.makedirs(self.output_folder)
+			except:
+				print("Error in makedirs(", self.output_folder, ")", sep="")
+
 
 		self.car_config_path = pathDict[CAR_CONFIG_PATH_ATTR]
 
-		self.dump_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+		self.dump_excel_path = self.output_folder + \
 							   "/" + \
 							   pathDict[DUMP_EXCEL_PATH_ATTR]
 
-		self.format_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+		self.format_excel_path = self.output_folder + \
 							   "/" + \
 							   pathDict[FORMAT_EXCEL_PATH_ATTR]
 
-		self.parsed_excel_path = pathDict[OUTPUT_FOLDER_ATTR] + \
+		self.parsed_excel_path = self.output_folder + \
 							   "/" + \
 							   pathDict[PARSED_EXCEL_ATTR]
 
@@ -140,6 +148,12 @@ class PathCollection:
 		return missedAttr
 
 	def defaultValue(self, key):
+		"""
+		Given one of the attribute keys, returns the default value associated
+		with it
+		:param key: pathdict key connected to a default value
+		:return: the default value associated with key
+		"""
 		key = str(key).replace("\'", "")
 
 		if(key == OUTPUT_FOLDER_ATTR):

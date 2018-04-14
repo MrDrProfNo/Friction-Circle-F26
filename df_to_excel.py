@@ -8,7 +8,16 @@ from pandas import ExcelWriter
 # Row that data starts at for formatted dump
 FORMAT_DATA_ROW_START = 5
 
-def full_dump(dirpath, filename, dataframe):
+def full_dump(dirpath, filename, fullDF):
+	"""
+	Dumps the passed dataframe to excel at the given directory (relative to top)
+	and with the given filename
+	:param dirpath: directory to put the output file in; absolute path or relative
+					to top folder
+	:param filename: name of the excel file to produce
+	:param dataframe: pandas dataframe to export to excel.
+	:return:
+	"""
 	### Full dump to Excel ###
 	# Original target directory: ./Friction_Circle_F26_Output/dump.xlsx
 	# ./ references current directory;
@@ -16,19 +25,42 @@ def full_dump(dirpath, filename, dataframe):
 	if not os.path.exists(dirpath):
 		try:
 			os.makedirs(dirpath)  # use os.makedirs to create the directory
-		except:
+		except OSError:
 			traceback.print_exc()
-			print("Error in makedirs(", dirpath, ")")
-	dataframe.to_excel(filename)
+			print("Error in makedirs(", dirpath, ")", sep="")
+
+	fullDF.to_excel(filename)
 
 def formatted_dump(dirpath, filename, dataframes):
+	"""
+	Takes a 3-tuple of dataframes, assuming that they are the x,y,z component
+	force columns from the full dataframe, and put them into an excel document
+	with some formatting specified by the user.
+
+	Dataframes are assumed to contain data that is 4 cells wide; the length may
+	vary.
+
+	:param dirpath: directory to put the output file in; absolute path or relative
+					to top folder
+	:param filename: name of the excel file to produce
+	:param dataframes: 3-tuple of pandas Dataframes to put into a formatted
+					excel document. Assumed to be 4 cells wide
+	:return:
+	"""
 	### Separate out Max Contact Patch Forces ###
 	df_MCPFx, df_MCPFy, df_MCPFz = dataframes
+
 	# Set the filepath for the target file by appending to path to output
 	# folder
+	if not os.path.exists(dirpath):
+		try:
+			os.makedirs(dirpath)
+		except:
+			traceback.print_exc()
+			print("Error in makedirs(", dirpath, ")", sep="")
 
 	# Define the pandas ExcelWriter using xlsxwriter as the engine
-	writer = ExcelWriter(filename, engine='xlsxwriter')
+	writer = ExcelWriter(filename, engine="xlsxwriter")
 
 	# Dump each of the above dataFrames to the spreadsheet.
 	# NOTE: This will not work if there is a variable currently assigned to
