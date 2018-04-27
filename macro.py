@@ -109,6 +109,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(xField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			# y
 
@@ -117,6 +118,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(yField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			# z
 
@@ -125,6 +127,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(zField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			for i in range(4):
 				keyboard.send("c")
@@ -176,6 +179,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(aField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			# y
 
@@ -184,6 +188,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(yField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			# z
 
@@ -192,6 +197,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			keyboard.write(zField.to_eng_string())
 			sleep(.5)
 			keyboard.send("enter")
+			sleep(.5)
 
 			for i in range(4):
 				keyboard.send("c")
