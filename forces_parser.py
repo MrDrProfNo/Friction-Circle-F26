@@ -56,6 +56,9 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 	Takes
 	:return:
 	"""
+
+	headers = generatePartialHeaders(df_full.shape[0])
+
 	try:
 		f = open(fromFileFront)
 	except:
@@ -164,7 +167,12 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 			# message roughly "non-integers will soon cease to be supported"
 			case_theta_coef = df_full.index[caseIDX]
 
+			headerText = headers[caseIDX]
+
+			titleText += headerText
 			titleText += case_theta_coef.to_eng_string()
+
+
 			ws = writer.sheets["Sheet 1"]
 			ws.write(
 				topMargin + ((count // 2) * (yspacing + tableheight)) - 1,
@@ -284,6 +292,37 @@ def replaceMitchellVariables(var, rear=False):
 		return "Shock @ Chassis"
 	else:
 		print("Unrecognized Mitchell Variable: ", var)
+
+def generatePartialHeaders(dfSize):
+	"""
+	Given the size of the dataframe, generates the headers to be applied to each
+	of its cases, based off of a previously specified pattern. All headers should
+	be preceded by "Left Front" or similar, and any other relevant information,
+	externally.
+	:param dfSize: Size of the dataframe to generate headers for
+	:return: an array containing the headers to be used based on position. So the
+			header for the 0 case will be first, and the header for the 1 case last
+	"""
+
+	headers = []
+	headers.append("Max Brake: ")
+
+	bcCount = dfSize // 2 - 1  # number of BC headers to add
+
+	for i in range(1, bcCount):
+		headers.append("BC " + str(i) + ": ")
+
+	headers.append("Max Corner 1: ")
+	headers.append("Max Corner 2: ")
+
+	acCount = dfSize // 2 - 1 # number of AC headers to add
+
+	for i in range(1, acCount):
+		headers.append("AC " + str(i) + ": ")
+
+	headers.append("Max Accel: ")
+
+	return headers
 
 if __name__ == '__main__':
 	# if this is being run as main, asks for a file to read from and produces
