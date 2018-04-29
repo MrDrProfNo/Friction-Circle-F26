@@ -104,16 +104,6 @@ def calculateForCaseN(datadict, car, n):
 
 
 
-	# constants that really need a better name but I don't know what they are
-	# name origin is that this is how they were in the original matlab code.
-	# The 6-position calculation for YG and 1-position for XG were being reused
-	# later in the code as constants with no explanation. Something to do with
-	# their theta coefficients.
-	YG_6 = (car.a * car.b) / Decimal(
-		m.sqrt((car.b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
-			   ((car.a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
-		   Decimal(m.sin(0.49 * m.pi))
-	XG_1 = -((car.a * car.b) / Decimal(m.sqrt(car.b ** 2)))
 
 
 	# define variables for car constants to make code easier to read
@@ -129,8 +119,22 @@ def calculateForCaseN(datadict, car, n):
 	A_d = car.A_d
 
 
+	# constants that really need a better name but I don't know what they are.
+	# name origin is that this is how they were in the original matlab code.
+	# The 6-position calculation for YG and 1-position for XG were being reused
+	# later in the code as constants with no explanation. Something to do with
+	# their theta coefficients.
+	YG_6 = (car.a * car.b) / Decimal(
+		m.sqrt((car.b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
+			   ((car.a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
+		   Decimal(m.sin(0.49 * m.pi))
+	XG_1 = -((car.a * car.b) / Decimal(m.sqrt(car.b ** 2)))
+
+	# The main calculations. Again, I don't really have a better label for
+	# any of these variables.
 	r_theta_n = (a * b) / Decimal(
-		m.sqrt(((b * cosNPi) ** 2 + ((a * sinNPi)) ** 2)))
+		m.sqrt(((b * cosNPi) ** 2 + ((a * sinNPi)) ** 2))
+		)
 	XG_n = -(r_theta_n * cosNPi)
 	YG_n = r_theta_n * sinNPi
 	RF_Fz_n = Fz_f + (M + D) / 2 * (-Long_WT * XG_n + Lat_WT * YG_n) + (
