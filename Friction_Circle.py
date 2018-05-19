@@ -130,7 +130,14 @@ def main():
 					 paths.parsed_excel_path,
 					 fullDF)
 
-	input("Press Enter when done")
 
 if __name__ == "__main__":
-	main()
+
+	# this setup just catches errors when running from terminal or python shell
+	# so it doesn't close immediately.
+	try:
+		main()
+	except Exception as e:
+		print("Encountered Error during runtime: \n", e.args)
+	finally:
+		input("Press Enter when done")

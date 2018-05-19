@@ -53,11 +53,13 @@ This was probably handled automatically, but let's check anyways
     - One of them will be called "Path". Click on it, and click "Edit"
 
     - It will give you a list of file-paths; two of them should lead to the Python
-    folder; one will end at Python\Python35, the other at Python\Python35\Scripts
+    folder; one will end at Python\Python35, the other at Python\Python35\Scripts.
+    The name of the folders may be slightly different; as long as it matches the actual
+    filepath we're good.
 
     - If either of these do not exist, then click "New" and add them. It may be
-    easiest to find the directory that the python executable is in, and copy the
-    path to that point.
+    easiest to find the directory that the python executable is in on your computer,
+    and copy the path to that point.
 
     - To test that it all works, open the windows command prompt and type "python",
     then press Enter. You should get a python interactive prompt, with each

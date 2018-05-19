@@ -7,3 +7,4 @@ python -m pip install win32gui
 python -m pip install pywin32
 
 pause
+exit
