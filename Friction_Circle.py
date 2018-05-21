@@ -111,7 +111,7 @@ def main():
 	formatted_dump(paths.output_folder, paths.format_excel_path, dim_force_dfs)
 
 	input("Friction_Circle.py is going to open vDosPlus. While the program is"
-		  " open, do not attempt to change windows. Expected runtime is ~50sec"
+		  " open, do not attempt to change windows. Expected runtime is ~80sec"
 		  "per load case. \nPress Enter when ready: ")
 
 	print("--- Opening vDosPlus, give me a minute ---")
