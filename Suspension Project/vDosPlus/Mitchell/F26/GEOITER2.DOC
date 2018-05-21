@@ -1,0 +1,17 @@
+                         Second Iteration Variable
+
+                         +----------------------+
+                         |  1 -  Not Available  |
+                         |  2 - <Roll Angle   > |
+                         |  3 -  Steer Angle    |
+                         |  4 -  Tire Growth    |
+                         |  5 -  None           |
+                         +----------------------+
+
+After selecting the first iteration variable, choose the second variable.
+This may not be the same as the first (see the Not Available above, since
+we selected Ride Height for the first iteration variable.
+
+For a Full Ride and Roll computation, select Roll Angle as the second
+iteration variable.  If you only want a Ride Height computation, then
+select None as the second iteration variable.

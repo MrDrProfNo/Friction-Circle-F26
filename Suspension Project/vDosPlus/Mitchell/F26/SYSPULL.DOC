@@ -1,0 +1,20 @@
+      +----------------------- Name of Menu ------------------------+
+      |                    +--------+                               |
+      |   Soup and         | Main   |           Dessert             |
+      |   salad            | course |           choices             |
+      |                    +--------+                               |
+      +-------------------------------------------------------------+
+
+This is a PullDown menu.  It appears at the top of the screen and you use
+the LEFT and RIGHT arrows to select the box you want.  The selected box
+is highlighted.  When you have selected the box you want, hit ENTER and
+a sub-menu will be 'pulled-down' from the main menus.
+You can also hit the CAPITALIZED letter in each box (S, M or D above)
+to select the box and pull down the appropriate sub-menu.
+
+The F2 key will explain the options of the selected sub-menu.
+The F3 key will display all the Sub-menu choices and explain your choices.
+These choices will also be displayed the first time you see the PullDown
+menu.  Use the F4 key to change text colors.
+
+Hit ESCape or Alt-X to leave this menu.

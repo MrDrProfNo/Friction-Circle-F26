@@ -1,0 +1,21 @@
+                                CAMBER
+
+Camber is the inclination of the tires from vertical, as viewed from
+the front of the tire.  Camber is measured relative to the ground,
+not relative to the chassis.  Camber is also measured in the plane of
+the tire, meaning steering inputs are taken into account.  Zero camber
+represents a perfectly vertical tire, which is considered optimum for
+acceleration and braking.  Positive camber means the top of the tire
+is leaning away from the chassis.  Negative camber means the top of
+the tire is leaning toward the chassis.
+
+When the vehicle encounters bumps with both wheels (the ride height goes
+negative), both tires usually go toward negative camber.  The top of
+both the loaded and unloaded tires go toward the chassis.  This is
+negative camber on both tires, even though one leans left and the other
+right.
+
+When the body rolls the loaded tire usually develops positive camber and
+the unloaded tire goes negative.  Both lean right (usually).  Choosing
+the optimum camber compromise is the true art of the designer.
+

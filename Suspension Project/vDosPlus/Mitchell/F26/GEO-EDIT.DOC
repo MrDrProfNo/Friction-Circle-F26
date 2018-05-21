@@ -1,0 +1,46 @@
+                             Edit Data
+
+                   +----------------------------+
+                   |  I -  Iterate limit/Origin |
+                   |  D -  Description of data  |
+                   |  G -  Graphic editing      |
+                   |  A -  Analysis             |
+                   |  V -  Vehicle changes      |
+                   |  1 -  Suspension Points    |
+                   |  2 - <Auxiliary points  >  |
+                   +----------------------------+
+
+There are several ways available to Edit and examine the data.
+
+Iteration limits : Specify the iteration limits and the origin of your
+                   co-ordinate system, if different from the program.
+
+Description : Describe the data with your own free-form notes.  This
+              helps you keep track of your data files.
+------------------------------------------------------------------------
+Graphic editing : Move suspension points on the screen using the cursor
+                  control keys.
+
+Analysis of points : This report shows various suspension lengths, the
+                     location of Instant Centers, the length of the
+                     Virtual Swing Arm, and a table of estimated
+                     Ride-Camber and Roll-Camber values based upon the
+                     length of the virtual swing arm.
+
+Vehicle movement :  Allows you to perform certain operations on the
+                    data, such as installing larger wheels and tires.
+
+Suspension points : Enter the basic suspension points in a full-screen
+                    editor.  This includes A-arms and tie-rod.
+
+Auxiliary points : Enter the auxiliary suspension points including the
+                   spring/shock, swaybar and halfshaft.
+
+------------------------------------------------------------------------
+
+Left suspension : If you are doing an asymmetric suspension, these are
+                  the left side points
+
+Left auxiliary : Auxiliary points on the left side for asymmetric cases.
+
+

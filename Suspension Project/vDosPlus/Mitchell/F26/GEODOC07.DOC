@@ -1,0 +1,20 @@
+                 VIRTUAL SWING AXLE or INSTANT CENTER
+
+The Instant Center is a conceptual point used for analysis of the
+movement of suspension.  For small displacements, a suspension moves
+as if there were a swing axle located at the Instant Center.  This
+imaginary link is known as a Virtual Swing Axle.  This is a useful
+analysis tool, though the Instant Center moves as soon as the
+suspension does, thus creating another Virtual Swing Axle.
+
+To determine the Instant Center, first imagine a vertical plane which
+passes through the contact patches of both wheels.  Now imagine a plane
+encompassing the upper control arms.  The intersection of these planes
+is a line known as the virtual upper control arm.  (In many cases the
+forward control link is in the horizontal plane, and is also the virtual
+control arm).  Repeat for the lower control arms.  Then project those
+control links to infinity.  The intersection of these projected lines
+is the Instant Center.
+
+(See entry 16 for the Fundamental Analysis of Virtual Swing Arm Length).
+

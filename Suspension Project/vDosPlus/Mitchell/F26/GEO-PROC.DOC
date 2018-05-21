@@ -1,0 +1,23 @@
+                              eXecute or quit
+
+                           +-------------------+
+                           |  X - <Execute>    |
+                           |  R -  Read data   |
+                           |  S -  Save data   |
+                           |  G -  Go restart  |
+                           |  Q -  Quit        |
+                           +-------------------+
+
+Execute will cause the program to leave the Data Input & Editing portion
+of the program, read the appropriate suspension structure information,
+and begin processing data.
+
+Read data will display the Directory of files and allow the user to read
+another data file.
+
+Save data will save the current data.  It is not necessary to do this
+because the files are automatically saved when you Execute.
+---------------------------------------------------------------------------
+Go will restart the program with the Program Options menu.
+
+Quit will terminate the program.

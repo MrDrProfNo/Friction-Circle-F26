@@ -1,0 +1,21 @@
+CHASSISR.SUB    *                *                *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *
+X Y Z
+                *                *                *                *
+TRAILVRT.SUB    *Tub A           *Tub C           *Vrt+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*
+X Y Z
+Axle H          *Axle K          *                *                *
+TRAILHRZ.SUB    *Vrt+ D          *Vrt+ F          *Hrz+            *
+  1.00000  1.00000  1.00000  0 Axle Span       *
+X Z Y
+Hrz+ E          *Axle S          *                *                *
+HINKLEA.SUB     *Tub T           *Tub T opposite  *Arm             *
+  1.00000  1.00000  1.00000  5 Contact Patch, L*
+X Y Z
+Axle H opposite *Axle K opposite *                *                *
+HINKLERA.SUB    *Hrz+ E          *Arm S           *Axle            *
+  1.00000  1.00000  1.00000  0 Leading Link    *
+Z Y X
+Axle E opposite *Tub A opposite  *                *                *
+

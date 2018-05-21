@@ -1,0 +1,96 @@
+13 program options are correct
+-121
+-121
+49 choose CGA graphics
+53 choose High Resolution
+113 leave graphics selection menu
+999
+13 pull down the CAD/Iterate submenu
+105 choose Iterative mode
+49 the first iterative variable is Ride Height
+50 the second iterative variable is Roll Angle
+0
+80 Go to iterative limits
+0
+80 skip past co-ordinate points
+0
+80
+0
+80
+0
+80
+9 now Tab to first iterative variable
+32 skip over first digit
+50 do two Ride Height steps
+9 tab over step size
+9
+32 space over first digit
+52 do four Roll Angle steps
+13 hit Enter to register data
+27 ESCape to leave this editor
+111 look at suspension options
+49 Display current options
+54 choose to do Motion Ratio computations
+120 Ready to eXecute program
+120 Now eXecute program
+121 do pause after graphics
+121 do show all tables
+110 do NOT beep
+121 do try the PAGE EJECT feature
+999
+32 Ride Height = 0.0 tables
+999
+999
+999
+999
+999
+32 Ride Height = 1.0 tables
+999
+999
+999
+999
+999
+32 Ride Height = -1.0 tables
+999
+999
+999
+999
+999
+32 Ride Height = 2.0 tables
+999
+999
+999
+999
+999
+32 Ride Height = -2.0 tables
+999
+999
+999
+999
+32 Roll Angle = 0.0 tables
+999
+999
+999
+999
+32 Roll Angle = 0.5 tables
+999
+999
+999
+999
+32 Roll Angle = 1.0 tables
+999
+999
+999
+999
+32 Roll Angle = 1.5 tables
+999
+999
+999
+999
+32 Roll Angle = 2.0 tables
+999
+999
+999
+999
+121 quit the program
+

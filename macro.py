@@ -4,7 +4,9 @@ from win32clipboard import OpenClipboard, CloseClipboard, GetClipboardData
 import win32gui as wg
 import keyboard
 
-def macroMain(dim_force_dfs):
+STANDARD_DELAY = .75
+
+def macroMain(dim_force_dfs, paths):
 	"""
 	Runs the macro for Racing by the Numbers, inputting data drawn from the
 	partial dataframes. dim_force_dfs must be a 3-tuple of Dataframes, otherwise
@@ -20,10 +22,8 @@ def macroMain(dim_force_dfs):
 
 
 	sleep(4)
-	pressToFront = ("down", "right", "enter")
-	pressToRear =  ("down", "down", "right", "enter")
 
-	macroSetup(pressToFront)
+	macroSetup(paths.front_axle_inst)
 
 	macroRunAxle(dim_force_dfs, "F", "tmpF.txt")
 
@@ -34,7 +34,7 @@ def macroMain(dim_force_dfs):
 	keyboard.send("n")
 
 	# Setup with the rear profile
-	macroSetup(pressToRear)
+	macroSetup(paths.rear_axle_inst)
 
 	macroRunAxle(dim_force_dfs, "R", "tmpR.txt")
 
@@ -56,17 +56,19 @@ def macroSetup(configSteps):
 	wg.EnumWindows(pullToFront, "vdosplus")
 	sleep(1)
 	keyboard.send("enter")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	for step in configSteps:
+		if step == "":
+			continue
 		keyboard.send(step)
-		sleep(.5)
-	sleep(.5)
+		sleep(STANDARD_DELAY)
+	sleep(STANDARD_DELAY)
 	keyboard.send("enter")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("enter")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("x")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("f")
 	sleep(3)
 
@@ -105,37 +107,37 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 
 			# x
 			keyboard.send("x")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(xField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			# y
 
 			keyboard.send("y")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(yField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			# z
 
 			keyboard.send("z")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(zField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			for i in range(4):
 				keyboard.send("c")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 				keyboard.send("f")
 				sleep(1)
 				keyboard.send("ctrl+a")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 				OpenClipboard()
 				data = GetClipboardData()
 
@@ -147,7 +149,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 				file.writelines(data[:24])
 				file.write("\n")
 				keyboard.send("enter")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 
 			keyboard.send("c")
 
@@ -156,7 +158,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 		# Run another case?
 		keyboard.send("y")
 
-		sleep(.5)
+		sleep(STANDARD_DELAY)
 		print("Complete", wheel, "run", case)
 
 	# For the second half of the data set, all x values go into the A field instead
@@ -175,37 +177,37 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 
 			# a
 			keyboard.send("a")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(aField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			# y
 
 			keyboard.send("y")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(yField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			# z
 
 			keyboard.send("z")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.write(zField.to_eng_string())
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
-			sleep(.5)
+			sleep(STANDARD_DELAY)
 
 			for i in range(4):
 				keyboard.send("c")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 				keyboard.send("f")
 				sleep(1)
 				keyboard.send("ctrl+a")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 				OpenClipboard()
 				data = GetClipboardData()
 
@@ -217,7 +219,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 				file.writelines(data[:24])
 				file.write("\n")
 				keyboard.send("enter")
-				sleep(.5)
+				sleep(STANDARD_DELAY)
 
 			keyboard.send("c")
 
@@ -225,7 +227,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 		# Run another case?
 		keyboard.send("y")
 
-		sleep(.5)
+		sleep(STANDARD_DELAY)
 		print("Complete run", case + 1)
 
 	file.close()
@@ -239,17 +241,17 @@ def macroQuit():
 	this position (includes closing vDosPlus)
 	:return:
 	"""
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("q")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("q")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("n")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("y")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.write("exit")
-	sleep(.5)
+	sleep(STANDARD_DELAY)
 	keyboard.send("enter")
 
 

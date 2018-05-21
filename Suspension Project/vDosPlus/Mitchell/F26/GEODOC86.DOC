@@ -1,0 +1,77 @@
+>PUSHDEMO  Double A-Arm, Push-rod, swaybar Demo
+Ride =-1.000  Roll = 2.000  Steer = 0.500  Tire = 0.000
+Solution Summary:        Distance     Objective         Error   Indep_Value
+
+   Tolerance                                      0.000010000
+ 1 Chassis            0.000000000   0.000000000   0.000000000   2.000000000
+ 2 Contact Patch, R  -0.000000076  -0.000000000  -0.000000076  -6.474330942
+ 3 Upright length R  10.575485807  10.575485804   0.000000002  -6.611446751
+ 4 Steering Link, R  17.500000000  17.500000000  -0.000000000   2.143404383
+ 6 Pivot Bell Right  16.278820596  16.278820596  -0.000000000 -13.537688186
+ 7 Pivot Rod Right   16.278820596  16.278820596  -0.000000000   0.000000000
+ 9 Swaybar mount, R   3.000000000   3.000000000   0.000000000  -3.696984276
+10 Swaybar Link, R    3.000000000   3.000000000   0.000000000   0.000000000
+12 Contact Patch, L  -0.000000080  -0.000000000  -0.000000080  -0.272483840
+13 Upright length L  10.575485803  10.575485804  -0.000000001   1.639285453
+14 Steering Link, L  17.500000000  17.500000000   0.000000000   1.032652948
+16 Pivot Bell Left   16.278820596  16.278820596   0.000000000   1.360983638
+17 Pivot Rod Left    16.278820596  16.278820596   0.000000000   0.000000000
+19 Swaybar mount, L   3.000000000   3.000000000   0.000000000  -0.126607614
+20 Swaybar Link, L    3.000000000   3.000000000   0.000000000   0.000000000
+
+Summary ERROR=   0.000000080  Structure number =12  Credible = 0
+Max= 0.000000080  Arm= 0.000000080  Pvt= 0.000000000  Bar= 0.000000000
+
+---------------------------------------------------------------------------
+<                        SOLUTION SUMMARY
+
+This table shows the accuracy of computed solution.  It is useful to
+verify the accuracy of a solution.
+
+The first line shows the Tolerance of the computation, which is 0.00001
+without a math co-processor and 0.000001 with a math co-processor.  The
+assorted computed parameters should all have an error less than this
+amount.
+
+If the Summary ERROR is greater than the tolerance, then the bottom
+line attempts to show which suspension component generated the problem.
+If the problem is only with the Bar, then the Camber, Instant Center, etc.
+are probably OK.  If the problem is with the Arm, then the problem is
+more serious.  Failures to determine a solution are probably related to
+a physical problem.  The suspension may not be capable of reaching a given
+location.  For instance, as you raise the Ride Height, there comes a point
+when the suspension arms are too short for the tire to reach the ground.
+
+This display is intended for the use of the programmer.
+------------------------------------------------------------------------
+
+- - - - - - - - - - - - - - -  SOLUTION SUMMARY  - - - - - - - - - - - - -
+
+The Solution Summary is used to verify the accuracy of the numerical
+solution.
+The "Distance" column represents the calculated distances of the structure.
+The "Objective" column is what the calculated distances should be.
+The "Error" column is the difference between Distance and Objective.
+For a correct solution all of the Error values should be less than the
+"Tolerance", which is 0.00001 for computers without 8087 math chips and
+0.000001 for computers with math co-processors.
+
+Solving for distances to one-millionth of an inch does not mean the camber
+is correct to the same degree.  Because the Camber is computed as a
+difference between points, an error of 0.000001 can produce a larger error.
+But experimentation as shown that accuracy of 0.00001 gives camber accuracy
+of 0.001, which should be sufficiently accurate for our needs.
+>
+---------------------------------------------------------------------------
+- - - - - - - - - - - - - -  REPEATING SOLUTIONS  - - - - - - - - - - - - -
+
+You may notice that re-calculating the same problem may result in a
+slightly different solution.  You may re-compute the same points at the
+same Ride, Roll and Steering position and get a different solution, as
+shown in the error values above.  This is because the program learns from
+it's past calculations and one calculation may follow a slightly different
+path (and hopefully quicker) to a solution than the previous computation.
+As long as both solutions are within the tolerance, this should may make
+no significant difference.
+
+

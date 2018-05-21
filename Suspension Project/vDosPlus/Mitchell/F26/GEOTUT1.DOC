@@ -1,0 +1,18 @@
+                     +----------------------------+
+                     | 1 -  Graphic Perspective   |
+                     | 2 -  Ride Height           |
+                     | 3 -  Roll                  |
+                     | 4 -  Steer                 |
+                     | 5 -  Camber                |
+                     | 6 -  Scrub                 |
+                     | 7 -  IC/Virtual Swing Arm  |
+                     | 8 -  Roll Center           |
+                     | 9 -  Kingpin               |
+                     | 0 -  Kingpin Offset        |
+                     | Q - <QUIT - return to CAD> |
+                     +----------------------------+
+
+This is the 1st set of tutorials, containing the most common suspension
+parameters.  These tutorials help explain, in words and plots, how the
+assorted parameters are calculated.
+

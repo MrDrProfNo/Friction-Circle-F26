@@ -1,0 +1,16 @@
+Enter an INTEGER number:  123
+
+
+                      RESPONDING TO AN INTEGER PROMPT
+
+The program is asking for an INTEGER.  Enter the number in the
+high-lighted area.  Do not use a decimal point.  You may use a minus.
+Do not use the (123) form for negative amounts.
+
+If you want the originally displayed value, press Enter at the beginning.
+
+Press Enter after entering the value.
+
+Press the F2 key for a description of what number the program expects
+  (details on units, etc.)
+

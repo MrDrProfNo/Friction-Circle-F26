@@ -1,0 +1,21 @@
+                 +------------------------------------+
+                 |           Table of Values          |
+                 |                                    |
+                 |    0.00            70.00           |
+                 |   10.00            80.00           |
+                 |   20.00            90.00           |
+                 | < 30.00>           100.00          |
+                 |   40.00            Summary         |
+                 |   50.00            Quit            |
+                 |   60.00                            |
+                 +------------------------------------+
+
+                           RESPONDING TO A MENU
+
+This is a sample Menu of table selections.  One selection is high-lighted
+and enclosed in brackets, i.e. < 30.00> in the example above.  The
+high-lighted entry may be changed by the UP and DOWN arrow keys.  When
+the action you want is high-lighted, hit ENTER to select the action.
+
+To leave this selection, high-light the QUIT entry and press ENTER.
+You may also ESCape from this menu.

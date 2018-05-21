@@ -1,0 +1,34 @@
++------------------------- Graphic Editing ------------------------------+
+|     eXecute          Sketch           suspension       Auxiliary       |
+|     options          suspension       Points           points          |
++------------------------------------------------------------------------+
+        !                !                !                !
+    +--------    +----------------- +----------------- +-----------------
+    |Execute     |Full-Featured ske |Fwd lower frame   |Tub spring/shock
+    |Quit        |Suspension Only   |Lower ball joint  |End spring/shock
+    +--------    |Auxiliary Only    |Rwd lower frame   |Bell Crank #1
+                 |Remove features   |Fwd upper frame   |Bell Crank #2
+                 |Vehicle parameter |Upper ball joint  |Pivot Push/Pull
+                 |Sketch Suspension |Rwd upper frame   |Outer Push/Pull
+                 +----------------- |Mac Strut axis    |Swaybar rod #1
+                                    |Steering Tierod   |Swaybar rod #2
+                                    |Steering frame    |Swaybar lever
+                                    |Track             |Swaybar attach
+                                    |Lower A-Arm       |Halfshaft inner
+                                    |Upper A-Arm       |Halfshaft outer
+                                    +----------------- +-----------------
+-------------------------------------------------------------------------
+Hit F1 for instructions on using this Pull-down menu.
+Hit F2 for information on specific choices.
+Use F3 to show all sub-menus.  Use F4 to change colors.
+
+The Graphical Editing menu allows you to display a portion of the
+suspension on the screen and then move a point using the cursor arrows.
+To move a point, locate it under under either Suspension points or
+Auxiliary points, pull-down the appropriate sub-menu and select the
+point.  If you are doing an asymmetric suspension there will be
+seperate sub-menus for left and right side points.
+
+Do not attempt to move points which do not exist for your suspension.
+This primarily applies to solid rear-axle suspensions where there are
+fewer points to define.

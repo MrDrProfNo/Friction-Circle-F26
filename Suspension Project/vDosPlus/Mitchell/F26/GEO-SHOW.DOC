@@ -1,0 +1,39 @@
+                              Sketch vehicle
+
+                     +-----------------------------+
+                     |  F -  Full-Featured sketch  |
+                     |  P -  Suspension Only       |
+                     |  A -  Auxiliary Only        |
+                     |  R -  Remove features       |
+                     |  V -  Vehicle parameters    |
+                     |  S - <Sketch Suspension   > |
+                     +-----------------------------+
+
+You may sketch the suspension to verify your data input.  Looking at a
+drawing of the suspension is often more meaningful than staring at X-Y-Z
+co-ordinates.  The S or <Sketch Suspension> choice will produce the
+drawing.
+
+------------------------------------------------------------------------
+The other choices define the sketch.  You may draw both suspension and
+auxiliary points or either.  The <Suspension Only> choice often makes
+the A-arms clearer because the springs and swaybar are not shown.
+
+The R or <Remove Features> choice is a toggle switch of whether or not
+to strip the full-featured sketch and reveal the stick-model underlying
+the sketch.  This option also labels the points.  If you turn this
+option off, the sketch will be produced faster.
+------------------------------------------------------------------------
+Vehicle parameters:   You may view the suspension from behind (an
+                      elevation angle of 0.0) through any position
+                      to straight above (elevation angle of 90.0).
+                      Changing the elevation angle will often make
+                      the sketch more realistic.
+
+                      You may also change the tire aspect ratio.
+
+                      You may also choose to draw a sedan rather than
+                      a formula car.  The sedan may be either left
+                      hand drive or right hand drive.  The position
+                      of the driver is an important visual clue to the
+                      viewing perspective, which is from the rear.

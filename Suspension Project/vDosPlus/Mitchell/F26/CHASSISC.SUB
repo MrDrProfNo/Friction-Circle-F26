@@ -1,0 +1,36 @@
+  17  17
+Origin               0.00     0.00     0.00
+A                    0.00     0.00     0.00
+C                    0.00     0.00     0.00
+D                    0.00     0.00     0.00
+F                    0.00     0.00     0.00
+T                    0.00     0.00     0.00
+U                    0.00     0.00     0.00
+X                    0.00     0.00     0.00
+Y                    0.00     0.00     0.00
+A opposite           0.00     0.00     0.00
+C opposite           0.00     0.00     0.00
+D opposite           0.00     0.00     0.00
+F opposite           0.00     0.00     0.00
+T opposite           0.00     0.00     0.00
+U opposite           0.00     0.00     0.00
+X opposite           0.00     0.00     0.00
+Y opposite           0.00     0.00     0.00
+A                C
+A                D               
+C                F               
+D                F
+F                T
+X                Y
+A opposite       C opposite
+A opposite       D opposite
+C opposite       F opposite
+D opposite       F opposite
+F opposite       T opposite
+X opposite       Y opposite
+A                A opposite
+C                C opposite
+D                D opposite
+F                F opposite
+T                T opposite
+

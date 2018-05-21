@@ -1,0 +1,20 @@
+                                SCRUB
+
+SCRUB refers to the horizontal movement of the tire contact patch.
+Positive scrub represents an outward movement of the contact patch,
+generating a wider track.  Negative scrub represents the inward movement
+of the tire contact patch.
+
+Scrub as a function of body roll also depends upon the center of
+rotation, which is the centerline of the vehicle at ground level in this
+program.  This assumption will cause positive scrub on the loaded wheel
+and negative scrub on the unloaded wheel as a result of positive body
+roll.  This may or may not represent the actual movement of the vehicle.
+Net Scrub may be a more realistic indicator.
+
+The tire contact patch used in this program corresponds to the
+centerline of the tire.  This is reasonable for a very thin tire, but
+modern racing tires are not thin.  The center of pressure of the tire
+should be used for the contact point, but this is a very complex
+subject.
+

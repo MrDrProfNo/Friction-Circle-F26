@@ -1,0 +1,15 @@
+   +--------------------------------------------------------------------+
+   |                                                                    |
+   |   Pause        No Pause     - <Pause after Table of Roll values>   |
+   |                                                                    |
+   +--------------------------------------------------------------------+
+
+The Pause after Table option is used in the Full Ride and Roll option to
+pause after the Tabular display of roll values before the screen is
+cleared to show the next graphics.  This allows you to study the screen
+or to do a PrintScreen.
+
+NOTE: The other pause option stopped the program after the graphics
+      display.  This option stops the program after the tabular
+      display.
+

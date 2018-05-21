@@ -42,6 +42,7 @@ from force_calculator import createDataframe
 from forces_parser import parse, readParseToExcel
 from friction_circle_init import init
 from macro import macroMain
+from traceback import print_tb
 
 import os
 
@@ -120,7 +121,7 @@ def main():
 	print("Generated vDosPlus process with PID:", pid)
 
 	# Run the macro
-	macroMain(dim_force_dfs)
+	macroMain(dim_force_dfs, paths)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)
@@ -139,5 +140,6 @@ if __name__ == "__main__":
 		main()
 	except Exception as e:
 		print("Encountered Error during runtime: \n", e.args)
+		print_tb(e.__traceback__)
 	finally:
 		input("Press Enter when done")

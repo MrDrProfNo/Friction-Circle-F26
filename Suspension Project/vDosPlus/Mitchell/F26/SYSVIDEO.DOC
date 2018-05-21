@@ -1,0 +1,18 @@
+Select the Graphics Board in use with your computer:
+
+   1.  CGA:      Color Graphics Adaptor  (also Compaq, etc.)
+   2.  MCGA:     M Color Graphics Adaptor
+   3.  EGA:      Enhanced Graphics Adaptor
+   4.  EGA64:    Enhanced Graphics Adaptor with 64Kb
+   5.  EGAmono:  Enhanced Graphics Adaptor - Monochromo monitor
+   6.  IBM-8514  high resolution graphics card
+   7.  HercMono: Hercules Monochromo
+   8.  ATT400:   AT&T 6300 (400 line)
+   9.  VGA:      Video Graphics Array
+   A.  PC3270:   IBM PC 3270
+
+   B.  Detect:   Let the software detect the Graphics board in use
+                (be sure to verify the selection).
+   C.  Check:    Check or verify the Graphics choice:  draw a series
+                 of boxes within boxes in various colors.
+   Q.  Quit:     Accept the last solution and leave this menu.

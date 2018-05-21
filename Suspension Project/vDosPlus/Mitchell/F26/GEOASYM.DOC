@@ -1,0 +1,29 @@
+   +---------------------------------------------------------------+
+   |                                                               |
+   | <Road Racing>  Oval Track   - <Is the suspension ASYMMETRIC>  |
+   |                                                               |
+   +---------------------------------------------------------------+
+
+An asymmetric suspension uses different suspension mounting points on the
+left and right sides of a car.  This is normally seen only on oval track
+cars.  Most road racing cars use the same suspension mounting points on
+both sides of the car.  Of course, they are really mirror images, so the
+suspension points may be the similiar but the suspension parts are not
+interchangeable.
+
+If you select the ASYMMETRIC suspension option, then you must enter the
+suspension points for both sides of the car.
+
+If you do not select the ASYMMETRIC suspension option, then you only enter
+one set of suspension points and the program applies them to both sides of
+the vehicle.
+--------------------------------------------------------------------------
+
+Many solid rear axle suspensions are asymmetric because of the Panhard Rod
+or the Watts link.  Pittman Arm or Draglink steering systems are also
+usually asymmetric.
+
+If you attempt to read an asymmetric suspension file without selecting the
+Asymmetric option, the program will ask you if you want to switch to the
+Asymmetric option.  If you do NOT switch to the Asymmetric option, the
+points will be converted to a symmetric case, which will probably be wrong.

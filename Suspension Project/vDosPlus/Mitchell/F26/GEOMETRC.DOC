@@ -1,0 +1,19 @@
+    +--------------------------------------------------------------+
+    |                                                              |
+    |  <Inches>      Centimeters  - <Unit of Length measurement>   |
+    |                                                              |
+    +--------------------------------------------------------------+
+
+If you select the METRIC option, then you may enter all suspension
+coordinates in centimeters.  The standard choice is <inches>.
+
+Actually, the Suspension Geometry is dimensionless.  The geometry is the
+same whether you are dealing with a full size vehicle or a scale model.
+All the METRIC option really does is change the scale of the graphics
+plotted on the computer screen.  The scale of those plots is designed
+for a vehicle with a 50-70 inch track.
+
+One advantage of the METRIC option is converting inches to centimeters.
+If you have data stored in inches, and you select the METRIC option, then
+the program will convert the suspension points from inches to centimeters.
+Or from centimeters to inches.

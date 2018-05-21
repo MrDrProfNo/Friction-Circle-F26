@@ -1,0 +1,41 @@
++------------------------- Keyboard Control -----------------------------+
+ +------------------------- Tutorial Menu --------------------------------+
+ |     Primary          eXtra            Other            Sketch          |
+ |     tutorials        tutorials        displays         suspension      |
+ +------------------------------------------------------------------------+
+         !                !                !                !
+   +--------------- +--------------- +--------------- +--------------------
+   |Graphic Perspec |Caster          |Suspension Leng |Full-Featured sketch
+   |Ride Height     |Caster Trail    |Kinematics vs.  |Suspension Only
+   |Roll            |Toe or ToeSteer |Display Paramet |Auxiliary Only
+   |Steer           |Net Steer/Acker |Display Points  |Remove features
+   |Camber          |Side View Swing |Change graphic  |Vehicle parameters
+   |Scrub           |Anti-Lift/Squat |Solution Summar |Sketch Suspension
+   |IC/Virtual Swin |Anti-Lift/Squat |Fundamental Ana +--------------------
+   |Roll Center     |Shock Travel    |Rotation Analysis
+   |Kingpin         |Motion Ratio    |Save Force Points
+   |Kingpin Offset  |Swaybar Twist   |Roll Center Analysis
+   |QUIT - return   |Halfshaft Plung |QUIT - return to CAD
+   +--------------- |QUIT - return   +---------------------
+                    +---------------
+-------------------------------------------------------------------------
+Hit F1 for instructions on using this Pull-down menu.
+Hit F2 for information on specific choices.
+Use F3 to show all sub-menus.  Use F4 to change colors.
+
+The tutorials offer detailed explanations of the suspension parameters.
+The Primary tutorials are the front-view parameters, including camber,
+scrub, instant center, roll center and kingpin.
+
+The eXtra tutorials include the sideview parameters such as caster,
+caster trail, sideview swing arm, and Anti-Dive/Anti-Squat/Anti-Lift.
+It also includes the top view parameters of toe steer, net steer and
+Ackerman analysis.  This section also includes motion ration or
+velocity ratio, swaybar twist and halfshaft plunge and inclination.
+
+The Other reports imclude a variety of special reports such as analysis
+of suspension lengths, the X-Y-Z location of the suspension points, a
+detailed analysis of the mathematical solution of the problem, and a
+fundamental analysis of the suspension.  There is also a report which
+gives the length of the Upper A-arm to produce a suspension which will
+have a roll center which does not more horizontally due to body roll.

@@ -1,0 +1,20 @@
+                    +--------------------------------------+
+                    |            Structure Menu            |
+                    |                                      |
+                    |    1 -  Yes Chassis of car           |
+                    |    2 -  Yes R Lower Wishbone         |
+                    |    3 -  Yes R Upper Wishbone         |
+                    |    4 -  Yes Right Hub                |
+                    |    5 -  Yes R Steering arm           |
+                    |    6 -  Yes R Spring/shock           |
+                    |    7 -  Yes Right halfshaft          |
+                    |    A -  All sub-structures           |
+                    |    V - <Quit, View the structure>    |
+                    +--------------------------------------+
+
+     Enter choice (1/2/3/4/5/6/7 ... ) or use arrow keys and hit <ENTER>
+
+This menu allows you to select the suspension elements which will appear
+in the drawing.  There is an ALL option to select all suspension
+elements.  Eliminating unnecessary elements makes the elements you wish
+to examine clearer.

@@ -33,8 +33,8 @@ class Car:
 		"""
 		params = {}
 		for line in open(cfg):
-			if line.startswith("#"):
-				continue  # Skip comments
+			if line.startswith("#") or line == "\n":
+				continue  # Skip comments and empty lines
 			param, value = map(str.strip, line.split("="))
 			params[param] = Decimal(value)
 		CG = params["CG"]

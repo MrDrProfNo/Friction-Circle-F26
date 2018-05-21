@@ -1,0 +1,15 @@
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |   Velocity     <Motion>     - <Velocity Ratio or Motion Ratio>   |
+   |                                                                  |
+   +------------------------------------------------------------------+
+
+The relationship between wheel travel and shock travel can be expressed in
+two different ways, called the Motion Ratio and the Velocity Ratio.
+
+The Motion Ratio, which is the default, is Shock Travel / Wheel Travel.
+
+The Velocity Ratio is Wheel Travel/Shock Travel = 1 / Motion Ratio.
+
+Select the ratio you are most comfortable with.  Both ratios are shown in
+the Tutorial.

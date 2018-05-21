@@ -1,0 +1,13 @@
+   +-----------------------------------------------------------+
+   |                                                           |
+   |  <Plot Data>   No Plot      - <Use Graphics Capability>   |
+   |                                                           |
+   +-----------------------------------------------------------+
+
+The Plot option will use the Graphics capability of your computer.
+The No Plot option will avoid using the graphics capability.  The
+primary use for this option is for computers without a graphics
+card.
+
+If your computer does not have a Graphics board, this option will
+be selected automatically.

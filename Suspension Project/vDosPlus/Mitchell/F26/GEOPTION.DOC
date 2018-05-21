@@ -1,0 +1,35 @@
+                            Suspension options
+                      +-----------------------------+
+                      |  1 -  Show Options/Attach.  |
+                      |  2 - <Tie-rod attachment  > |
+                      |  3 -  Use Halfshaft         |
+                      |  4 -  Use Spring and Shock  |
+                      |  5 -  Spring attachment     |
+                      |  6 -  NO Motion Ratio comp  |
+                      |  7 -  Use Swaybar           |
+                      |  8 -  Swaybar Attachment    |
+                      |  9 -  Use Push/Pull Rod     |
+                      |  0 -  Push/Pull Rod Attach  |
+                      +-----------------------------+
+
+There are several suspension options available for the various structures.
+You may decide whether or not to include various suspension elements in
+your computations, including Spring/Shock, Swaybar, Halfshaft and
+Push/Pull rod.  Do not Use Halfshafts unless the suspension has them.
+--------------------------------------------------------------------------
+
+Some structures do not support Swaybar or Push/Pull rods.  If the choice
+does not appear in this menu, then the structure does not support the
+element.  To do Push/Pull rods you must have Suspension_Type=4 or 5.
+
+An important choice is whether or not to do the Motion Ratio computations.
+Selecting this option will double the computation time because the
+suspension is lowered 0.01 inch for a base computation, and then raised
+to desired height and computed again.  This gives you a very accurate
+Motion Ratio value (or Veleocity Ratio, if you prefer) but takes time.
+
+You may relocate some attachment points.  For instance, some formula cars
+have a double A-arm rear suspension but with the 'steering tie-rod' (or
+it's equivalent) attached to the lower A-arm rather than to the chassis.
+You could also attach the spring or swaybar to different suspension rods.
+

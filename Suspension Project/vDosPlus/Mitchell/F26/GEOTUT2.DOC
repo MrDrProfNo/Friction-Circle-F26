@@ -1,0 +1,16 @@
+                     +----------------------------+
+                     | 1 -  Caster                |
+                     | 2 -  Caster Trail          |
+                     | 3 -  Toe or ToeSteer       |
+                     | 4 -  Net Steer/Ackerman    |
+                     | 5 -  Side View Swing Arm   |
+                     | 6 -  Shock Travel          |
+                     | 7 -  Motion Ratio          |
+                     | 8 -  Swaybar Twist         |
+                     | Q - <QUIT - return to CAD> |
+                     +----------------------------+
+
+This is the second set of suspension tutorials, containing additional
+suspension parameters.  The tutorials show, in words and graphs, how the
+parameters are calculated.
+

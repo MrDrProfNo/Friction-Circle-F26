@@ -1,0 +1,19 @@
+                                SHOCK TRAVEL
+
+     Shock Travel is the distance the shock or spring expands or compresses
+in reaction to suspension movement.  Shock Travel is defined to be zero at
+Ride=0.0 and Roll=0.0.  A positive value indicates the shock/spring unit
+is getting longer; a negative value indicates compression.  For a simple
+coilover spring/shock set-up, bump is upward movement of the wheel or
+downward movement of the vehicle (negative value of Ride) and will cause
+compression of the spring/shock. This will result in a negative value for
+Shock Travel.  Droop (positive value of Ride) represents expansion of the
+spring/shock unit and a positive value of Shock Travel.
+
+     The program will handle a variety of rocker arm arrangements (rocker
+arm, push rod, pull rod).  But for some arrangements the relationship
+between Ride height and Shock Travel may be reversed.  Bump may cause
+expansion and a positive value of Shock Travel.  The simplest example of
+this would be a coilover shock mounted near the bottom of the vehicle and
+attached to the upper A-arm.
+

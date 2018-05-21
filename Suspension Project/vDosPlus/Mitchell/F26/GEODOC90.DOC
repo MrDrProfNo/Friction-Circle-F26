@@ -1,0 +1,37 @@
+>Analysis of Roll Center and Instant Centers:
+Current Ride, Roll, Steer and Grow    0.000    0.100    0.000    0.000
+Location of current Roll Center      -0.398    1.859
+Location of original Roll Center     -0.000    1.859
+Inclination of Instant Center:       -6.600/ 118.566 is  -3.186 degrees
+
+True Length of Lower A-Arm           17.500
+Inclination of current Lower A-Arm    0.158/ 112.575 is   0.080 degrees
+True Length of Upper A-Arm           12.976
+Inclination of Upper A-Arm:          10.609/ 111.308 is   5.444 degrees
+Inclination of Desired RC:            1.859/  33.003 is   3.225 degrees
+Location of desired Instant Center  -84.172    6.602
+
+Desired Inclination of Upper A-Arm   10.607/ 109.917 is   5.512 degrees
+
+The Mitchell Analysis Upper Length   10.110   rather than  12.976
+
+-----------------------------------------------------------------------
+<                          ROLL CENTER ANALYSIS
+
+This is a proprietary method for determining the length of the Upper A-Arm
+which will provide minimal lateral roll center movement as the vehicle
+rolls.  This procedure must be called with RIDE=0.0, STEER=0.0 and with a
+small, but not zero, value of ROLL (0.1 is a good value.)  When this is
+done the procedure will compute the desired length for the Upper A-Arm.
+This value can then be entered in the Dynamic Editing section.
+
+>  For the above example, an Upper A-Arm length of 10.110 gave the
+following results:
+
+                    ROLL      LATERAL ROLL CENTER LOCATION
+                    1.00              -0.009
+                    2.00               0.012
+                    3.00               0.088
+                    4.00               0.244
+
+Even greater accuracy can be obtained by performing the computation again.

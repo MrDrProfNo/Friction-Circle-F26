@@ -1,0 +1,19 @@
+  +------------------------------------------------------------------+
+  |                                                                  |
+  |  <Degrees>     Inches       - <Toe Steer in Degrees or Inches>   |
+  |                                                                  |
+  +------------------------------------------------------------------+
+
+Toe steer can be measured in either <degrees> (the default) or inches
+(or centimeters in the metric case).  When inches is selected, the
+program assumes you have placed a 28-inch long board flush against the
+wheel.  Then toe steer is measured as the difference between the front
+of the board and the centerline of the car and the rear of the board
+and the centerline of the car.  Alignment wheels do the same thing.
+
+The 28-inch base measurement can be changed in the #1 editing
+selection.  The 28-inch reference is used by one oval track team.
+Other teams may use an alignment wheel or board of some other
+reference length.  The measured toesteer is the difference between the
+two ends of the board, not just the movement of one end of the board.
+The relation is Toesteer(inches) = Span * Tangent (Toesteer in degrees)

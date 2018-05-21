@@ -1,0 +1,24 @@
+                          SIDE VIEW SWING ARM
+
+     The Side View Swing Arm is used to understand the vertical motion
+of the vehicle in reaction to braking and acceleration. The braking
+reaction is called Anti-Dive at the front and Anti-Lift at the rear.
+Under braking the tends to dive at the front and lift at the rear. This
+tendency can be resisted by building "Anti-Dive" and "Anti-Lift" into
+the suspension geometry.
+
+     Under acceleration the rear of the vehicle tends to squat (assuming
+the vehicle is rear-wheel drive). This tendency can be resisted by
+building "Anti-Squat" into the suspension.
+
+     This analysis begins with a Virtual Swing Arm which is located at
+an Instant Center, just like the Front View Virtual Swing Arm and Instant
+Center.  But look at the suspension geometry rather than the front view.
+The Instant Center is determined in two steps. The first, which is often
+overlooked, involves projecting the upper and lower control arms into the
+plane of the tire.  Then those points are projected forward or backward to
+a side view instant center.  The Side View Virtual Swing Arm is assumed to
+be mounted at this instant center.  For small movement, the suspension can
+be analyzed as if it were a swing arm mounted in this manner.
+
+

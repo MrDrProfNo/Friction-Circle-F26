@@ -1,0 +1,58 @@
++------------------------- Data Input & Control -------------------------+
+|   Cad or        suspension    Edit          Sketch        eXecute      |
+|   iterate       Options       data          vehicle       or quit      |
++------------------------------------------------------------------------+
+     !             !             !             !             !
+   +------------ +------------ +------------ +------------ +-----------
+   |CAD=Cursor   |Show Options |Iteration li |Full-Feature |Execute
+   |Iterative    |Tie-rod atta |Description  |Suspension O |Read data
+   +------------ |Use Halfshaf |Cursor graph |Auxiliary On |Save data
+                 |Use Spring a |Analysis of  |Remove featu |GO restart
+                 |Spring attac |Vehicle move |Vehicle parm |Quit
+                 |NO Motion Ra |Suspension P |Sketch Suspe +-----------
+                 |Use Swaybar  |Auxiliary po +---------------------
+                 |Swaybar Atta +-------------------
+                 |Use Push/Pull Rod
+                 |Push/Pull Rod Attach
+                 +---------------------
+ Hit F1 for instructions on using this Pull-down menu.
+ Hit F2 for information on specific choices.
+ Use F3 to show all sub-menus.  Use F4 to change colors.
+--------------------------------------------------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                           Data Input & Control
+
+CAD or iterate : choose between the two program modes.  CAD allows you to
+                 manipulate the vehicle from the keyboard, changing ride
+                 height, roll angle, steering input, and tire growth, and
+                 observe the results on the screen.  Iterate calculates a
+                 wide range of positions and produces tables of results.
+
+suspension Options : You may tailor the program to your needs by choosing
+                     just the options you want.  If you are doing a rear
+                     suspension, you may be very interested in halfshaft
+                     plunge.  If you are doing a front suspension, you
+                     may not be interested.  You can also change some
+                     attachment points; you can attach the swaybar drop-
+                     link to the upper A-arm while the spring is attached
+                     to the lower A-arm or a bell-crank pivot.
+
+Edit data : Enter and edit the suspension points as well as the description
+            of the data and even the origin of your co-ordinate system.
+            This includes a graphical input and verification capability.
+--------------------------------------------------------------------------
+                           Data Input & Control
+
+Sketch vehicle : This option allows you to look at the vehicle you have
+                 specified and see if all the points are in the proper
+                 places.  You can look at the vehicle from any elevation.
+                 The top view may help to identify the proper location
+                 of the swaybar and the steering tierod.
+
+eXecute or quit : This sub-menu allows you to leave the Data Input and
+                  Control section of the program and begin processing.
+                  You may also Quit the program or start over with the
+                  program options menu.  Other choices include Reading
+                  another data file or Saving a file.  However, data
+                  files are automatically saved when you go to the
+                  processing portion of the program.

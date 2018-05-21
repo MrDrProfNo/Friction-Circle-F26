@@ -1,0 +1,63 @@
+>PUSHDEMO  Double A-Arm, Push-rod, swaybar Demo
+Ride =-1.000  Roll = 2.000  Steer = 0.500  Tire = 0.000
+
+                             FUNDAMENTAL ANALYSIS
+
+This analysis of instantaneous parameters is based on an analysis of the
+instant center.  This analysis describes the movement of the tire over small
+movements.  It may be compared with computed values in Display Parameters.
+The Loaded side has an Instant Center at       86.561 horizontal
+                                     and        0.446 height
+
+    The instantaneous Ride Camber is            0.662 degrees/inch
+                      Roll Camber is            0.620 degrees/degree
+                      Ride Scrub is            -0.005 inches/inch
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The Unloaded side has an Instant Center at    121.808 horizontal
+                                       and      3.119 height
+
+    The instantaneous Ride Camber is            0.470 degrees/inch
+                      Roll Camber is            0.730 degrees/degree
+                      Ride Scrub is            -0.026 inches/inch
+    The instantaneous Ride Net Scrub is        -0.031 inches/inch
+
+-----------------------------------------------------------------------
+<                          FUNDAMENTAL ANALYSIS
+
+The Instant Center of the suspension provides a means of computing the
+theoretical Ride Camber, Roll Camber and Ride Scrub.  Those values are
+shown in this report.
+
+The Theoretical formulas are:
+
+    Ride Camber = 57.296 * ArcTan(1.0/Swing Arm length)
+                = 57.296 /Swing Arm Length.  (approximation)
+
+    In the above example, swing arm length=86.664 gives Ride Camber=0.661.
+
+    Roll Camber = 1.0 - (track/2.0)/Swing arm length
+                = 0.620 in the above example
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Ride Scrub  = Swing Arm Height / Swing Arm Length
+                = 0.425/86.664  = 0.005
+    Ride Scrub  = 3.120/121.802 = 0.028
+    Ride Net    =                 0.033  vs. 0.027 actual
+>
+---------------------------------------------------------------------------
+- - - - - - - - - - - - - -  THEORETICAL ANALYSIS  - - - - - - - - - - - -
+
+Computed suspension parameters:
+
+     Track of 32.80     Ride Camber =       1.747 * (1.0 - Roll Camber)
+     One degree of Roll is                   0.573 inches of spring travel
+
+     Loaded side Virtual Swing Arm length   =  118.008
+     Instantaneous Ride Camber is                0.486 degrees per inch
+     Instantaneous Roll Camber is                0.722 degrees per degree
+
+
+     Unloaded side Virtual Swing Arm length =  192.851
+     Instantaneous Ride Camber is                0.297 degrees per inch
+     Instantaneous Roll Camber is               -0.829 degrees per degree
+

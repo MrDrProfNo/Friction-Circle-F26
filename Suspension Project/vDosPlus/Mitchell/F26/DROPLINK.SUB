@@ -1,0 +1,11 @@
+   5   4
+X opposite           0.00     0.00     0.00
+Y opposite           0.00     0.00     0.00
+X                    0.00     0.00     0.00
+Z opposite           0.00     0.00     0.00
+Z                    0.00     0.00     0.00
+X opposite      *Y opposite      *
+X               *X opposite      *
+X               *Z               *
+X opposite      *Z opposite      *
+

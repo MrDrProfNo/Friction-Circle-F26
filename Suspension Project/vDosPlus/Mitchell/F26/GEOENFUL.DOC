@@ -1,0 +1,20 @@
+This is the full screen editor to enter suspension co-ordinates, in the
+Full Ride & Roll mode.  The X-Y-Z co-ordinates of all suspension points as
+well as steering links must be entered.  These points must be measured
+very carefully in order to produce accurate results.  Errors as small as
+a quarter of an inch can destroy the accuracy of the results.
+
+The bottom of the screen specifies Ride height and Chassis Roll parameters.
+These are the computational parameters.  They control the range of
+suspension travel and the computation time.  The standard of 6 iterations
+0.50 inch Ride height represents 6 iterations in bump for a total bump
+travel of 3.00 inches as well as 6 jounce iterations for 3.00 inches of
+jounce travel.  Six roll iterations of 0.50 degrees will cover 3.0 degrees
+of chassis roll.  Production vehicles may roll much more.
+
+There is also a run-time estimate which gives the user an idea how long the
+computations will take (i.e., watch the screen, go for coffee, or go to
+lunch).  The estimates are for PC machines without a math co-processor.
+Computers with a math co-processor (8087, 80287 or 80387 chip) or faster
+internal speeds (XT, 286 or 386 machines will run faster.
+

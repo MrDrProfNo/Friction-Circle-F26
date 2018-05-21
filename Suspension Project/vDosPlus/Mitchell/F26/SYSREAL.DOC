@@ -1,0 +1,18 @@
+>                     Enter a REAL number: < 100.00>
+
+<
+                    RESPONDING TO A REAL NUMBER PROMPT
+
+The program is asking for a REAL number.  Enter the number in the
+high-lighted area.  You may use a decimal point and a minus sign.
+If you do not use a decimal point, one will be inserted after the
+number you enter.  Do not use parentheses, i.e. (123.45), for negative
+amounts. Use the minus sign for negative numbers, i.e. -123.45.
+
+If you want the originally displayed value, press Enter at the beginning.
+
+Press Enter after entering the value.
+
+Press the F2 key for a description of what number the program expects
+  (details on units, etc.)
+

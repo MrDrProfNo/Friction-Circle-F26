@@ -50,3 +50,20 @@ rear_parsed=ROutput.txt
 # will start up for you during runtime
 VDosPlus_path=./Suspension Project/vDosPlus/vDosPlus.exe
 
+# Keypress sequence to get to the front axle run configuration in Mitchell's
+# Enter as a series of arrow keys, which would be used to
+# select the desired run configuration during normal use. So, for example, the
+# instructions:
+# down,down,right
+# would select the run configuration that was in the second column from the left,
+# third row from the top.
+#
+# Spaces can be used, but commas must be the separator
+# If left blank, the first configuration will be selected.
+front_axle_instructions=
+
+
+# Keypress sequence to get to the rear axle run configuration in Mitchell's.
+# Same instructions as the front_axle_instructions field.
+rear_axle_instructions=down
+

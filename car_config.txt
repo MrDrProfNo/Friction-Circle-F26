@@ -1,16 +1,29 @@
-# Car weight
+# Expects fields with the following names, exactly: W, D, W_d, CG, WB, TW, A, A_d
+#
+# Lines beginning with a '#' are ignored, and empty lines are permitted between
+# commands and values as desired. Anything else will be interpreted as a field,
+# and may cause issues.
+
+# Car weight [lbs]
 M=345
-# Driver weight
+
+# Driver weight [lbs]
 D=180
-# Weight Distribution
+
+# Weight Distribution [% Front]
 W_d=0.469
-# CG height
+
+# CG height [in]
 CG=11.7
-# Wheelbase
+
+# Wheelbase [in]
 WB=65
-# Track Width
+
+# Track Width [in]
 TW=45
-# Aero
+
+# Total Aero Downforce [lb]
 A=465
-# Aero Distribution
+
+# Aero Distribution [% Front]
 A_d=0.44

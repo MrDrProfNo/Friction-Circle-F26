@@ -1,0 +1,14 @@
+                            +----------------+
+                            | X -  Execute   |
+                            | Q -  Quit      |
+                            | T - <Tutorial> |
+                            +----------------+
+
+This option allows you to select the tutorials, to execute (re-calculate
+after moving suspension points) or to leave the program (quit).
+
+The key combination Alt-T will also select the Tutorials without going
+through this menu.
+
+The key combination Alt-Q will leave the program (quit).
+

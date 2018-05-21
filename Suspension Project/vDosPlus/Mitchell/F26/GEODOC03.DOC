@@ -1,0 +1,23 @@
+                              BODY ROLL
+
+BODY ROLL is measured in degrees.  The amount of body roll is shown
+under the word ROLL.  The amount and direction of body roll is depicted
+graphically by a vertical bar above the chassis.  The angle of this line
+is exaggerated by a factor of twenty.  Two degrees of body roll, which
+is a considerable amount for a race car, is shown as forty degrees.
+
+Positive body roll represents the chassis rolling to the right as it
+would in a left hand turn.  Negative body roll is to the left, as in
+a right hand turn.
+
+The chassis is assumed to roll about a point at ground level on the
+centerline of the vehicle.  This assumption provides consistency and
+simplicity but contradicts the idea that the chassis rolls about the
+roll center.  But there is a difference between kinematics and
+mechanics.  The roll center is a conceptual point determined by
+mechanics.  Some forces, such as jacking forces, are assumed to act
+through the roll center.  The moment arm which determines body roll
+is related to the roll center.  But the actual location of the vehicle
+in a turn is the result of many forces.  For proper analysis one must
+know the actual ride height and inclination of the vehicle on the track.
+

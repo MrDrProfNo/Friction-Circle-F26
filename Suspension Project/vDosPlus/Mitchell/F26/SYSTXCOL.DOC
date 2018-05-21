@@ -1,0 +1,12 @@
+                           +------------------+
+                           | Mono:  0 1 2 3 4 |
+                           | Color:<0 1 2 3 4>|
+                           +------------------+
+
+        Are the numbers in the COLOR line CLEAR above (Y/N)?
+
+This question determines whether you have a color monitor.  If you
+answer YES above and do not have a color monitor, some text will be
+unclear.  If you have a color monitor and do not choose the Color
+option, then you will not get color text.
+

@@ -1,0 +1,47 @@
+Rear A-Arm Structure
+This solid rear axle suspension involves a longitudional A-Arm, or two
+links from the chassis (mounted either in front or behind the rear axle)
+meeting at a common point on the rear axle housing.
+
+There are also two other links from the chassis to the axle.
+
+This model will support spring/shock but not swaybar.
+There is no reason to do Half-shafts with a solid rear-axle.
+*
+CHASSISR.SUB    *                *                *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *Chassis         *
+X Y Z
+                *                *                *                *
+REARAARM.SUB    *Tub T           *Tub T opposite  *Arm             *
+  1.00000  1.00000  1.00000  5 Contact Patch, L*Longitud. A-Arm *
+Y X Z
+Axle H opposite *Axle K opposite *                *                *
+TRAILVRT.SUB    *Tub A           *Tub A           *Vrt+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*Link/Vertical   *
+Y X Z
+Axle H          *Axle K          *                *                *
+TRAILHRZ.SUB    *Tub A           *Vrt+ F          *Hrz+            *
+  1.00000  1.00000  1.00000  0 Axle Span       *Link/Horiz.     *
+Z X Y
+Hrz+ E          *Arm S           *                *                *
+REARAXLA.SUB    *Hrz+ E          *Arm S           *Axle            *
+  1.00000  1.00000  1.00000  0 Leading Link    *Rear axle       *
+Y Z X
+Axle E opposite *Tub A opposite  *                *                *
+LONGLINK.SUB    *Tub A           *Axle E          *Lnk+            *
+  1.00000 -1.00000  1.00000 10 Longitud. Link R*R Longitud. Link*
+X Y Z
+Tub A           *Axle E          *                *                *
+LONGLINK.SUB    *Tub A opposite  *Axle E opposite *Lnk-            *
+  1.00000 -1.00000  1.00000 10 Longitud. Link L*L Longitud. Link*
+X Y Z
+Tub A opposite  *Axle E opposite *                *                *
+COILOVER.SUB    *Tub U           *Axle V          *Col+            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock R*R Spring/shock  *
+X Y Z
+Tub U           *Axle V          *                *                *
+COILOVER.SUB    *Tub U opposite  *Axle V opposite *Col-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock L*L Spring/shock  *
+X Y Z
+Tub U opposite  *Axle V opposite *                *                *
+

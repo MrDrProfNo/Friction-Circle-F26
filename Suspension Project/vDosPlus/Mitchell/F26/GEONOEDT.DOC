@@ -1,0 +1,13 @@
+    +-----------------------------------------------------------+
+    |                                                           |
+    |   Edit Data    No Edit      - <Process without editing>   |
+    |                                                           |
+    +-----------------------------------------------------------+
+
+The Edit Data choice allows you to edit the suspension point data in
+the normal manner.  The No Edit option allows you to bypass the
+editing step and proceed directly to computations.  This is useful
+when reviewing a standard suspension or making a presentation.
+However, the option is fraught with danger if the file does not
+contain what you expect it to.
+

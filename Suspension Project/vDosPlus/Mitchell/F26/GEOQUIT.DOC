@@ -1,0 +1,11 @@
+           +-----------------------------------------------+
+           |                                               |
+           |   Are you finished with this program (Y/N)?   |
+           |                                               |
+           +-----------------------------------------------+
+
+If you respond Yes, the program will terminate.
+
+If you respond No, the program will restart without the tire required to
+reload the program or show the iuitial screens.
+

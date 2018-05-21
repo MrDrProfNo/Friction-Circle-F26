@@ -1,0 +1,82 @@
+UPPERARM Structure specification:  Single A-Arm with three other links.
+A upper wishbone with two links above which form a virtual A-arm and a third
+link to control steer.  This is often used with rear suspensions, which makes
+the tie-rod just another link.
+*
+CHASSISC.SUB    *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *
+X Y Z
+                *                *                *                *
+LOWERCOL.SUB    *Tub A           *Tub C           *Low+            *
+  1.00000  1.00000  1.00000  5 Contact patch, R*
+X Y Z
+Hub+ H          *Hub+ K          *                *                *
+STEER-VR.SUB    *Tub T           *Tub T           *Tie+            *
+  1.00000  1.00000  1.00000  0 Steer Vertical R*
+X Y Z
+Hub+ G          *Tub F           *                *                *
+STEER-HZ.SUB    *Tub T           *Tie+ D          *Rod+            *
+  1.00000  1.00000  1.00000  0 Steer Horizntl R*
+Z Y X
+Rod+ S          *Low+ B          *                *                *
+HUB2.SUB        *Low+ B          *Rod+ S          *Hub+            *
+  1.00000  1.00000  1.00000  0 Hub rods       R*
+Z X Y
+Hub+ E          *Tub D           *                *                *
+COILOVER.SUB    *Tub U           *Low+ V          *Col+            *
+  1.00000  1.00000  1.00000 10 Coilover Shock R*
+X Y Z
+Tub U           *Low+ V          *                *                *
+SWAYBAR.SUB     *Tub X           *Tub Y           *Bar+            *
+  1.00000  1.00000  1.00000  0 Swaybar mount, R*
+Y X Z
+Bar+ Z          *Low+ R          *                *                *
+SWAYLINK.SUB    *Bar+ Z          *Low+ R          *Lnk+            *
+  1.00000  1.00000  1.00000  0 Swaybar Link, R *
+X Y Z
+Low+ R          *Bar+ Z          *                *                *
+UP-ROD1.SUB     *Tub D           *Hub+ E          *Rd1+            *
+  1.00000  1.00000  1.00000 10 Upper Rod One, R*
+Z X Y
+Tub D           *Hub+ E          *                *                *
+UP-ROD2.SUB     *Tub F           *Hub+ G          *Rd2+            *
+  1.00000  1.00000  1.00000 10 Upper Rod Two, R*
+Z X Y
+Tub F           *Hub+ G          *                *                *
+LOWERCOL.SUB    *Tub A opposite  *Tub C opposite  *Low-            *
+  1.00000 -1.00000  1.00000  5 Contact patch, L*
+X Y Z
+Hub- H          *Hub- K          *                *                *
+STEER-VR.SUB    *Tub T opposite  *Tub T opposite  *Tie-            *
+  1.00000 -1.00000  1.00000  0 Steer Vertical L*
+X Y Z
+Hub- G          *Tub F opposite  *                *                *
+STEER-HZ.SUB    *Tub T opposite  *Tie- D          *Rod-            *
+  1.00000 -1.00000  1.00000  0 Steer Horizntl L*
+Z Y X
+Rod- S          *Low- B          *                *                *
+HUB2.SUB        *Low- B          *Rod- S          *Hub-            *
+  1.00000 -1.00000  1.00000  0 Hub rods       L*
+Z X Y
+Hub- E          *Tub D opposite  *                *                *
+COILOVER.SUB    *Tub U opposite  *Low- V          *Col-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock L*
+X Y Z
+Tub U opposite  *Low- V          *                *                *
+SWAYBAR.SUB     *Tub X opposite  *Tub Y opposite  *Bar-            *
+  1.00000 -1.00000  1.00000  0 Swaybar mount, L*
+Y X Z
+Bar- Z          *Low- R          *                *                *
+SWAYLINK.SUB    *Bar- Z          *Low- R          *Lnk-            *
+  1.00000 -1.00000  1.00000  0 Swaybar Link, L *
+X Y Z
+Low- R          *Bar- Z          *                *                *
+UP-ROD1.SUB     *Tub D opposite  *Hub- E          *Rd1-            *
+  1.00000 -1.00000  1.00000 10 Upper Rod One, L*
+Z X Y
+Tub D opposite  *Hub- E          *                *                *
+UP-ROD2.SUB     *Tub F opposite  *Hub- G          *Rd2-            *
+  1.00000 -1.00000  1.00000 10 Upper Rod Two, L*
+Z X Y
+Tub F opposite  *Hub- G          *                *                *
+

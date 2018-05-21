@@ -1,0 +1,19 @@
+                              SELECT MONITOR
+
+This option allows you to specify the graphics adaptor and video
+monitor you wish to use.  After selecting the monitor you can
+specify a mode, which precisely defines both the text and graphics
+output, including the resolution and the colors.
+
+The DETECT option will allow the software to select the monitor.
+
+The VERIFY option will display a series of boxes within boxes to
+verify your graphics selection.  If you don't see all the boxes
+on the screen, try another graphics mode.
+
+WARNING:  If you attempt to select a monitor combination you do
+not have, your computer may lock up.  You may be able to get out
+of this by hitting any key, or with the CTRL-Break, but you may
+have to re-boot your computer with the CTRL-ALT-DEL combination.
+
+The QUIT option picks the last choice you made and leaves the menu.

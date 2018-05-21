@@ -1,0 +1,20 @@
+   +----------------------------------------------------------+
+   |                                                          |
+   |   <Print>      No Print     - <Print hardcopy results>   |
+   |                                                          |
+   +----------------------------------------------------------+
+
+The <Print> option will permit you to produce hardcopy results of
+the input and the results of the computations.  With the No print
+option, there will be no printed output.
+
+You may use the PrtSc or PrintScreen function of your computer to
+copy the contents of the screen to the printer regardless of
+whether you select Print or No-Print in this option.
+
+To use PrtSc with screen graphics (instead of screen text) you
+must have invoked the GRAPHICS command before running the
+FreeBody suspension geometry program.  See your DOS manual for
+details of this command and for the types of printers it will
+work with.  It may not work with laser printers.
+

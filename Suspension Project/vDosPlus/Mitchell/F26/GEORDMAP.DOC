@@ -1,0 +1,136 @@
+               ROAD MAP FOR THE SUSPENSION GEOMETRY PROGRAM
+
+              +-------------------------------------------+
+              |  Program Options:  configure the program  |
+              +-------------------------------------------+
+                                    !
+                              +-----------+
+                              | Read File |<----------------------+
+                              +-----------+                       |
+                                    !                             |
+            +-----------------------------------------------+     |
+            |  Data Input & Editing:  enter & verify data   |-----+
+            |  choice of numeric and graphical editors      |
+            +-----------------------------------------------+
+                                    !
+                              +-----------+
+                              | Save File |
+                              +-----------+
+                                    !
+                                    !
+                                    !
+----------------------------------------------------------------------------
+                                    !
+                                    !
+       +---------------------------------------------------------+
+ +---->|  Processing of data: either iterative or cursor control |<----+
+ |     |  includes graphical or numerical output                 |     |
+ |     +---------------------------------------------------------+     |
+ |             !                 !          !             !            |
+ |   +-----------------+    +---------+     !     +----------------+   |
+ +---| Dynamic Editing |    | Special |     !     | Tutorials and  |---+
+     | of data points  |    |  views  |     !     | special reports|
+     +-----------------+    +---------+     !     +----------------+
+                                            !
+                                        +-------+
+                                        | Quit  |
+                                        +-------+
+
+----------------------------------------------------------------------------
+
+Program:    This menu allows you to configure the program to your own
+Options     application.  You may specify your video monitor, the units
+            you prefer to use (length in inches or metric, etc.), and
+            whether you have a symmetric suspension (road racing) or
+            asymmetric (oval track).  You may also specify if you want
+            printed output, and even the amount of detail of the
+            graphics which appear on the monitor.
+
+            Each time you restart the program, this menu will appear
+            with the choices you made for the last run.  You do not have
+            to configure the program each time you run the program.
+
+----------------------------------------------------------------------------
+
+Data Input:  This Pull-down menu includes the data input, editing and
+& Editing    suspension options.
+
+             The first choice is for CAD or Iterative mode.  In CAD mode
+             you manipulate the vehicle on the screen.  In Iterative mode
+             the computer runs through a series of values and prepares
+             tables of results, as well as files for the Display program.
+
+             Suspension options specify the details of the suspension you
+             are studying.  You may specify whether or not there is a
+             swaybar or halfshafts.  You may specify whether or not you
+             want to study spring/shock travel and whether or not you want
+             to compute a motion or velocity ratio.
+
+             The suspension options even allow you to define where the
+             various elements of the suspension are attached.  For instance,
+             the spring/shock may be attached to the lower A-arm while the
+             swaybar is attached to the upper A-arm.
+----------------------------------------------------------------------------
+
+             The Edit data choices allow you to enter the co-ordinates of
+             the suspension points, describe the file, and even specify
+             your co-ordinate system.
+
+             Most of this editing is done with full-screen editors to
+             enter numeric values.  The editors have check sums which
+             verify the input data.
+
+             Other options permit you to depict the suspension points on
+             the screen and move the points with the cursor arrows.
+
+             This selection also includes an analysis selection with more
+             verification data including Instant Centers and the length of
+             virtual swing arms.
+----------------------------------------------------------------------------
+
+Sketch:   This option produces a sketch of the suspension from various
+vehicle   perspectives.  The sketch also labels the suspension points.
+          This graphical sketch permits you to verify your data: if it
+          doesn't look right, it isn't right.
+
+          The sketch feature also permits you to specify a formula car
+          or sedan for the graphic displays.  The sedan can be either
+          left hand drive or right hand drive, for Europeans.
+----------------------------------------------------------------------------
+
+eXecute:  After completing the data input, the computer begins to process
+or quit   the data.  If you selected the Iterative mode, then the program
+          will run through the range of ride, roll and steer values you
+          selected.  After each series of iterations the computer will
+          produce a set of tables.  These tables will also be printed if
+          you specified printer output in the program options menu.
+
+          If you selected the CAD menu, then you may manipulate the
+          suspension geometry with the arrow keys (UP, DOWN, LEFT or
+          RIGHT), the PG UP and PG DN keys (to control steering), and
+          the INS and DEL keys to control tire growth/deflection.
+
+          In CAD mode you may also use the ESCape key to bring up a
+          pulldown menu for Dynamic Editing of suspension points.
+          This permits you to move points graphically on the screen.
+
+          The Tutorials permit detailed examination of each of the
+          suspension parameters to see how they are determined and
+          what they mean.
+------------------------------------------------------------------------------
+- - - - - - - - - - - - - -  SPECIAL FEATURES  - - - - - - - - - - - - - -
+
+The Tutorial section has several special reports, including the following:
+
+    Display an Analysis of the Suspension, including the lengths of links.
+    Display Suspension Parameters  (in non-graphic format)
+    Display Suspension Points  (numeric location of points)
+    Change the Graphic Scale used for Tutorials
+    Fundamental Analysis of suspension based upon the location
+        of the Instant Center
+    Roll Center Analysis - compute true upper A-Arm length to
+        produce roll center which will remain stationary as the
+        chassis rolls.
+
+    You can also examine the mathematical solution of the problem to see
+    if any suspension elements are binding or preventing a solution.

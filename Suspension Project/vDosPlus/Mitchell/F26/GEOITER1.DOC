@@ -1,0 +1,13 @@
+                         First Iteration Variable
+
+                          +--------------------+
+                          |  1 - <Ride Height> |
+                          |  2 -  Roll Angle   |
+                          |  3 -  Steer Angle  |
+                          |  4 -  Tire Growth  |
+                          +--------------------+
+
+Select the first iteration variable, usually Ride Height.  Selecting
+Ride Height will allow you to do a Full Ride and Roll computation, or
+simply a Ride Height computation.  This will produce tables showing
+the suspension parameters at different ride heights.

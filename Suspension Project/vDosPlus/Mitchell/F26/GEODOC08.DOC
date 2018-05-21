@@ -1,0 +1,21 @@
+                              ROLL CENTER
+
+If each suspension rotates about the Instant Center, then the entire
+chassis rotates about the Roll Center.  This imaginary point lies in
+the same plane as the Instant Centers and the Virtual Swing Axles.
+
+To determine the Roll Center, construct lines from the Instant Centers
+to the Contact patches.  The Roll Center is located at the intersection
+of these lines.
+
+If both Instant Centers are above ground and on the opposite side as
+their wheel, then the Roll Center will be above ground and between the
+wheels.  If one Instant Center is below ground and the other above, then
+the Roll Center will be outside the wheels.  If both Instant Centers are
+below ground, then the Roll Center will also be below ground.
+
+A high roll center usually means more jacking force which tends to raise
+the chassis (like short swing axle cars), but a high roll center
+minimizes body roll.  A low roll center, even below ground, minimizes
+the jacking effect but creates more body roll.
+

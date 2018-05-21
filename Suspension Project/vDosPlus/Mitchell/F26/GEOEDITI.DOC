@@ -1,0 +1,67 @@
+            Edit Data:  Iteration Limits and Co-Ordinate Origin
+
+This screen includes two un-associated types of data.  The first is the
+origin of YOUR co-ordinate system.  Many manufacturers use a co-ordinate
+system which differs from the system used by the Suspension Geometry
+program.  Many use a fixed point at the bottom of a bulkhead.  You may
+enter suspension points in your co-ordinate system by FIRST defining the
+origin of your co-ordinate system in this screen.
+
+Specify where the RbyN origin is in your system.  The RbyN origin is at:
+   X = Fore-Aft:  Centerline of wheel or tire contact patch
+   Y = Cross-car: Centerline of chassis
+   Z = Vertical:  Ground level
+
+Let us suppose that the origin of your system is the bottom of a bulkhead
+which is two inches off the ground and six inches in front of the tire
+centerline.  You would enter the Coordinate system origin as:
+             6.000   0.000  -2.000
+
+---------------------------------------------------------------------------
+              Wm C Mitchell Software Data Entry for Suspension Geometry
+Description Double_A-Arm_example_file_______________  Lengths in inches
+Output File Name OUTPUT______________  Input File was AADEMO.GEO
+
+                                   Fore/Aft    Width   Vertical
+Coordinate system origin           __0.000   __0.000   __0.000
+This is the location of the RbyN co-ordinate system in YOUR co-ordinate
+system.  If your co-ordinate system has the vertical origin (zero) on a
+bulkhead two inches above the ground, enter -2.000 for Vertical above.
+=========================================================================
+
+Please note that you can not change the direction of positive values,
+which remain:
+   X = Fore-Aft:  Positive is towards the rear of the car
+   Y = Cross-car: Positive is the distance from the Center-line
+                 (when entering Asymmetric suspensions, both sides
+                  are entered as positive: negative numbers would
+                  only be used for special cases, like solid rear-
+                  axle suspensions.)
+   Z = Vertical:  Positive is Up.
+---------------------------------------------------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                     Iterative Ranges and Increments
+
+Ride height parameters:      _6 steps by __1.000 up and down from __0.000
+Chassis Roll parameters:     _6 steps by __0.500 increasing from  __0.000
+
+This calls for  182 iterations taking about  15.2 minutes.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you are in Iterative Mode then this screen will appear.  The screen
+shows the iteration variable (selected under the CAD/Iterate sub-menu)
+and permits the user to select the number of steps to be included in the
+iterative computation.  The user also selects the size of each step and
+the initial position.  All iterative variables will be  treated as
+'up and down' except for roll angle, which only increases.
+
+Many aerodynamic cars are only interested in negative ride heights, i.e.,
+the car will never be higher than it is in the pits.  Aerodynamic pressure
+will force the car down with speed.  For this case you might use 8 steps
+by 0.250 inches from an initial position of -2.000.  This cover the range
+from -4.0 up to 0.0 by increments of 0.250.
+-------------------------------------------------------------------------
+
+The time estimate is an approximation for 8088 PCs.  Most newer computers
+will run faster.  Use this as a rough indicator only.  You may be able to
+develop your own scale factor, i.e., an estimate of 20 minutes may take
+4 minutes on your computer.

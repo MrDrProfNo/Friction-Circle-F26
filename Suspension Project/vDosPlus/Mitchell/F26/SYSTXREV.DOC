@@ -1,0 +1,12 @@
+                                 +------+
+                                 | a<c> |
+                                 | b<d> |
+                                 +------+
+
+        Can you see FOUR letters in the square above (Y/N)?
+
+This question determines whether your monitor supports reverse video.
+If you can not see the four lettrs clearly in the square above, then
+answer NO.  If you can clearly see the four letters, respond YES.
+
+Many laptops do not support reverse video.

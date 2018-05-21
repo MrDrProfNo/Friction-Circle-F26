@@ -1,0 +1,9 @@
+The viewing angle changes your perspective of the car.  The default
+viewing angle of 0.0 corresponds to ground level.  A 90 degree angle
+represents a plan view, or viewing the car from above.  A 20-40 degree
+viewing angle represents our normal view of the car.
+
+At the default viewing angle of 0.0 the wishbones may appear as a single
+rod.  By selecting a greater viewing angle both arms of the wishbone
+come into view.  Select the viewing angle which provides the most
+informative or familiar view.

@@ -1,0 +1,40 @@
+> Rate Previous  Unloaded                         Loaded   Previous    Rate
+ 0.010   -1.010             Ride inches  = -1.000            -1.010    0.010
+ 0.000    2.000             Roll degrees =  2.000             2.000    0.000
+ 0.000    0.500             Steering Rack=  0.500  1          0.500    0.000
+                            Tire Growth  =  0.000  1
+ 0.426   -1.374    -1.369   Camber (degrees)        0.217     0.210    0.691
+                    0.000   Camber Setting (deg)    0.000
+ 0.028    5.737     5.738   Toe Steer (degrees)     5.737     5.737   -0.028
+                    0.000   Toe Setting (degrees)   0.000
+                            Net Steer (degrees)    -0.000     0.000   -0.055
+
+-0.016   -0.129    -0.129   Tire Scrub (inches)     0.123     0.123   -0.011
+                            Net Scrub (inches)     -0.006    -0.005   -0.027
+                    5.454   Caster (degrees)        6.355
+ 0.508    0.039     0.044   Shock Travel           -1.116    -1.121    0.554
+                            Swaybar Twist (deg)    -3.821    -3.827    0.580
+
+                  121.808   Swing Arm length       86.561
+                    3.119   Swing Arm height        0.446
+                            Roll Center horizontal-21.814
+                            Roll Center height      0.283
+
+                  133.883   SVSA longitudanal     138.015
+                   17.951   SVSA height            18.717
+---------------------------------------------------------------------------
+<                            DISPLAY PARAMETERS
+
+This table displays most of the computed suspension parameters.
+It can be used with PrtSc to produce a quick hardcopy of the computations.
+
+If only one input parameter (ride, roll or steer) was changed after the
+previous run, then this table also shows the parameters for the previous
+computation and the Rate of change for several parameters.  For instance,
+if you changed the ride by 0.01 inch then the RIDE RATE is computed for
+several parameters.  The Camber Ride Rate takes the current camber and
+subtracts the previous value, and then divides by 0.01.  This gives the
+amount Camber changes per inch of Ride change.
+
+This can be used to compare with the theoretical rates shown elsewhere.
+

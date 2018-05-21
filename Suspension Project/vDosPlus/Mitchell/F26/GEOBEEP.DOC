@@ -1,0 +1,11 @@
+   +----------------------------------------------------------------+
+   |                                                                |
+   |   Beep         Silence      - <Beep whenever program pauses>   |
+   |                                                                |
+   +----------------------------------------------------------------+
+
+The Beep option causes the program to beep whenever it pauses after
+the plot or after the tables.  This is useful if you are doing
+something else why the computer computes.  On the other hand, if you
+are carefully watching the computer screen, the beep is annoying.
+Silence is golden.

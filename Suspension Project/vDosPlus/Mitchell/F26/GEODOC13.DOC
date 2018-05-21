@@ -1,0 +1,24 @@
+                                STEER
+
+STEER refers to the steering movement of the wheels.  For the front
+of the vehicle, it may result from both movement of the steering rack
+and kinematic movement of the wheel due to suspension movement.  At the
+rear STEER is simply the result of kinematics.
+
+Positive STEER corresponds to the movement of both right and left
+wheels in a LEFT turn.  Thus the right or loaded wheel turns inward and
+the left or unloaded wheel turns outward.  Both of these are measured
+in degrees and both are measured in positive amounts.  Negative STEER
+would correspond to a RIGHT turn.
+
+Positive steer in the right wheel is Toe-In, negative steer is
+Toe-Out.  On the left or unloaded wheel the conventions are reversed;
+Positive steer is Toe-Out, negative amounts are Toe-In.
+
+Net Steer is the difference between Loaded and Unloaded Steer.
+A positive Net Steer represents the right or loaded wheel turning left
+more than the left or unloaded wheel.  Proper Ackerman values, wherein
+the outboard wheel turns less than the inboard wheel, requires TOE-OUT
+or negative Net Steer.  Computing actual Ackerman steering effects
+requires knowledge of the radius of the turn.
+

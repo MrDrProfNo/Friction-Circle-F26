@@ -1,0 +1,11 @@
+                                HALFSHAFT PLUNGE
+
+Halfshaft plunge measures the movement of CV Joints necessary to bridge
+the distance between rear end and hub.  Positive values represent
+extension while negative values are compression.
+
+The report also displays the angles of the CV Joints at both the rear
+end and the hub.  However, the angles displayed are only two-dimensional.
+The angle is measured in a vertical plane, as shown in the following
+plot.  Any angle in the fore-aft plane is not computed.  This may be
+changed in the future.

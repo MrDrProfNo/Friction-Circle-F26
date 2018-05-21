@@ -1,0 +1,23 @@
+                            STEERING INPUT
+
+The Steering Input is expressed as a fraction of the nominal steering
+rack travel.  The nominal steering rack travel is the usable amount,
+not the maximum physically available.  The nominal steering rack
+travel should represent what is likely to be used on the race track,
+not what is available when pushing the car about the pits.  Indeed,
+the nominal steering rack travel might even be different for a CART
+car set up for Indy than for the same car at Long Beach.
+
+The steering input is expressed as a fraction of the nominal steering
+rack travel.  Thus a steering input of "0.5" represents 50% of the
+nominal steering rack travel.  A POSITIVE input corresponds to a LEFT
+hand turn.  This applies for both front-steer and rear-steer geometries.
+input of "0.5" represents 50% of the steering rack travel in the
+direction corresponding to a left hand turn.  (This is correct for
+both front-steer and rear-steer geometries.)  A NEGATIVE steering input
+corresponds to a RIGHT turn.
+
+The steering input may be greater than "1.0".  For instance, a value of
+"1.5" represents 150% of the nominal steering rack travel.  No check is
+made that the steering rack travel is actually obtainable.
+

@@ -1,0 +1,17 @@
+These are files of suspension points.  Each file contains the suspension
+points and computational parameters for a specific vehicle.  Saving files
+avoids the necessity to re-enter points for each run.
+
+Each suspension file also includes a one-line description, which can be
+seen by Previewing the files with the F3 function key.  The files also
+also contail a five line detailed description, which can only be seen
+after reading the file.
+
+Even if you are entering data for a new vehicle, you must start with
+existing data.  The AADEMO file may be a good starting point.  Using
+existing data helps get the proper signs and values into the computer.
+
+Be sure to the the DEMO file appropriate to the type of suspension you
+are studying.  Reading a solid rear-axle suspension DEMO file, such as
+PAN3DEMO involves different suspension points than a MacPherson Strut
+(MACDEMO) or a Double A-arm suspension (AADEMO).

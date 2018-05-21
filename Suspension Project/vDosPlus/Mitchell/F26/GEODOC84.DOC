@@ -1,0 +1,59 @@
+>PUSHDEMO  Double A-Arm, Push-rod, swaybar Demo
+Ride =-1.000  Roll = 2.000  Steer = 0.500  Tire = 0.000
+    Fore/Aft      Width     Height         Loaded Side
+A   -3.00000    9.72106    5.16450             Fore/Aft     Width    Height
+B   -0.16387   27.17621    6.77275   Contact   -0.73748  33.12303  -0.00000
+C    3.00000    9.73851    5.66419   Top Tire  -0.74676  33.21544  24.49982
+D   -3.00000   13.35059   14.54354   King pro  -0.91816  27.90836   0.00000
+E    1.00000   26.04651   17.22311   Inst Cen   0.00000 -53.44226   0.44639
+F    3.00000   13.35059   14.54354   Roll Cen   0.00000 -21.81384   0.28329
+S    9.78596   28.17570    6.72957   SVSA     138.01453  33.12303  18.71667
+T   10.00000   10.72918    5.37944   A proj.    0.80237  33.12303   7.32067
+H   -0.74212   33.16924   12.24991   C proj.   -1.24285  33.12303   7.15080
+K   -1.24195   38.14415   12.23096   D proj.    3.22954  33.12303  18.71667
+N   -0.79010   33.11774    0.00011   F proj.   -0.11477  33.12303  18.71667
+                                     UpBJ one   1.00000  26.04651  17.22311
+                                     UpBJ two   1.00000  26.04651  17.22311
+     0.21721 Camber in degrees
+     5.73718 Toe Steer in degrees
+     0.12303 Scrub in inches
+     6.35492 Caster in degrees
+     6.16981 Kingpin Angle in degrees
+     5.21467 Kingpin Offset in inches
+     0.18068 Caster Trail in inches
+--------------------------------------------------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PUSHDEMO  Double A-Arm, Push-rod, swaybar Demo
+Ride =-1.000  Roll = 2.000  Steer = 0.500  Tire = 0.000
+                     Loaded Side                       Unloaded Side
+Point     Fore/Aft      Width     Height     Fore/Aft      Width     Height
+U shock    0.00000    1.24369    5.96084      0.00000   -0.75509    6.03064
+V shock   -0.00000    5.89911   15.89116     -0.00000   -5.40062   17.23286
+P pivot   -2.00000    9.51801   13.67677     -2.00000   -8.47102   14.30496
+Q pivot    2.00000    9.51801   13.67677      2.00000   -8.47102   14.30496
+M rod     -0.00000   11.73240   17.29567     -0.00000  -11.39892   17.37537
+W rod     -0.13565   24.16599    6.78912      0.00573  -23.74450    6.76468
+X bar    -10.00000    7.69373   18.74352    -10.00000   -6.29775   19.23211
+Y bar    -10.00000    0.69799   18.98782    -10.00000    0.69799   18.98782
+Z link    -0.02081    7.67122   18.09912     -0.00002   -6.29697   19.25420
+R drop    -0.00000    7.10541   15.15303     -0.00000   -6.42409   16.25689
+I half     0.00000    7.41453   10.74839      0.00000   -6.57694   11.23699
+J half    -0.54219   31.17927   12.25749      0.47319  -30.59074   12.19871
+---------------------------------------------------------------------------
+<
+- - - - - - - - - - - - - - -  DISPLAY POINTS  - - - - - - - - - - - - - -
+
+This report displays the coordinates of the suspension points and certain
+suspension parameters to 0.00001 accuracy.  This report is primarily used
+to check results and verify accuracy.
+
+Note the difference between suspension point N and the Contact Patch.
+N is the contact patch when the tire is in measurement position with
+Ride=0.0, Roll=0.0, and Steer=0.0.  As those parameters are changed the
+suspension point N is not identical to the contact patch because the hub
+and tire rotate as the suspension moves.  In the above example point N has
+rotated 0.790 inches and is 0.00011 inches off the ground.  Also note that
+the actual contact patch is 0.737 inches ahead of the original contact
+patch.
+
+

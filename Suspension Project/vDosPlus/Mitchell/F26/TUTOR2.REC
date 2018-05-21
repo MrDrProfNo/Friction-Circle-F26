@@ -1,0 +1,70 @@
+0
+80 Use DOWN ARROW to select MONITOR
+0
+80 do SET MONITOR, use DOWN ARROW
+13 Hit ENTER to leave program options menu
+-121 Hit y to select COLOR text option
+-121 Hit y to utilize reverse video
+49 Hit 1 to select CGA
+53 Hit 5 to select High Resolution
+99 Hit c to CHECK the graphics selection
+999
+113 Hit q to Accept the Graphics Selection and leave this menu
+999
+120 hit x to eXecute
+120 hit x to Execute program
+0
+77 Roll the chassis 0.5 degrees
+0
+77
+0
+77
+0
+77
+0
+77
+13 Hit ENTER to compute suspension
+0
+60 Hit F2 for an explanation
+0
+73 Hit PgUp to steer vehicle
+0
+73
+0
+73
+0
+73
+0
+73
+13 Hit ENTER to compute
+0
+60 Hit F2 for an explanation
+116 Hit T to go to the Tutorial section
+0
+60 Hit F2 for an explanation
+121
+13 Hit ENTER to select the first submenu
+53 Hit 5 to look at Camber
+121
+999
+999
+55 Hit 7 to look at Instant Centers
+121
+999
+999
+27 Hit ESCape to leave this submenu
+120 Hit x to go to eXtra tutorials
+51 Hit 3 for Toe Steer
+121
+999
+999
+999
+52 Hit 4 for Net Steer and Ackerman
+121
+999
+999
+999
+113 Hit q to Quit
+113 Hit q to Quit
+121 Hit Y to leave this program
+

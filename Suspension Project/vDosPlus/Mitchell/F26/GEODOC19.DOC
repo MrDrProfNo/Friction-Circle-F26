@@ -1,0 +1,24 @@
+                               MOTION RATIO
+
+     Motion Ratio is the change in Shock Travel divided by the change in
+Ride height.  If the ride height (or wheel) moves 4.0 inches and the
+Shock Travel is 3.0 inches, then the Motion Ratio is 0.75.  The wheel
+rate is the spring rate times the SQUARE of the Motion Ratio.
+
+     Computing the Motion Ratio requires TWO suspension calculations.
+The two computations must have the same Roll and Steer values.  The
+Motion Ratio is computed as the difference in Shock Travel divided by
+the difference in Ride Height for the two computations.  The difference
+in Ride Height may be as small as 0.001 for an accurate Motion Ratio
+computation.
+
+     See the following Graphic for an example of the Motion Ratio
+computation.
+
+                   Shock Travel at Ride=1.01 is 0.89234
+                   Shock Travel at Ride=1.00 is 0.88642
+                   The difference is            0.00592
+                   The Motion Ratio is 0.00592/0.01 = 0.592
+
+     A 100 lb/inch spring would have a Wheel Rate of 100 * 0.592 * 0.592
+                                                      = 35.0464 lb/inch.

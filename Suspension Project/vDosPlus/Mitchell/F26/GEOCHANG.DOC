@@ -1,0 +1,11 @@
+You can save the current suspension points in the same file you
+created earlier, thereby overwriting and destroying the original
+contents of that file, or you can save the current suspension
+points in a new file.  If you wish to change the file name,
+respond with a YES to this question.
+
+If you do want to change the file name, the program will ask for
+that file name.  Enter any valid filename, i.e. A:NEWPOINT
+You do not need to add the extension; the program will add the
+extension .GEO
+

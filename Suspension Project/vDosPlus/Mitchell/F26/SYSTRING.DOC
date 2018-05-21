@@ -1,0 +1,16 @@
+Enter a NAME or DESCRIPTION:  Default description
+
+
+
+                       RESPONDING TO A STRING PROMPT
+
+The program is asking for STRING input.  Enter the string in the
+high-lighted area.  Do not go beyond the highlighted area.
+
+If you want the originally displayed value, press Enter at the beginning.
+
+Press Enter after entering the value.
+
+Press the F2 key for a description of what number the program expects
+  (details on units, etc.)
+

@@ -1,0 +1,20 @@
+
+
+The plot scale factor is currently  1.00
+A larger factor will show a wider view but in smaller scale.
+A smaller factor will show a larger scale but the view will be smaller.
+Enter new plot scale factor:
+
+
+- - - - - - - - - - - - - -  CHANGE GRAPHIC SCALE  - - - - - - - - - - - -
+
+This function allows the user to change the graphic scale.  Most graphic
+exhibits are properly scaled, but occasionally the user may wish to
+adjust the scale.
+
+If you think of the normal graphic view as a normal 55mm lens for a 35mm
+cameran then a larger factor of 2.0 would correspond to a 27mm wide angle.
+A plot scale factor of 0.50 would correspond to a 110 mm telephoto lens,
+with a narrower field of view but greater detail of the subject.
+
+

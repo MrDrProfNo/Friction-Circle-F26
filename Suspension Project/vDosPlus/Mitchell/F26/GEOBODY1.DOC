@@ -1,0 +1,29 @@
+           +----------------------------------------------------+
+           |                  Perspective Menu                  |
+           |                                                    |
+           |    P -   0.000 Perspective Angle:  Front-Side      |
+           |    E -   0.000 Elevation Angle:  Front-Top         |
+           |    Y -   0.000 Horizontal Center                   |
+           |    Z -   5.000 Vertical Center                     |
+           |    S -   1.000 Scale Factor                        |
+           |    L -  DO label points                            |
+           |    C -  Change Colors                              |
+           |    V -  View the structure                         |
+           |    H -  Half View only                             |
+           |    Q - <Quit View program>                         |
+           +----------------------------------------------------+
+
+      Enter choice (P/E/Y/Z/S/L/C ... ) or use arrow keys and hit <ENTER>
+
+These options control the appearance of the stick-model drawing of the
+suspension structure.  This drawing can label each suspension point and
+even draw different suspension elements in a different color.
+
+--------------------------------------------------------------------------
+You may specify both the perspective angle and the elevation angle,
+giving you complete control of viewing location.  (You can even look at
+the car from underneath).  You may specify whether you view the entire
+car or just one side.  You can even control the center of the view and
+the scale for an up-close examination of a portion of the suspension,
+such as a bell-crank pivot.
+

@@ -1,0 +1,63 @@
+                            SET GRAPHICS MONITOR
+
+                 +------------------------------------------+
+                 |                Driver Menu               |
+                 |                                          |
+                 |    1 -  CGA                              |
+                 |    2 -  MCGA                             |
+                 |    3 - <EGA>                             |
+                 |    4 -  EGA64                            |
+                 |    5 -  EGAmono                          |
+                 |    6 -  IBM 8514                         |
+                 |    7 -  HercMono                         |
+                 |    8 -  ATT400                           |
+                 |    9 -  VGA                              |
+                 |    A -  PC3270                           |
+                 |    B -  DETECT                           |
+                 |    C -  Check the Selection              |
+                 |    Q -  Quit (Accept the last choice)    |
+                 |                                          |
+                 +------------------------------------------+
+
+     Enter choice (1/2/3/4/5/6/7 ... ) or use arrow keys and hit <ENTER>
+
+----------------------------------------------------------------------------
+
+This menu allows you to specify the graphics monitor on your computer.
+After selecting a graphics board (items 1 .. A above), another menu will
+appear which allows you to specify the graphics mode you want.  For
+instance, the common CGA board has two 200 x 320 color modes and one
+high resolution 200 x 640 monochrome mode.
+
+Item B for DETECT will have the computer attempt to identify the graphics
+board on your computer.  This selection should be verified by the process
+described below.
+
+Item C for CHECK allows you to check the validity of your selection.  The
+computer will use your graphic selection and draw a test pattern on the
+screen.  The test pattern consists of a series of boxes-within-boxes with
+an X drawn through the corners.  If this test pattern does not appear in
+it's entirity, particularily the bottom of the boxes, then make another
+graphics selection and try again.
+
+If several graphic selections work, choose the one which is most pleasing.
+
+QUIT this menu when you have made and checked your graphics selection.
+
+----------------------------------------------------------------------------
+- - - - - - - - - - - - - -  GRAPHICS MODE  - - - - - - - - - - - - - - - -
+
+                 +------------------------------------------+
+                 |                 EGA Mode                 |
+                 |                                          |
+                 |    1 -  EGA low                          |
+                 |                                          |
+                 |    2 -  EGA high                         |
+                 |                                          |
+                 +------------------------------------------+
+
+These are the MODE choices for EGA graphics.  If you are not familiar with
+the various modes, use the CHECK option to select the most pleasing mode
+for your graphics board.  The highest resolution is usually the best
+because the Racing by the Numbers programs do not use all the colors
+available with some graphics boards.

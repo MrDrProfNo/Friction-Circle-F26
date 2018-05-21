@@ -1,0 +1,44 @@
+Standard three link solid rear axle structure:
+This suspension has three links from the chassis to the rear-axle plus a
+Panhard rod used as a lateral locating device.
+*
+CHASSISR.SUB    *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *Chassis of car  *
+X Y Z
+                *                *                *                *
+TRAILVRT.SUB    *Tub A           *Tub C           *Vrt+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*R Trail Base    *
+X Y Z
+Axle H          *Axle K          *                *                *
+TRAILHRZ.SUB    *Vrt+ D          *Vrt+ F          *Hrz+            *
+  1.00000  1.00000  1.00000  0 Panhard Rod     *R Trail Link    *
+X Z Y
+Axle S          *Tub T           *                *                *
+TRAILVRT.SUB    *Tub A opposite  *Tub C opposite  *Vrt-            *
+  1.00000 -1.00000  1.00000  5 Contact Patch, L*L Trail Base    *
+X Y Z
+Axle H opposite *Axle K opposite *                *                *
+TRAILHRZ.SUB    *Vrt- D          *Vrt- F          *Hrz-            *
+  1.00000 -1.00000  1.00000  0 Windup Link     *L Trail Link    *
+X Z Y
+Hrz+ E          *Hrz- E          *                *                *
+REARAXLE.SUB    *Hrz+ E          *Hrz- E          *Axle            *
+  1.00000  1.00000  1.00000  0 Top Link        *Rear Axle       *
+Z Y X
+Axle S opposite *Tub T opposite  *                *                *
+PANHARD.SUB     *Tub T           *Axle S          *Pan             *
+  1.00000  1.00000  1.00000 10 Panhard Rod     *Panhard Rod     *
+X Y Z
+Tub T           *Axle S          *                *                *
+PANHARD.SUB     *Tub T opposite  *Axle S opposite *Wind            *
+  1.00000 -1.00000  1.00000 10 Top-Link        *Top Link        *
+X Y Z
+Tub T opposite  *Axle S opposite *                *                *
+COILOVER.SUB    *Tub U           *Axle V          *Cov+            *
+  1.00000  1.00000  1.00000 10 Coilover Shock R*R Coilover Shock*
+X Y Z
+Tub U           *Axle V          *                *                *
+COILOVER.SUB    *Tub U opposite  *Axle V opposite *Cov-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock R*L Coilover Shock*
+X Y Z
+Tub U opposite  *Axle V opposite *                *                *

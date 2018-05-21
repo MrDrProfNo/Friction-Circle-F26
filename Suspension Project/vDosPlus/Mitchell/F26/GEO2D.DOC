@@ -1,0 +1,10 @@
+The QUICK 2-Dimension option causes the computer to perform all
+calculations in two dimensions rather than three.  This may be useful
+for preliminary calculations, but we live in a three dimensional world
+and all serious analysis should be done in three dimensions.
+
+You can not perform steering analysis in two dimensions.
+
+However, the two dimension is much faster.  Two dimension calculations
+require only about 20% of the computation time for three dimensions.
+

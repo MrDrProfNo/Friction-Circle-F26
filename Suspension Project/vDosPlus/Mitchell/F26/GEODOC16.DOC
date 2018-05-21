@@ -1,0 +1,23 @@
+               OUTBOARD ANTI-DIVE, ANTI-LIFT and ANTI-SQUAT
+
+     Outboard Anti analysis applies to situations where the braking or
+acceleration force is applied at the contact patch, i.e. outboard brakes
+front or rear or acceleration with a solid rear axle.
+
+     The Anti Factor is calculated by dividing the height of the Side View
+Instant Center by the distance of the Side View Instant Center from the
+tire contact patch.
+
+     Next you must find the pivot point for vertical movement of the car.
+For Anti-Dive this is the wheelbase multiplied by the proportion of braking
+effort on the front wheels.  For Anti-Lift it is the wheelbase multiplied
+by the proportion of braking effort on the rear wheels, or one minus the
+front proportion.  For acceleration (of a rear-wheel drive car) it is the
+wheelbase. For front-wheel drive you would calculate Anti-Rise at the front
+using the full wheelbase.  For four-wheel drive you would apportion the
+acceleration between front and rear just as you do for braking.
+
+     Now compute the Height of the Center of Gravity divided by the
+longitudinal reference distance (see the paragraph above).  Then the Anti
+Factor is divided by this fraction to get the Anti Percentage.
+

@@ -1,0 +1,16 @@
+                            +--------------------+
+                            | 1 -  Apple         |
+                            | 2 -  Blueberry     |
+                            | 3 - <Mince>        |
+                            | 4 -  Peach         |
+                            | 5 -  Strawberry    |
+                            +--------------------+
+
+This is an extra sub-menu 'pulled down' by some sub-menu choices, usually
+to provide additional details for that choice.  For instance, if you
+selected PIE under the dessert sub-menu, this extra sub-menu allows you to
+choose the variety of pie.  It operates like other menus and sub-menus.
+Select an item with either the UP and DOWN arrow or by striking the keys
+corresponding to the KEYS above (1, 2, 3, ... ).  When you have made your
+choice, select it with the ENTER key.  You will then leave this menu.
+

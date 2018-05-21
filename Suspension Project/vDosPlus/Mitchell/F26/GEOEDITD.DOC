@@ -1,0 +1,42 @@
+              Wm C Mitchell Software Data Entry for Suspension Geometry
+Description Double_A-Arm_example_file_______________  Lengths in inches
+Output File Name OUTPUT______________  Input File was AADEMO.GEO
+
+Suspension Type _0 Double A-Arm    Describe Data
+This_AADEMO_file_is_an_example_of_the_Double_A-Arm_suspension_(type_0).__
+This_file_uses_the_default_with_the_steering_tie-rod_attached_to_the_tub.
+The_coil-over_spring/shock_is_attahced_to_the_lower_A-Arm._______________
+The_half-shaft_is_processed_in_order_to_demonstrate_the_capability,_but__
+most typical_cases_will_be_front_suspensions_without_a_half-shaft._______
+
+DOUBLEAA Structure specification:  Double A-Arm or Double Wishbone
+Upper and lower wishbones with a steering tie-rod.
+Model supports spring/shock and halfshaft but not swaybar or bellcrank.
+Spring/shock may be attached to:  Lower wishbone (default)
+                                  Upper wishbone
+                                  Hub
+The steering Tie-rod may be attached to:  Tub, chassis or frame (default)
+                                          Lower wishbone
+                                          Upper wishbone
+------------------------------------------------------------------------
+                         Edit Data: The Description
+
+This screen includes two descriptions of the suspension data.  The first
+description, near the top of the screen, is a one line entry which will
+appear at the bottom of the graphic screen, and will be shown when you
+Preview files before reading.  This description is limited to 40
+characters.
+
+The other description includes 5 79-character lines and permits much
+greater detail.  A one line description of "90-X fr wt rr/mod 3 plus 2"
+may be very meaningful when you create the file, but six months later
+it will help to refer to the extended description and see that this
+file is for the "Blast 90-X car, front suspension with the wide-track
+road racing option, modification number 3 (low roll center with short
+virtual swing arm and rapidly rising rate suspension using the +2 hole
+in the bell-crank."
+
+This screen also describes the Structure associated with the file, as
+specified by the Suspension Type.  This material can not be changed,
+but it may indicate a need to change the Suspension Type.
+

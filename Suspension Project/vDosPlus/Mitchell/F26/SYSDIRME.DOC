@@ -1,0 +1,89 @@
+>             +-------------------------------------------+
+              |   Directory of FILES (.XYZ) on A Drive:   |
+              |                                           |
+              |   AADEMO        NAZARETH                  |
+              |   CLEVELAN      PHOENIX                   |
+              |   ELKHART       POCONO                    |
+              |   INDYQUAL      PORTLAND                  |
+              |   INDYRACE      TAMIAMI                   |
+              |   LAGUNA        Drive B:                  |
+              |   LONGBEAC      Drive C:                  |
+              |   MEADOW                                  |
+              |  <MID-OHIO>                               |
+              |   MILWAUKE                                |
+              +-------------------------------------------+
+
+This sample directory includes all the files with the extension .XYZ.
+These files represent the 1987 Indy car schedule.  All file names
+are limited to 8 characters, thus "CLEVELAN" for Cleveland and
+"LONGBEAC" for Long Beach.  Blanks are NOT permitted, thus "LONGBEAC"
+for Long Beach.  The AADEMO file is used for the Tutorial.  The
+Drive B: and Drive C: entries allow the user to look at the directory
+on those files.  Do not use Drive C: unless you have a C drive, and
+only the active subdirectory can be accessed.
+----------------------------------------------------------------------
+
+<                        DATA FILE DIRECTORY MENU
+
+This Directory menu contains the names of appropriate data files.
+One filename is high-lighted and enclosed in < filename >.  Use the
+UP ARROW and DOWN ARROW keys (or LEFT ARROW and RIGHT ARROW) if there
+is more than one column of filenames) to highlight the filename you
+want.  Then press ENTER to read the desired file.
+
+ESCape will allow you to leave the Directory menu without reading a file.
+However, some programs will insist that you read a file.  Use the F2
+function key for additional information on the specific files.
+
+You may Preview files by pressing the F3 function key.  This will display
+a description of each file.  Use F4 to change text colors.
+
+The Directory only lists files on one disk drive, as desiginated in the
+first line.  You may examine and select files on another disk drive by
+bouncing to the "Drive X" line and hitting ENTER.  Then a new Directory
+menu will appear and you may examine and select a file, or change drives
+again.  You may NOT access data in a different subdirectory.
+>
+--------------------------------------------------------------------------
+- - - - - - - - - - - -   PREVIEW THE DIRECTORY  - - - - - - - - - - - - -
+
+Use the F3 key to produce a Preview of the appropriate Directory listings.
+The Preview consists of the File Names alongwith the Description of the
+contents.  This is very helpful when you are dealing with a large number
+of files and can't remember exactly what "MOD3-X1" meant when you created
+the file three months ago.  This a Preview of Suspension Geometry files:
+
+       FileName   Description of Contents
+       AADEMO     100 Double A-Arm example file
+       ARM1DEMO   110 Lower A-Arm and two upper links
+       ARM3DEMO   109 Rear A-Arm with Trailing Links Demo
+       COILDEMO   102 Coil Over Demo file
+       DRAGDEMO   112 Complete Drag-Link Steering Model
+       HARMDEMO   106 H-Arm lower with single upper link
+       MACDEMO    101 MacPherson Strut demo
+       MACDEMOS   113 MacPherson Strut demo
+       PAN3DEMO   107 Solid Rear Axle with Panhard Rod Demo
+       PULLDEMO   104 Double A-Arm, Pull-rod, swaybar Demo
+       PUSHDEMO   105 Double A-Arm, Push-rod, swaybar Demo
+       ROCKDEMO   103 Double A-Arm, Rocker, Swaybar Demo
+       TRALDEMO   106 Trailing-Arm demo using H-arm
+
+- - - - - - - - - - - - - - - -  FILE NAMES  - - - - - - - - - - - - - - -
+
+Your DOS manual will define permitted file names.  Generally, you may use
+the 26 letters, 10 digits, and certain special characters (- _ $ # & @ !).
+Lowercase characters are converted to upper case. Blanks are NOT permitted
+and periods (.) or slashes (\ /) have special meaning. Filenames may be up
+to 8 characters in length. RACING BY THE NUMBERS (tm) assigns extensions;
+you enter MID-OHIO and the program will save MID-OHIO.XYZ.
+
+You should not use filenames beginning with AA or A and any special
+characters, i.e. AAA, A, A# or A$. These filenames, or any others which
+precede AADEMO, may cause the Demos to fail to run properly. You may use
+these filenames on a data disk because the Demos only use files on the
+program disks.
+
+This restriction also applies to filename beginning with numbers, like
+911. If you have a filename for a Porsche, use a filename like POR911 or
+ever P911. If you use a filename like 911 then the DEMOs may not run.
+

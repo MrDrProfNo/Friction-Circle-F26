@@ -1,0 +1,45 @@
+>Number of gears used is 4        Wm C Mitchell Software Gear Ratio Program
+MPH range to be plotted, minimum   _40   maximum   180
+RPM range to be plotted, minimum _5000   maximum _9000
+===========================================================================
+     Present   AADEMO______________       º Proposed    AADEMOX____________
+RPM at shift point  _8200    In/Out       º RPM at shift   _8200    In/Out
+Tire Diameter (in.) 27.000   Teeth        º Tire Dia.      27.000   Teeth
+Rear Axle ratio     _3.900   _0 _0        º Rear Axle      _3.900   _0 _0
+Spur Gears ratio    _0.000   _0 _0        º Spur ratio     _0.000   _0 _0
+                                          º
+     In/Out  Gear    Total    Max    RPM  º In/Out  Gear    Total    Max
+Gear Teeth   Ratio   Ratio    MPH    Drop º Teeth   Ratio   Ratio    MPH
+4th  30 30  _1.000   3.900  168.89   1367 º 30 30  _1.000   3.900  168.89
+3rd  25 30  _1.200   4.680  140.74   1640 º 26 30  _1.154   4.500  146.37
+2nd  20 30  _1.500   5.850  112.59   2050 º 20 30  _1.500   5.850  112.59
+1st  15 30  _2.000   7.800   84.44        º 15 30  _2.000   7.800   84.44
+Notes__Sample_Trans-Am/GTO_car_with_four_ º __Sample_Trans-Am/GTO_car_with
+     speed_transmission._________________ º four_speed_transmission_and___
+     ____________________________________ º higher_third_gear,_lower_split
+     ____________________________________ º to_fourth_gear._______________
+===========================================================================
+Use curser keys and tabs to move around screen and change fields
+Hit ENTER to register data and compute maximum MPH and RPM Drop
+Hit ESCAPE to produce Gear Ratio plot
+<
+-------------------------------------------------------------------------
+- - - - - - - - - - - - -  FULL SCREEN EDITOR  - - - - - - - - - - - - -
+
+Use the Up, Down, Left and Right arrow keys to move the cursor around
+the screen.  The Tab key will advance the cursor to the next field,
+which is quicker than moving one space at a time.  The Back-Tab returns
+to the previous field.
+
+Place the values you want in the high-lighted fields.  If the field has
+a decimal point, then you may enter a decimal point in your number (but
+be sure to remove the previous decimal point).  After changing the
+fields, hit ENTER to compute secondary values (max MPH or check sums).
+
+Use the F2 key for an explanation of this menu.  Use the F3 key to
+color the editor if you can not distinguish the high-lighted fields
+from the labelling and background fields.
+
+After making all the changes, and checking the computed values, hit the
+ESCAPE key or Alt-X to leave this full screen editor.
+

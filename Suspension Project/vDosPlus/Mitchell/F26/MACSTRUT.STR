@@ -1,0 +1,51 @@
+MACSTRUT is MacPherson Strut structure specification:
+This model has a lower wishbone with a MacPherson strut above it.
+This model supports spring/shock and halfshaft but not swaybar or bellcrank.
+The Spring/shock unit is an integral part of the MacPherson Strut.
+The steering tie-rod may be attached to:  Tub, chassis or frame (default)
+                                          Lower A-Arm
+*
+CHASSIS.SUB     *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *
+X Y Z
+                *                *                *                *
+LOWER.SUB       *Tub A           *Tub C           *Low+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*
+X Y Z
+Hub+ H          *Hub+ K          *                *                *
+MACHUB.SUB      *Low+ B          *Tub D           *Hub+            *
+  1.00000  1.00000  1.00000  0 Steering Link, R*
+Z X Y
+Hub+ S          *TIE T           *Hub+ G          *                *
+STEERING.SUB    *TIE T           *Hub+ S          *Str+            *
+  1.00000  1.00000  1.00000 10 Steering Link, R*
+Z X Y
+TIE T           *Hub+ S          *                *                *
+COILOVER.SUB    *Tub D           *Hub+ G          *Col+            *
+  1.00000  1.00000  1.00000 10 Coilover Shock R*Right Spring/shk*
+X Y Z
+Tub D           *Hub+ G          *                *                *
+HALFSHFT.SUB    *Tub I           *Hub+ J          *Shf+            *
+  1.00000  1.00000  1.00000 10 Half-Shaft, Rght*Right halfshaft *
+X Y Z
+Tub I           *Hub+ J          *                *                *
+LOWER.SUB       *Tub A opposite  *Tub C opposite  *Low-            *
+  1.00000 -1.00000  1.00000  5 Contact Patch, L*
+X Y Z
+Hub- H          *Hub- K          *                *                *
+MACHUB.SUB      *Low- B          *Tub D opposite  *Hub-            *
+  1.00000 -1.00000  1.00000  0 Steering Link, L*
+Z X Y
+Hub- S          *TIE T opposite  *Hub- G          *                *
+STEERING.SUB    *TIE T opposite  *Hub- S          *Str-            *
+  1.00000 -1.00000  1.00000 10 Steering Link, L*
+Z X Y
+TIE T opposite  *Hub- S          *                *                *
+COILOVER.SUB    *Tub D opposite  *Hub- G          *Col-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock L*Left Spring/shk *
+X Y Z
+Tub D opposite  *Hub- G          *                *                *
+HALFSHFT.SUB    *Tub I opposite  *Hub- J          *Shf-            *
+  1.00000 -1.00000  1.00000 10 Half-Shaft, Left*Left halfshaft  *
+X Y Z
+Tub I opposite  *Hub- J          *                *                *

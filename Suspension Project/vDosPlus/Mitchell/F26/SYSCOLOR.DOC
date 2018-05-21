@@ -1,0 +1,32 @@
+   0  0 Background
+   a  7 Normal text
+   b 15 Bold text
+   c  3 Reverse background
+   d  1 Reverse text
+   e 14 Reverse Bold text
+   f  4 Error background
+   g 11 Error message text
+   h  7 Output 1 background
+   i  4 Output 1 text
+
+      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+
+Use UP and DOWN arrows to select variable, RIGHT and LEFT to select colors.
+ENTER to change a color;  ESCape to quit; & to SAVE color chart,  # to READ
+
+This full-screen menu, a portion of which is shown above, allows you to
+change the text colors used in the program.
+
+---------------------------------------------------------------------------
+
+You can also select a variable with the letter shown to the left of the
+variable.  When you have selected a variable and a color, then hit ENTER
+to register the change.
+
+Background colors are limited to the colors 0 to 7.
+
+Do not have the text color the same as the background, or the text will
+be invisible.
+
+Your color selections will be saved with the program configuration file.
+The next time you run the program, the same colors will be used.

@@ -1,0 +1,52 @@
+Standard three link solid rear axle structure:
+This suspension has three links from the chassis to the rear-axle plus a
+Watts Link used as a lateral locating device.
+*
+CHASSISR.SUB    *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *Chassis of car  *
+X Y Z
+                *                *                *                *
+TRAILVRT.SUB    *Tub A           *Tub C           *Vrt+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*R Trail Base    *
+X Y Z
+Axle H          *Axle K          *                *                *
+TRAILHRZ.SUB    *Vrt+ D          *Vrt+ F          *Hrz+            *
+  1.00000  1.00000  1.00000  0 Watts Rod Left  *R Trail Link    *
+X Z Y
+Tub T opposite  *Watt S opposite *                *                *
+TRAILVRT.SUB    *Tub A opposite  *Tub C opposite  *Vrt-            *
+  1.00000 -1.00000  1.00000  5 Contact Patch, L*L Trail Base    *
+X Y Z
+Axle H opposite *Axle K opposite *                *                *
+TRAILHRZ.SUB    *Vrt- D          *Vrt- F          *Hrz-            *
+  1.00000 -1.00000  1.00000  0 Windup Link     *L Trail Link    *
+X Z Y
+Hrz+ E          *Hrz- E          *                *                *
+REARWATT.SUB    *Hrz+ E          *Hrz- E          *Axle            *
+  1.00000  1.00000  1.00000  0 Top Link        *Rear Axle       *
+Z Y X
+Axle M          *Tub W           *                *                *
+TOPLINK.SUB     *Tub W           *Axle M          *Rod+            *
+  1.00000  1.00000  1.00000 10 Top-Link        *Top Link        *
+X Y Z
+Tub W           *Axle M          *                *                *
+WATTLINK.SUB    *Axle P          *Axle Q          *Watt            *
+  1.00000  1.00000  1.00000  0 Watts Rod Right *Watts Linkage   *
+X Y Z
+Tub T           *Watt S          *                *                *
+PANHARD.SUB     *Tub T           *Watt S          *Wat+            *
+  1.00000  1.00000  1.00000 10 Watts Link R    *R Watts Link    *
+X Y Z
+Tub T           *Watt S          *                *                *
+PANHARD.SUB     *Tub T opposite  *Watt S opposite *Wat-            *
+  1.00000 -1.00000  1.00000 10 Watts Link L    *L Watts Link    *
+X Y Z
+Tub T opposite  *Watt S opposite *                *                *
+COILOVER.SUB    *Tub U           *Axle V          *Cov+            *
+  1.00000  1.00000  1.00000 10 Steering Link, R*R Coilover Shock*
+X Y Z
+Tub U           *Axle V          *                *                *
+COILOVER.SUB    *Tub U opposite  *Axle V opposite *Cov-            *
+  1.00000 -1.00000  1.00000 10 Steering Link, R*L Coilover Shock*
+X Y Z
+Tub U opposite  *Axle V opposite *                *                *

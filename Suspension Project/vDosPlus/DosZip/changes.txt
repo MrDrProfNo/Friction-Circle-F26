@@ -1,0 +1,2 @@
+Changes in 2.55 - 9 Apr 2015
+- fixed bug in colour setup -- updated default colours for Edit/View

@@ -1,0 +1,17 @@
+                        +------------------------+
+                        | A -  Fwd lower frame   |
+                        | B -  Lower ball joint  |
+                        | C -  Rwd lower frame   |
+                        | D -  Fwd upper frame   |
+                        | E -  Upper ball joint  |
+                        | F -  Rwd upper frame   |
+                        | G -  Mac Strut axis    |
+                        | S -  Steering Tierod   |
+                        | T -  Steering frame    |
+                        | d -  Track             |
+                        | t -  Tire height       |
+                        +------------------------+
+This program allows you to change the suspension points on the screen.
+It only appears in the Oval Track mode (Asymetric suspension), and only
+moves the Left side points.
+

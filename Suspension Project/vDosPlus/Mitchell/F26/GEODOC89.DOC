@@ -1,0 +1,36 @@
+                     SUSPENSION GEOMETRY FORCE ANALYSIS
+
+The Suspension Geometry Force Analysis program augments the kinematic
+analysis of the Geometry program with a computation of forces.  The program
+determines the forces on various suspension elements as a result of forces
+applied at the tire contact patch.  This can be used for stress analysis or
+for an analysis of vehicle dynamics.
+
+The Force Analysis program uses the same input files as the Freebody
+Geometry program.  The user then specifies the force applied at the tire
+contact patch in any direction (vertical load, acceleration/braking or
+cornering) and the program computes the forces on the hub, the upper and
+lower A-Arms, and the spring/shock system.  This information is displayed
+in numerical form as well in graphical plots.
+
+Additional analysis includes Jacking force and Dive/Squat analysis.  These
+theoretical concerns are compared with actual computations.
+
+
+-----------------------------------------------------------------------------
+- - - - - - - - - - - - -   STEERING ARM ANALYSIS   - - - - - - - - - - - - -
+
+The program also analyzes the location of the steering arm.  If the steering
+arm is not aimed at the three-dimensional Instant Center axis then some of
+the Jacking Force and Dive/Squat force will be fed off into the steering arm
+and there will be significant bump steer.
+
+The steering arm is usually aimed at the front view Instant Center to
+minimize toesteer as a function of ride and roll changes.  But the steering
+arm should be actually be aimed at the axis which runs from the front view
+instant center to the side view instant center.  The suspension moves about
+this axis.
+
+The length of the steering arm also effects bump steer but as a second order
+effect.
+

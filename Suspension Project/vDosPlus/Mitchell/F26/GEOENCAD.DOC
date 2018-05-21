@@ -1,0 +1,16 @@
+This is the full screen editor to enter suspension co-ordinates, in the
+CAD mode.  The X-Y-Z co-ordinates of all suspension points as well as
+steering links must be entered.  These points must be measured very
+carefully in order to produce accurate results.  Errors as small as a
+quarter of an inch can destroy the accuracy of the results.
+
+Measuring the suspension points of an existing car is much tougher than
+you might think.  Plan on spending half a day measuring points, and
+perhaps removing the engine or other obstructions.  Be sure that the
+car is at proper ride height when the measurements are made.
+
+While measuring the X-Y-Z co-ordinates, also measure the lengths of the
+various suspension elements.  When you enter the X-Y-Z co-ordinates, the
+corresponding lengths are computed and displayed on the right side of the
+screen.  Compare these computed lengths to your measurements as a check
+sum.  If they do not correspond, go back and re-measure.

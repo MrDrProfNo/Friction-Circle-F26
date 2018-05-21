@@ -1,0 +1,39 @@
+              Wm C Mitchell Software Data Entry for Suspension Geometry
+Description Double_A-Arm_example_file_______________  Lengths in inches
+Output File Name OUTPUT______________  Input File was AADEMO.GEO
+
+Suspension Type _0 Double A-Arm    Fore/Aft    Width   Vertical
+Lower-inner forward tub mount   A  _-3.000   __9.500   __6.500
+Lower ball joint                B  __0.000   _27.000   __6.750
+Lower-inner rearward tub mount  C  __3.000   __9.500   __7.000
+Upper-inner forward tub mount   D  _-3.000   _12.800   _16.000
+Upper ball joint                E  __1.000   _25.720   _17.200
+Upper-inner rearward tub mount  F  __3.000   _12.800   _16.000
+
+Steering Arm mount on hub       S  _10.000   _27.000   __6.750
+Tub mount for steering arm      T  _10.000   __9.500   __6.750
+Wheelbase and Track                100.000   _66.000
+Rim Width and Tire Diameter                  _10.000   _24.500
+Initial Camber and Toe settings    __0.000   __0.000
+Center of Gravity                  _50.000             _15.000
+Toe Measure/Steering Rack Travel             __2.000
+--------------------------------------------------------------------------
+                        Edit Data: Suspension Points
+
+These are the X-Y-Z co-ordinates of the suspension points.  Measure and
+enter the points very carefully, or the results of your computations
+will be useless.
+
+The screen will also Check Values which should be used to verify your
+measurements.  When you measure the car, measure the check values as
+well as the location of the points.  If the computed Check Values don't
+agree with your measurements, go back and re-measure.
+
+             Check Values                 Check Values
+             A to B=  17.757              S to T=  17.500
+             B to C=  17.757              B to S=  10.000
+             A to C=   6.021              Kingpin   6.983
+             D to E=  13.578              RollOut  76.969
+             E to F=  13.129              Caster    5.466
+             D to F=   6.000              B to E=  10.575
+

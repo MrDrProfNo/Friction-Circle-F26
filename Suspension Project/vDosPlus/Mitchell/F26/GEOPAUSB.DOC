@@ -1,0 +1,15 @@
+   +-------------------------------------------------------------------+
+   |                                                                   |
+   |   Pause        No Pause     - <Pause after Plot of Roll values>   |
+   |                                                                   |
+   +-------------------------------------------------------------------+
+
+The Pause after Plot option is used in the Full Ride and Roll option to
+pause after the graphics display of roll values before the screen is
+cleared to show a table of values.  This allows you to study the screen
+or to do a PrintScreen.
+
+WARNING:  This option requires you to press a key to leave the final
+graphics display.  However, the computer delays responding to this
+command to insure that all PrtSc are complete.  To not be impatient
+and hit additional keys until the tables appear.

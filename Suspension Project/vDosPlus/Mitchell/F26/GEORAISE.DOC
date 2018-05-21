@@ -1,0 +1,13 @@
+This option permits you to change the tire diameter and change all
+suspension points an appropriate amount.  For instance, if you have
+entered data for a 24.0 inch diameter tire and wish to see what will
+happen with a 26.0 inch tire.  This option will change the tire diameter
+from 24.0 to 26.0 and will raise the height of all suspension points by
+1.0 inches.
+
+This option merely saves a lot of editing of suspension points.
+
+Note that this is NOT the same as changing the co-ordinate system.  This
+actually changes the location of suspension points.  A change of
+co-ordinate system merely prints numbers which agree with your other
+drawings.

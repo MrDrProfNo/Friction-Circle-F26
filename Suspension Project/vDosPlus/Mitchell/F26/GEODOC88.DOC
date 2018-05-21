@@ -1,0 +1,23 @@
+>PUSHDEMO  Double A-Arm, Push-rod, swaybar Demo
+Ride =-1.000  Roll = 2.000  Steer = 0.500  Tire = 0.000
+Rotation Analysis:            Pre1      Pre2     Post1     Post2    Solution
+
+  1 Chassis           XYZ    0.00000   0.00000   0.00000   0.00000   2.00000
+  2 Contact Patch, R  XYZ   90.00000   4.76364 -88.00000  -4.76364  -6.47433
+  3 Upright length R  XYZ    0.00000   0.00000   0.00000   0.00000  -6.61145
+  4 Steering Link, R  ZXY  -52.00127   8.83517  44.14650  -8.82238   2.14340
+  6 Pivot Bell Right  XYZ    0.00000   0.00000   0.00000   0.00000 -13.53769
+  7 Pivot Rod Right   ZXY   90.00000 132.51045 -90.62506-130.19657   0.00000
+  9 Swaybar mount, R  YXZ   90.00000 180.00000 -90.00000-178.00000  -3.69698
+ 10 Swaybar Link, R   XYZ  270.00000  90.00000-259.12835 -89.60256   0.00000
+ 12 Contact Patch, L  XYZ   90.00000   4.76364 -88.00000  -4.76364  -0.27248
+ 13 Upright length L  XYZ    0.00000   0.00000   0.00000   0.00000   1.63929
+ 14 Steering Link, L  ZXY   52.00127   8.83517 -58.74881 -10.42842   1.03265
+ 16 Pivot Bell Left   XYZ    0.00000   0.00000   0.00000   0.00000   1.36098
+ 17 Pivot Rod Left    ZXY  270.00000 132.51045  89.97342-130.67816   0.00000
+ 19 Swaybar mount, L  YXZ  270.00000   0.00000-270.00000  -2.00000  -0.12661
+ 20 Swaybar Link, L   XYZ  270.00000  90.00000-267.57162 -89.99953   0.00000
+
+<                            ROTATION ANALYSIS
+
+This report is for the programmer.

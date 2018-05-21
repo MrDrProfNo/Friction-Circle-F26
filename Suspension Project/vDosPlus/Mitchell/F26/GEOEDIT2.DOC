@@ -1,0 +1,38 @@
+              Wm C Mitchell Software Data Entry for Suspension Geometry
+Description Double_A-Arm,_Push-rod,_swaybar_Demo____  Lengths in inches
+Output File Name OUTPUT______________  Input File was PUSHDEMO.GEO
+
+Suspension Type _5 Push Rod        Fore/Aft    Width   Vertical
+Tub mount of spring/shock       U  __0.000   __1.000   __7.000
+Activation end of spring/shock  V  __0.000   __6.000   _18.000
+Forward bell crank pivot        P  _-2.000   __9.000   _15.000
+Rearward bell crank pivot       Q  __2.000   __9.000   _15.000
+Bell crank end of push/pull rod M  __0.000   _12.000   _18.000
+Activation end of push/pull rod W  __0.000   _24.000   __7.000
+
+Roll-bar blade pivot point      X  -10.000   __7.000   _20.000
+Roll-bar mount inboard          Y  -10.000   __0.000   _20.000
+Roll-bar blade meets drop-link  Z  __0.000   __7.000   _20.000
+Roll-bar drop-link attachment   R  __0.000   __7.000   _17.000
+
+Driveshaft inboard (rear end)   I  __0.000   __7.000   _12.000
+Driveshaft outboard (hub)       J  __0.000   _31.000   _12.250
+------------------------------------------------------------------------
+                        Edit Data: Auxiliary Points
+
+These are the X-Y-Z co-ordinates of the auxiliary points.  Measure and
+enter the points very carefully, or the results of your computations
+will be useless.
+
+The screen will also Check Values which should be used to verify your
+measurements.  When you measure the car, measure the check values as
+well as the location of the points.  If the computed Check Values don't
+agree with your measurements, go back and re-measure.
+
+                                 Check Values
+                                 U to V=  12.083
+                                 P to Q=   4.000
+                                 M to W=  16.279
+                                 X to Z=  10.000
+                                 Z to R=   3.000
+                                 I to J=  24.001

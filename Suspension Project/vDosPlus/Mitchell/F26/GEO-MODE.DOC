@@ -1,0 +1,20 @@
+The Suspension Geometry Program runs in two modes.  You must select one
+mode at the beginning of each run, and you can not change during a run.
+
+The CAD mode is for preliminary analysis or for studying a specific
+condition.  The suspension may be manipulated from the keyboard.  The user
+may control ride height, roll, and steering inputs and see the effect on
+the screen.  The user may also move the suspension points, but no files
+are saved from these computations; the user must record the results.
+
+The ITERATIVE (formerly Full Ride & Roll) modes run the suspension through
+a series of pre-determined conditions to generate tables and plots of
+suspension behavior.  The user sets the limits of suspension movement.
+The resulting tables may be examined on the screen or printed.  Data files
+are also created which may be examined with the DISPLAY program.
+
+---------------------------------------------------------------------------
+Both of these modes accompolish the same objective, but the Iterative mode
+is much more thorough and complete (and much more time-consuming).  It may
+require an hour of computer time to run a thorough Iterative case, but no
+operater intervention is required - let the computer run over lunch.

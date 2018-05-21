@@ -1,0 +1,28 @@
+                           RESPONDING TO A MENU
+
+                        +------------------------+
+                        |    Read, Edit or Save  |
+                        |                        |
+                        |    R -  READ a file    |
+                        |    E - <EDIT the data> |
+                        |    S -  SAVE a file    |
+                        +------------------------+
+
+          Enter choice (R/E/S) or use arrow keys and hit <ENTER>
+
+This is a Menu of available program actions.  Select one action by
+hitting the key corresponding to the character (either number or letter)
+shows to the left of the action.
+
+This menu is also a bounce-bar menu.  One entry is high-lighted and
+enclosed in brackets - <EDIT the data> above.  The high-lighted entry
+may be changed with the UP ARROW and DOWN ARROW keys.  When the desired
+entry is highlighted, hit ENTER to select the entry.
+--------------------------------------------------------------------------
+
+These menus operate in wrap-around fashion. If the top entry is highlighted
+and you hit the UP ARROW, the highlight will move to the bottom entry.
+If the bottom entry is highlighted and you hit the DOWN ARROW, then the
+highlight will move to the top entry. This is useful in moving to the
+bottom entry, which is often QUIT.
+

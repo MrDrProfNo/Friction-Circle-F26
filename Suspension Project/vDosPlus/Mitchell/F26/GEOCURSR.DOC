@@ -1,0 +1,18 @@
+                      Drive-It with Cursor instructions
+
+Up Arrow, Down Arrow             Change ride height, bump or droop
+Right Arrow, Left Arrow          Change roll angle, Right is more roll
+PgUp, PgDn                       Change steering input
+Ins, Del                         Tire growth, Ins=increase (inflation)
+                                              Del=decrease (deflation)
+End, Ctrl-End                    lower or raise Delta value (the amount
+                                 ride or roll is changed each keystroke)
+Home                             Reset ride, roll, steer to 0.0; clear
+Enter                            Compute suspension parameters
+?                                change screen comment
+T, Alt-T                         Tutorials
+V, Alt-V                         View body structure
+X, Alt-X, ESCape                 Dynamic editing of suspension points
+Q, Alt-Q                         Quit program
+F1,F2                            Help screen (show this page)
+F4                               Change colors

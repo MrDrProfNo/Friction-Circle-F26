@@ -1,0 +1,18 @@
+                         +-------------------------+
+                         | 1 -  Cake               |
+                         | 2 - <Pie>               |
+                         | 3 -  Fruit Cup          |
+                         +-------------------------+
+
+The main Pull-down menu gave you choice of Soup & salad, Main course and
+dessert.  If you 'pull-down' the dessert sub-menu, you get this selection.
+
+This is a sub-menu 'pulled down' from a main menu.  It operates like other
+menus.  Select an item with either the UP and DOWN arrow or by striking
+the keys corresponding to the KEYS above (1, 2, 3, ... ).  When you have
+the desired item, select it with the ENTER key.
+
+Use the F2 key for an explanation of your choices in this sub-menu.
+Hit the ESCape key or Alt-X to leave this menu and return to the main
+Pull-down menu.  Use the F4 key to change text colors.
+

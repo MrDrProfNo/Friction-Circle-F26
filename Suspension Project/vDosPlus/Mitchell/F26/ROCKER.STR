@@ -1,0 +1,78 @@
+ROCKER Structure specification:  Double A-Arm with Swaybar
+Upper and lower wishbones with a steering tie-rod.
+Model supports spring/shock, swaybar and halfshaft but not bellcrank.
+Spring/shock and swaybar may be attached to:  Lower wishbone
+                                              Upper wishbone (default)
+                                              Hub
+The steering Tie-rod may be attached to:  Tub, chassis or frame (default)
+                                          Lower wishbone
+                                          Upper wishbone
+*
+CHASSIS.SUB     *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *Chassis of car  *
+X Y Z
+                *                *                *                *
+LOWER.SUB       *Tub A           *Tub C           *Low+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*R Lower Wishbone*
+X Y Z
+Hub+ H          *Hub+ K          *                *                *
+UPPER.SUB       *Tub D           *Tub F           *Upp+            *
+  1.00000  1.00000  1.00000  8 Upright length R*R Upper Wishbone*
+X Y Z
+Upp+ E          *Low+ B          *                *                *
+HUB.SUB         *Low+ B          *Upp+ E          *Hub+            *
+  1.00000  1.00000  1.00000  0 Steering Link, R*Right Hub       *
+Z X Y
+Hub+ S          *TIE T           *                *                *
+STEERING.SUB    *TIE T           *Hub+ S          *Str+            *
+  1.00000  1.00000  1.00000 10 Steering Link, R*R Steering arm  *
+Z X Y
+TIE T           *Hub+ S          *                *                *
+COILOVER.SUB    *Tub U           *SHK+ V          *Col+            *
+  1.00000  1.00000  1.00000 10 Coilover Shock R*R Spring/shock  *
+X Y Z
+Tub U           *SHK+ V          *                *                *
+SWAYBAR.SUB     *Tub X           *Tub Y           *Bar+            *
+  1.00000  1.00000  1.00000  0 Swaybar mount, R*R Anti-Roll bar *
+Y X Z
+Bar+ Z          *ARB+ R          *                *                *
+SWAYLINK.SUB    *Bar+ Z          *ARB+ R          *Lnk+            *
+  1.00000  1.00000  1.00000  0 Swaybar Link, R *R drop link     *
+X Y Z
+ARB+ R          *Bar+ Z          *                *                *
+HALFSHFT.SUB    *Tub I           *Hub+ J          *Shf+            *
+  1.00000  1.00000  1.00000 10 Half-Shaft, Rght*Right halfshaft *
+X Y Z
+Tub I           *Hub+ J          *                *                *
+LOWER.SUB       *Tub A opposite  *Tub C opposite  *Low-            *
+  1.00000 -1.00000  1.00000  5 Contact Patch, L*L Lower Wishbone*
+X Y Z
+Hub- H          *Hub- K          *                *                *
+UPPER.SUB       *Tub D opposite  *Tub F opposite  *Upp-            *
+  1.00000 -1.00000  1.00000  8 Upright length L*L Upper Wishbone*
+X Y Z
+Upp- E          *Low- B          *                *                *
+HUB.SUB         *Low- B          *Upp- E          *Hub-            *
+  1.00000 -1.00000  1.00000  0 Steering Link, L*Left Hub        *
+Z X Y
+Hub- S          *TIE T opposite  *                *                *
+STEERING.SUB    *TIE T opposite  *Hub- S          *Str-            *
+  1.00000 -1.00000  1.00000 10 Steering Link, L*L Steering arm  *
+Z X Y
+TIE T opposite  *Hub- S          *                *                *
+COILOVER.SUB    *Tub U opposite  *SHK- V          *Col-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock L*L Spring/shock  *
+X Y Z
+Tub U opposite  *SHK- V          *                *                *
+SWAYBAR.SUB     *Tub X opposite  *Tub Y opposite  *Bar-            *
+  1.00000 -1.00000  1.00000  0 Swaybar mount, L*L Anti-Roll bar *
+Y X Z
+Bar- Z          *ARB- R          *                *                *
+SWAYLINK.SUB    *Bar- Z          *ARB- R          *Lnk-            *
+  1.00000 -1.00000  1.00000  0 Swaybar Link, L *Left drop link  *
+X Y Z
+ARB- R          *Bar- Z          *                *                *
+HALFSHFT.SUB    *Tub I opposite  *Hub- J          *Shf-            *
+  1.00000 -1.00000  1.00000 10 Half-Shaft, Left*Left Half-shaft *
+X Y Z
+Tub I opposite  *Hub- J          *                *                *

@@ -1,0 +1,12 @@
+           +--------------------------------------------------+
+           |                                                  |
+           | <AADEMO>       Directory    - <DATA Source>      |
+           |                                                  |
+           +--------------------------------------------------+
+
+This Program Option allows you to select the same data file you used last
+run or to use the Directory to select a different file.
+
+Selecting the same file used last time, <AADEMO> in this case, simply
+saves the time and keystrokes needed to select the same file from the
+Directory.

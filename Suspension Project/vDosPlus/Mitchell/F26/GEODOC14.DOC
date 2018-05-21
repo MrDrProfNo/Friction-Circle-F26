@@ -1,0 +1,9 @@
+                               NET STEER
+
+Net Steer is the difference between Loaded and Unloaded Steer.
+A positive Net Steer represents the right or loaded wheel turning left
+more than the left or unloaded wheel.  Proper Ackerman values, wherein
+the outboard wheel turns less than the inboard wheel, requires TOE-OUT
+or negative Net Steer.  Computing actual Ackerman steering effects
+requires knowledge of the radius of the turn.
+

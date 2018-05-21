@@ -1,0 +1,15 @@
+                        GRAPHICAL PERSPECTIVE
+
+The screen display of the suspension depicts the view from the rear of
+the vehicle looking forward.  This is the driver's view of the front
+suspension.
+
+The graphic shows part of the tub, the upper and lower control arms,
+the hub or upright, and the centerline of the tire.
+
+The vehicle is making a LEFT turn (unless negative values of ROLL and
+STEER are used).  The right side of the screen shows the right side
+suspension, which is also referred to as the outboard side or LOADED
+side.  The left side of the screen shows the left side suspension,
+which is also referred to as inboard or UNLOADED side.
+

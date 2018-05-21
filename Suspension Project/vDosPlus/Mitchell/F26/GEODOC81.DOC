@@ -1,0 +1,95 @@
+>Computed suspension lengths: Both sides
+
+     Length of forward Lower link   A-B      17.757
+     Length of rearward lower link  C-B      17.757
+     Perpendicular lower link length         17.500
+     Front View Projection lower length      17.500
+
+     Length of forward Upper link   D-E      13.578
+     Length of rearward upper link  F-E      13.129
+     Perpendicular upper link length         12.976
+     Front View Projection upper length      12.976
+
+     Distance between ball joints   B-E      10.575
+     Tie Rod Length                 S-T      17.500
+
+     Rollout or tire circumference           76.969
+
+     Damper Length                  U-V      12.083
+     Swaybar Blade length           X-Z      10.000
+     Swaybar Rod length             Z-R       3.000
+     Push/Pull Rod length           M-W      16.279
+
+     Halfshaft length               I-J      24.001
+--------------------------------------------------------------------------
+
+
+Computed suspension lengths: Both sides
+
+     Static Caster (in degrees)               5.454
+     King Pin angle (in degrees)              8.942
+     King Pin Offset/Scrub Radius            -5.099
+     Caster Trail                             0.624
+
+     Instant Center                         -86.792       6.750
+     length of virtual swing arm            119.982
+
+     The Half Track is Track/2.0     =       32.889
+     Ride Camber (d Camber/d Ride)   =        0.478
+     Roll Camber (d Camber/d Roll)   =        0.726
+
+     One degree of Roll is                    0.574 inches of wheel travel
+--------------------------------------------------------------------------
+
+
+This report shows the computed lengths of various suspension links.  These
+may be used for verifying data or for building parts.  Similiar numbers
+are also displayed as Check Values on editing screens.
+
+--------------------------------------------------------------------------
+- - - - - - - - - - - -  Virtual Swing Arm Length  - - - - - - - - - - - -
+Relationship between Virtual Swing Arm length and Ride Camber/Roll Camber
+Virtual Swing Arm    Virtual Swing Arm   Ride Camber   Roll Camber
+divided by Track     Length in inches    Degrees/inch  Degrees/Deg
+      0.40                 26.31             2.177       -0.250
+      0.50                 32.89             1.742        0.000
+      0.60                 39.47             1.451        0.167
+      0.70                 46.04             1.244        0.286
+      0.80                 52.62             1.089        0.375
+      0.90                 59.20             0.968        0.444
+      1.00                 65.78             0.871        0.500
+      1.25                 82.22             0.697        0.600
+      1.50                 98.67             0.581        0.667
+      1.75                115.11             0.498        0.714
+      1.82 Actual         119.98             0.478        0.726
+      2.00                131.56             0.436        0.750
+      2.25                148.00             0.387        0.778
+      2.50                164.45             0.348        0.800
+      2.75                180.89             0.317        0.818
+      3.00                197.34             0.290        0.833
+      3.25                213.78             0.268        0.846
+      3.50                230.22             0.249        0.857
+      3.75                246.67             0.232        0.867
+      4.00                263.11             0.218        0.875
+--------------------------------------------------------------------------
+<                       VIRTUAL SWING ARM LENGTH
+
+Ride Camber, or camber change (degrees) per inch of ride travel is:
+
+             ArcTangent of (1.0 / Virtual Swing Arm Length)
+
+Thus a suspension with a long virtual swing arm has little Ride Camber.
+Indeed, a solid rear axle suspension has an infinitely long Virtual
+Swing Arm Length and no Ride Camber.  When a car with solid rear axle
+hits a bump, there is no camber change.
+
+But Roll Camber, or camber change (degrees) per degree of body roll, is:
+
+             1.0 - RideCamber * Track/2 * Tangent(1 degree)
+  or nearly  1.0 - (Track/2) / Virtual Swing Arm Length
+
+Thus small Ride Camber means large Roll Camber, alas.  Indeed, when the
+Virtual Swing Arm Length is half the track, you have a Roll Camber of
+zero.  But short swing arms have other disadvantages, like weight
+jacking (ask any Triumph driver).
+

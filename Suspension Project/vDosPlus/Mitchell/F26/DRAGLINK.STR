@@ -1,0 +1,68 @@
+DRAGLINK Structure specification:  Complete steering model with Droplink
+Upper and lower wishbones with a steering tie-rod connected to a droplink
+Model supports spring/shock and halfshaft but not swaybar or bellcrank.
+Spring/shock and swaybar may be attached to:  Lower wishbone (default)
+                                              Upper wishbone
+                                              Hub
+The steering Tie-rod must be attached to the droplink.
+*
+CHASSISD.SUB    *Tub Origin      *Tub Origin      *Tub             *
+  1.00000  1.00000  1.00000  0 Chassis         *Chassis of car  *
+X Y Z
+                *                *                *                *
+PIVOTD.SUB      *Tub P opposite  *Tub Q opposite  *Str             *
+  1.00000  1.00000  1.00000  0 Steering Arm, L *L Steering arm  *
+Z X Y
+Tub T opposite  *Str X opposite  *                *                *
+DROPLINK.SUB    *Str X opposite  *Str Y opposite  *Drop            *
+  1.00000  1.00000  1.00000  0 Droplink        *Droplink        *
+Z Y X
+Tub P           *Drop X          *                *                *
+LOWERD.SUB      *Tub A opposite  *Tub C opposite  *Low-            *
+  1.00000 -1.00000  1.00000  5 Contact Patch, L*L Lower Wishbone*
+X Y Z
+Hub- H          *Hub- K          *                *                *
+UPPERD.SUB      *Tub D opposite  *Tub F opposite  *Upp-            *
+  1.00000 -1.00000  1.00000  8 Upright length L*L Upper Wishbone*
+X Y Z
+Upp- E          *Low- B          *                *                *
+HUB.SUB         *Low- B          *Upp- E          *Hub-            *
+  1.00000 -1.00000  1.00000  0 Steering Link, L*Left Hub        *
+Z X Y
+Hub- S          *Drop Z opposite *                *                *
+STEERARM.SUB    *Drop Z opposite *Hub- S          *Str-            *
+  1.00000 -1.00000  1.00000 10 Steering Link, L*L Steering arm  *
+Z X Y
+Drop Z opposite *Hub- S          *                *                *
+COILOVER.SUB    *Tub U opposite  *SHK- V          *Col-            *
+  1.00000 -1.00000  1.00000 10 Coilover Shock L*L Spring/shock  *
+X Y Z
+Tub U opposite  *SHK- V          *                *                *
+HALFSHFT.SUB    *Tub I opposite  *Low- J opposite *Shf-            *
+  1.00000 -1.00000  1.00000 10 Half-Shaft, Left*Left halfshaft  *
+X Y Z
+Tub I opposite  *Low- J          *                *                *
+LOWERD.SUB      *Tub A           *Tub C           *Low+            *
+  1.00000  1.00000  1.00000  5 Contact Patch, R*R Lower Wishbone*
+X Y Z
+Hub+ H          *Hub+ K          *                *                *
+UPPERD.SUB      *Tub D           *Tub F           *Upp+            *
+  1.00000  1.00000  1.00000  8 Upright length R*R Upper Wishbone*
+X Y Z
+Upp+ E          *Low+ B          *                *                *
+HUB.SUB         *Low+ B          *Upp+ E          *Hub+            *
+  1.00000  1.00000  1.00000  0 Steering Link, R*Right Hub       *
+Z X Y
+Hub+ S          *Drop Z          *                *                *
+STEERARM.SUB    *Drop Z          *Hub+ S          *Str+            *
+  1.00000  1.00000  1.00000 10 Steering Link, R*R Steering arm  *
+Z X Y
+Drop Z          *Hub+ S          *                *                *
+COILOVER.SUB    *Tub U           *SHK+ V          *Col+            *
+  1.00000  1.00000  1.00000 10 Coilover Shock R*R Spring/shock  *
+X Y Z
+Tub U           *SHK+ V          *                *                *
+HALFSHFT.SUB    *Tub I           *Low+ J          *Shf+            *
+  1.00000  1.00000  1.00000 10 Half-Shaft, Rght*Right Half-shaft*
+X Y Z
+Tub I           *Low+ J          *                *                *

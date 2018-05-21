@@ -1,0 +1,45 @@
+                     +----------------------------+
+                     | 1 -  Suspension Analysis   |
+                     | 2 -  Kinematics vs. Force  |
+                     | 3 -  Display Parameters    |
+                     | 4 -  Display Points        |
+                     | 5 -  Change graphic Scale  |
+                     | 6 -  Solution Summary      |
+                     | 7 -  Fundamental Analysis  |
+                     | 8 -  Rotation Analysis     |
+                     | 9 -  Force Computations    |
+                     | 0 -  Roll Center Analysis  |
+                     | Q - <QUIT - return to CAD> |
+                     +----------------------------+
+
+These tutorials contain some additional tabular information.
+----------------------------------------------------------------------
+
+1.  The Suspension Analysis gives lengths of the suspension links, and
+    other basic data.
+
+2.  Kinematics vs. Force explains two fundamental issues.
+
+3.  Display Parameters shows the suspension elements in tabular form.
+
+4.  Display Points gives the location of suspension points to high
+    accuracy.  This can be used as input to other programs.
+
+5.  Change graphic scale controls the appearance of the tutorials.
+    This permits the user to see a wider image or to narrow in on a
+    specific area.
+----------------------------------------------------------------------
+6.  The Solution Summary describes the mathematical solution of the
+    suspension problem.  This is mainly for debugging.
+
+7.  The Fundamental Analysis gives Roll Camber, Ride Camber, and other
+    calculated variables based on virtual swing arm length.
+
+8.  The Rotation Analysis is for debugging.
+
+9.  The Force Computations calculate the forces on suspension points
+    resulting from input forces at the tire contact patch
+
+0.  The Roll Center Analysis is a mathematical procedure to determine
+    the length of the Upper A-Arm to give a roll center which does not
+    move laterally as the vehicle rolls.

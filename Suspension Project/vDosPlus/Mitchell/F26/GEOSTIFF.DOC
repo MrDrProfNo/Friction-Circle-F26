@@ -1,0 +1,33 @@
+                              STIFFNESS COEFFICIENT
+
+The Stiffness coefficient is crucial to understanding the roll of the tire
+spring rate.  The stiffness coefficient is defined as the ratio of the
+spring rate of the spring to the spring rate of the tire.  If the tire has
+a spring rate of 1,000 lbs/in and the spring is rated at 500 lbs/in, then
+the stiffness coefficient is 500/1000 = 0.50.
+
+If the spring rate of the tire is infinite, i.e., a rigid body, then the
+stiffness coefficient is 0.0 regardless of what spring is used.  This
+corresponds to the assumption of the regular suspension geometry program.
+
+The Motion Ratio Computation must be performed in order to properly use the
+Stiffness coefficient.  The Motion Ratio relates the stiffness of the spring
+to the actual wheel rate.  The program then uses this wheel rate to
+determinre the growth or deflection of the tire.  The program iterates until
+a solution is found satisfies the normal requirements as well as the proper
+ratio of spring travel and tire growth/deflection.
+
+----------------------------------------------------------------------------
+
+NOTE:  Tire growth/deflection is now measured as the change in static loaded
+radius.  It formerly was based in a change in the diameter of the tire.  This
+new definition corresponds to normal use.
+
+The Stiffness coefficient can (currently) only be used in CAD mode.  The
+Stiffness coefficient starts at 0.0.  The lower case 's' key increases the
+stiffness coefficient; upper case 'S' decreases the Stiffness coefficient.
+The END key can be used to change delta from 0.1 to 0.01, 0.001 or 1.0.
+The Stiffness coefficient can be manipulated just like ride heigth, body
+roll, or any other variable.
+
+

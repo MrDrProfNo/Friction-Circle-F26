@@ -1,0 +1,108 @@
+0
+59 Hit the F1 key for Help
+999
+999
+0
+60 Hit F2 for an explanation of this menu
+999
+0
+77 Use RIGHT ARROW to select the DIRECTORY option
+0
+80 Use DOWN ARROW to select MONITOR
+0
+77 Use RIGHT ARROW to select the SET MONITOR option
+13 Hit ENTER to leave program options menu
+-121 Hit y to select COLOR text option
+-121 Hit y to utilize reverse video
+49 Hit 1 to select CGA
+53 Hit 5 to select High Resolution
+99 Hit c to CHECK the graphics selection
+999
+113 Hit q to Accept the Graphics Selection and leave this menu
+0
+59 Hit F1 for Help
+999
+0
+60 Hit F2 for an explanation of this menu
+999
+0
+61 Hit the F3 key to Preview files
+999
+13 Hit ENTER to select the AADEMO file
+999
+0
+59 Hit F1 for an explanation of Pull Down menus
+999
+0
+60 Hit F2 for an explanation of this selection
+999
+999
+13 Hit ENTER to select the CAD/mode selection
+0
+60 Hit F2 for an explanation of this choice
+999
+999
+99 Hit c to select CAD mode
+111 Hit o to look at suspension Options
+0
+60 F2 for an explanation
+999
+999
+49 Look at options
+101 Hit e to Edit data
+100 Hit d for Description
+27 Hit ESCape to leave full-screen editor
+49 Hit 1 to look at suspension points
+27 Hit ESCape to leave this editor
+115 Hit s to sketch the suspension
+115 Hit s to sketch without changing options
+999
+120 Hit x to eXecute
+120 Hit x to run data
+0
+60 Hit F2 for an explanation of this choice
+0
+80 Hit the Down Arrow to lower the vehicle 0.1 inch (parallel bump)
+0
+80 Hit the Down Arrow again
+0
+80 and again
+0
+80 again ...
+0
+80 Yes, I know it's boring
+13 Now hit ENTER to compute this position
+0
+77 Hit the Right Arrow to increase Roll 0.1 degrees
+0
+77 Hit the Right Arrow again
+0
+77 and again
+0
+77 once more
+0
+77 last time
+13 Hit ENTER to compute
+27 Hit ESCape to bring up CAD menu
+112 Select to move Suspension Points
+101 Select E to move Upper ball joint
+0
+72 Hit UP arrow to raise Upper ball joint 0.1 inch
+0
+72 Hit UP arrow again
+0
+72 and again
+0
+72 once more
+0
+72 last time
+13 now hit ENTER to finish moving ball joint
+27 hit ESCape to leave submenu
+27 hit ESCape to leave CAD menu
+113 hit Q to quit
+110 in this case we don't want to SAVE the suspension
+121 We are finished with this program
+121 WE ARE FINISHED
+121 WE ARE DEFINITELY FINISHED
+
+
