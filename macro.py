@@ -3,6 +3,8 @@ from win32clipboard import OpenClipboard, CloseClipboard, GetClipboardData
 
 import win32gui as wg
 import keyboard
+from decimal import Decimal
+
 
 STANDARD_DELAY = .75
 
@@ -159,7 +161,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 		keyboard.send("y")
 
 		sleep(STANDARD_DELAY)
-		print("Complete", wheel, "run", case)
+		print("Complete", wheel, "run", case + 1)
 
 	# For the second half of the data set, all x values go into the A field instead
 	for case in range(dataSize // 2, dataSize):
@@ -168,6 +170,10 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 			yField = df_MCPFy[wheel + "_Fy"][case]
 			zField = df_MCPFz[wheel + "_Fz"][case]
 			print("Running: " + wheel + "; Case: ", case + 1)
+
+			if(yField < Decimal(.5) or yField > Decimal):
+				yField = Decimal(0)
+
 			print("a:", aField)
 			print("y:", yField)
 			print("z:", zField, "\n")
@@ -228,7 +234,7 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 		keyboard.send("y")
 
 		sleep(STANDARD_DELAY)
-		print("Complete run", case + 1)
+		print("Complete", wheel, "run", case + 1)
 
 	file.close()
 
