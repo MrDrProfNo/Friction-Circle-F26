@@ -96,10 +96,20 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 
 	for case in range(0, dataSize // 2):
 		for wheel in ["R" + axle, "L" + axle]: # Creates FR, FL, RR, RL as needed
-			xField = df_MCPFx[wheel + "_Fx"][case]
-			yField = df_MCPFy[wheel + "_Fy"][case]
-			zField = df_MCPFz[wheel + "_Fz"][case]
+
+			# simple using <dataframe>[index1][index2] causes it to try and
+			# use the case number (position) as the dataframe index (associated label)
+			# which results in the second case (position 1) using the values for
+			# the last case (associated label "1")
+			xField = df_MCPFx[wheel + "_Fx"].iloc[case]
+			yField = df_MCPFy[wheel + "_Fy"].iloc[case]
+			zField = df_MCPFz[wheel + "_Fz"].iloc[case]
 			print("Running: " + wheel + "; Case: ", case + 1)
+
+			if(yField < Decimal(.5) and yField > Decimal(-.5)):
+				yField = Decimal(0)
+
+
 			print("x:", xField)
 			print("y:", yField)
 			print("z:", zField, "\n")
@@ -166,12 +176,17 @@ def macroRunAxle(dim_force_dfs, axle, fOutput):
 	# For the second half of the data set, all x values go into the A field instead
 	for case in range(dataSize // 2, dataSize):
 		for wheel in ["R" + axle, "L" + axle]: # Creates FR, FL, RR, RL as needed
-			aField = df_MCPFx[wheel + "_Fx"][case]
-			yField = df_MCPFy[wheel + "_Fy"][case]
-			zField = df_MCPFz[wheel + "_Fz"][case]
+
+			# simple using <dataframe>[index1][index2] causes it to try and
+			# use the case number (position) as the dataframe index (associated label)
+			# which results in the second case (position 1) using the values for
+			# the last case (associated label "1")
+			aField = df_MCPFx[wheel + "_Fx"].iloc[case]
+			yField = df_MCPFy[wheel + "_Fy"].iloc[case]
+			zField = df_MCPFz[wheel + "_Fz"].iloc[case]
 			print("Running: " + wheel + "; Case: ", case + 1)
 
-			if(yField < Decimal(.5) or yField > Decimal):
+			if(yField < Decimal(.5) and yField > Decimal(-.5)):
 				yField = Decimal(0)
 
 			print("a:", aField)
