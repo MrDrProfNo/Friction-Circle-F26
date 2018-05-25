@@ -128,7 +128,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 			caseIDX = (count // 2)
 			caseData = df_full.iloc[caseIDX]
 
-			addPositionColumn(caseIDX, df)
+			addPositionColumn(caseIDX + 1, df)	# normal people don't 0 index
 
 			# case = Decimal(case)
 			# case = round(case, 1)
