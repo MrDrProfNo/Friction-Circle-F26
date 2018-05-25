@@ -14,6 +14,8 @@ def createDataframe(car, loadCases):
 	:return: Dataframe containing the calculated values in a dictionary
 	"""
 
+	sParams = secondaryParams(car)
+
 	# Error checking with more descriptive crash errors.
 	if (not isinstance(loadCases, int)):
 		raise TypeError("number of load cases must be of type int")
@@ -70,14 +72,54 @@ def createDataframe(car, loadCases):
 
 	# run calculations for all values of theta
 	for coef in theta_coef_all:
-		calculateForCaseN(datadict, car, coef)
+		calculateForCaseN(datadict, car, sParams, coef)
 
 
 	df = DataFrame(data=datadict, index=theta_coef_all, columns=columns)
 
 	return df
 
-def calculateForCaseN(datadict, car, n):
+def secondaryParams(car):
+	"""
+	Generates the secondary set of constant parameters based on those read
+	from the config file.
+	:param params: params dictionary produced by ParamsFromConfig
+	:return: tuple containing variables a, b, Fz_f, Fz_r (Max Long Accel,
+			Max Lat Accel, Front Static Corner weight, Rear Static Corner
+			weight)
+	"""
+
+	W_d = car.W_d
+	M = car.M
+	D = car.D
+	A = car.A
+	A_d = car.A_d
+
+	# In order for math-related operations to work, Decimal cannot be
+	# multiplied by a float. Separate Decimals are kept around for pi
+	Fz_f = Decimal((W_d * (M + D)) / 2)  # Front Static Corner weight
+	Fz_r = Decimal(((1 - W_d) * (M + D)) / 2)  # Rear Static Corner weight
+	# A and B
+	Fr_A = Decimal(Fz_f * 2 + A * A_d)  # Front Axle Weight
+	Re_A = Decimal(Fz_r * 2 + A * (1 - A_d))  # Rear Axle Weight
+
+	Mux_f = Decimal(2.2677) - Decimal(.0007) * (Fr_A)  # Front Mu_x
+	Mux_r = Decimal(2.2677) - Decimal(.0007) * (Re_A)  # Rear Mu_x
+	Muy_f = Decimal(1.7625) - Decimal(.0004) * (Fr_A)  # Front Mu_y
+	Muy_r = Decimal(1.7625) - Decimal(.0004) * (Re_A)  # Rear Mu_y
+
+	Fr_Fx = Mux_f * Fr_A  # Front Cornering Force (x)
+	Fr_Fy = Muy_f * Fr_A  # Front Cornering Force (y)
+	Re_Fx = Mux_r * Re_A  # Rear Cornering Force (x)
+	Re_Fy = Muy_r * Re_A  # Rear Cornering Force (y)
+	Total_x = Fr_Fx + Re_Fx  # Total X Cornering Force
+	Total_y = Fr_Fy + Re_Fy  # Total Y Cornering Force
+	a = Total_x / (M + D)  # Max Long Accel
+	b = Total_y / (M + D)  # Max Lat Accel
+
+	return a, b, Fz_f, Fz_r
+
+def calculateForCaseN(datadict, car, sParams, n):
 	"""
 	Runs calculations for all values for the given theta-coefficient n. Uses
 	default values for the Car as given by the car object, which should have read
@@ -107,10 +149,10 @@ def calculateForCaseN(datadict, car, n):
 
 
 	# define variables for car constants to make code easier to read
-	a = car.a
-	b = car.b
-	Fz_f = car.fz_f
-	Fz_r = car.fz_r
+	a = sParams[0]
+	b = sParams[1]
+	Fz_f = sParams[2]
+	Fz_r = sParams[3]
 	M = car.M
 	D = car.D
 	Long_WT = car.Long_WT
@@ -124,11 +166,11 @@ def calculateForCaseN(datadict, car, n):
 	# The 6-position calculation for YG and 1-position for XG were being reused
 	# later in the code as constants with no explanation. Something to do with
 	# their theta coefficients.
-	YG_6 = (car.a * car.b) / Decimal(
-		m.sqrt((car.b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
-			   ((car.a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
+	YG_6 = (a * b) / Decimal(
+		m.sqrt((b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
+			   ((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
 		   Decimal(m.sin(0.49 * m.pi))
-	XG_1 = -((car.a * car.b) / Decimal(m.sqrt(car.b ** 2)))
+	XG_1 = -((a * b) / Decimal(m.sqrt(b ** 2)))
 
 	# The main calculations. Again, I don't really have a better label for
 	# any of these variables.
