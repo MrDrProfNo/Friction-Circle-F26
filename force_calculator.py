@@ -95,6 +95,18 @@ def secondaryParams(car):
 	A = car.A
 	A_d = car.A_d
 
+	e = Decimal(m.e)
+	C1Long = Decimal(2.24147)
+	C2Long = Decimal(-0.0011860)
+
+	C1Lat = Decimal(1.48337)
+	C2Lat = Decimal(-0.0024767)
+	C3Lat = Decimal(0.40077)
+	C4Lat = Decimal(0.0028038)
+	LatDefault = Decimal(1.6028)
+
+	maxFn = 224
+
 	# In order for math-related operations to work, Decimal cannot be
 	# multiplied by a float. Separate Decimals are kept around for pi
 	Fz_f = Decimal((W_d * (M + D)) / 2)  # Front Static Corner weight
@@ -103,10 +115,18 @@ def secondaryParams(car):
 	Fr_A = Decimal(Fz_f * 2 + A * A_d)  # Front Axle Weight
 	Re_A = Decimal(Fz_r * 2 + A * (1 - A_d))  # Rear Axle Weight
 
-	Mux_f = Decimal(2.2677) - Decimal(.0007) * (Fr_A)  # Front Mu_x
-	Mux_r = Decimal(2.2677) - Decimal(.0007) * (Re_A)  # Rear Mu_x
-	Muy_f = Decimal(1.7625) - Decimal(.0004) * (Fr_A)  # Front Mu_y
-	Muy_r = Decimal(1.7625) - Decimal(.0004) * (Re_A)  # Rear Mu_y
+	Mux_f = C1Long * e ** (C2Long * Fr_A)  # Front Mu_x
+	Mux_r = C1Long * e ** (C2Long * Re_A)  # Rear Mu_x
+
+	if( Fr_A < maxFn ):
+		Muy_f = C1Lat * e ** (C2Lat * Fr_A) + C3Lat * e ** (C4Lat * Fr_A) # Front Mu_y
+	else:
+		Muy_f = LatDefault
+
+	if( Re_A < maxFn ):
+		Muy_r = C1Lat * e ** (C2Lat * Re_A) + C3Lat * e ** (C4Lat * Re_A)
+	else:
+		Muy_r = LatDefault
 
 	Fr_Fx = Mux_f * Fr_A  # Front Cornering Force (x)
 	Fr_Fy = Muy_f * Fr_A  # Front Cornering Force (y)
@@ -116,6 +136,9 @@ def secondaryParams(car):
 	Total_y = Fr_Fy + Re_Fy  # Total Y Cornering Force
 	a = Total_x / (M + D)  # Max Long Accel
 	b = Total_y / (M + D)  # Max Lat Accel
+
+	print("Maximum theoretical longitudinal acceleration is:", a)
+	print("Maximum theoretical lateral acceleration is:", b)
 
 	return a, b, Fz_f, Fz_r
 
@@ -145,9 +168,6 @@ def calculateForCaseN(datadict, car, sParams, n):
 	sinNPi = Decimal(m.sin(n * pi))
 
 
-
-
-
 	# define variables for car constants to make code easier to read
 	a = sParams[0]
 	b = sParams[1]
@@ -159,6 +179,19 @@ def calculateForCaseN(datadict, car, sParams, n):
 	Lat_WT = car.Lat_WT
 	A = car.A
 	A_d = car.A_d
+
+	### More constants for the Mu... calculations ###
+	e = Decimal(m.e)
+	C1Long = Decimal(2.24147)
+	C2Long = Decimal(-0.0011860)
+
+	C1Lat = Decimal(1.48337)
+	C2Lat = Decimal(-0.0024767)
+	C3Lat = Decimal(0.40077)
+	C4Lat = Decimal(0.0028038)
+	LatDefault = Decimal(1.6028)
+
+	maxFn = 224
 
 
 	# constants that really need a better name but I don't know what they are.
@@ -187,22 +220,35 @@ def calculateForCaseN(datadict, car, sParams, n):
 		A * (n - A_d) / 2)
 	LR_Fz_n = Fz_r + (M + D) / 2 * (Long_WT * XG_n - Lat_WT * YG_n) + (
 		A * (1 - A_d) / 2)
-	LF_Mu_x_n = (Decimal(2.2677) - Decimal(.0007) * (abs(LF_Fz_n))) * (
-		XG_n / XG_1)
-	RF_Mu_x_n = (Decimal(2.2677) - Decimal(.0007) * (abs(RF_Fz_n))) * (
-		XG_n / XG_1)
-	LR_Mu_x_n = (Decimal(2.2677) - Decimal(.0007) * (abs(LR_Fz_n))) * (
-		XG_n / XG_1)
-	RR_Mu_x_n = (Decimal(2.2677) - Decimal(.0007) * (abs(RR_Fz_n))) * (
-		XG_n / XG_1)
-	LF_Mu_y_n = (Decimal(1.7625) - Decimal(.0004) * (abs(LF_Fz_n))) * (
-		YG_n / YG_6)
-	RF_Mu_y_n = (Decimal(1.7625) - Decimal(.0004) * (abs(RF_Fz_n))) * (
-		YG_n / YG_6)
-	LR_Mu_y_n = (Decimal(1.7625) - Decimal(.0004) * (abs(LR_Fz_n))) * (
-		YG_n / YG_6)
-	RR_Mu_y_n = (Decimal(1.7625) - Decimal(.0004) * (abs(RR_Fz_n))) * (
-		YG_n / YG_6)
+
+	# Long
+	LF_Mu_x_n = C1Long * e ** (C2Long * LF_Fz_n)
+	RF_Mu_x_n = C1Long * e ** (C2Long * RF_Fz_n)
+	LR_Mu_x_n = C1Long * e ** (C2Long * LR_Fz_n)
+	RR_Mu_x_n = C1Long * e ** (C2Long * RR_Fz_n)
+
+	# Lat
+	if( LF_Fz_n < maxFn ):
+		LF_Mu_y_n = C1Lat * e ** (C2Lat * LF_Fz_n) + C3Lat * e ** (C4Lat * LF_Fz_n)
+	else:
+		LF_Mu_y_n = LatDefault
+
+	if( RF_Fz_n < maxFn ):
+		RF_Mu_y_n = C1Lat * e ** (C2Lat * RF_Fz_n) + C3Lat * e ** (C4Lat * RF_Fz_n)
+	else:
+		RF_Mu_y_n = LatDefault
+
+	if( LR_Fz_n < maxFn ):
+		LR_Mu_y_n = C1Lat * e ** (C2Lat * LR_Fz_n) + C3Lat * e ** (C4Lat * LR_Fz_n)
+	else:
+		LR_Mu_y_n = LatDefault
+
+	if( RR_Fz_n < maxFn ):
+		RR_Mu_y_n = C1Lat * e ** (C2Lat * RR_Fz_n) + C3Lat * e ** (C4Lat * RR_Fz_n)
+	else:
+		RR_Mu_y_n = LatDefault
+
+
 	LFX_n = -LF_Mu_x_n * LF_Fz_n
 	RFX_n = -RF_Mu_x_n * RF_Fz_n
 	LRX_n = -LR_Mu_x_n * LR_Fz_n
@@ -216,13 +262,13 @@ def calculateForCaseN(datadict, car, sParams, n):
 	Fy_n = LFY_n + RFY_n + LRY_n + RRY_n
 	LaG_n = Fy_n / (M + D)
 	LF_c_n = Decimal(
-		m.sqrt(abs(LF_Fz_n) ** 2 + abs(LFX_n) ** 2 + abs(LFY_n) ** 2))
+		m.sqrt(LF_Fz_n ** 2 + LFX_n ** 2 + LFY_n ** 2))
 	RF_c_n = Decimal(
-		m.sqrt(abs(RF_Fz_n) ** 2 + abs(RFX_n) ** 2 + abs(RFY_n) ** 2))
+		m.sqrt(RF_Fz_n ** 2 + RFX_n ** 2 + RFY_n ** 2))
 	LR_c_n = Decimal(
-		m.sqrt(abs(LR_Fz_n) ** 2 + abs(LRX_n) ** 2 + abs(LRY_n) ** 2))
+		m.sqrt(LR_Fz_n ** 2 + LRX_n ** 2 + LRY_n ** 2))
 	RR_c_n = Decimal(
-		m.sqrt(abs(RR_Fz_n) ** 2 + abs(RRX_n) ** 2 + abs(RRY_n) ** 2))
+		m.sqrt(RR_Fz_n ** 2 + RRX_n ** 2 + RRY_n ** 2))
 
 	# Collect all values of n; used for row labeling later
 	datadict["r_theta"].append(r_theta_n)

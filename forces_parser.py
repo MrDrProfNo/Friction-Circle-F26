@@ -4,7 +4,7 @@ import argparse
 import os.path
 import re
 from decimal import Decimal
-from pandas import ExcelWriter, DataFrame
+from pandas import ExcelWriter, DataFrame, Series
 
 def parse(path, output_name):
 	print('Opening input text file...')
@@ -128,6 +128,8 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 			caseIDX = (count // 2)
 			caseData = df_full.iloc[caseIDX]
 
+			addPositionColumn(caseIDX, df)
+
 			# case = Decimal(case)
 			# case = round(case, 1)
 			if (displacement == 0):  # right front wheel
@@ -161,7 +163,6 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 						startrow=topMargin + (
 						(caseIDX) * (yspacing + tableheight))
 						)
-
 
 			# occasionally spits a message into console, but never crashes
 			# message roughly "non-integers will soon cease to be supported"
@@ -225,7 +226,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 							 "INDIRECT(\"C[-3]\", FALSE)^2)"
 							 ]
 		line = f.readline()
-
+	writer.save()
 	writer.close()
 
 
@@ -312,8 +313,9 @@ def generatePartialHeaders(dfSize):
 	for i in range(1, bcCount):
 		headers.append("BC " + str(i) + ": ")
 
-	headers.append("Max Corner 1: ")
-	headers.append("Max Corner 2: ")
+	if(dfSize >= 4):
+		headers.append("Max Corner 1: ")
+		headers.append("Max Corner 2: ")
 
 	acCount = dfSize // 2 - 1 # number of AC headers to add
 
@@ -323,6 +325,21 @@ def generatePartialHeaders(dfSize):
 	headers.append("Max Accel: ")
 
 	return headers
+
+def addPositionColumn(index, df):
+	"""
+	Generates an array of the value "index", the length of the passed dataframe,
+	and then appends it as a column of that dataframe.
+	:param index: Number to populate with
+	:param df: Dataframe to put column in
+	"""
+	size = df.shape[0]
+	series = []
+	for i in range(0, size):
+		series.append(index)
+
+	df["Load Case"] = Series(series, index=df.index)
+
 
 if __name__ == '__main__':
 	# if this is being run as main, asks for a file to read from and produces

@@ -1,9 +1,9 @@
 import os  # filepath related functions
 import traceback
 
-from pandas import ExcelWriter
+from pandas import ExcelWriter, Series
 
-
+from forces_parser import generatePartialHeaders
 
 # Row that data starts at for formatted dump
 FORMAT_DATA_ROW_START = 5
@@ -50,6 +50,19 @@ def formatted_dump(dirpath, filename, dataframes):
 	"""
 	### Separate out Max Contact Patch Forces ###
 	df_MCPFx, df_MCPFy, df_MCPFz = dataframes
+
+
+	### Set custom index, replacing the theta coefficient
+	index = generatePartialHeaders(df_MCPFx.shape[0])
+
+	df_MCPFx[""] = Series(index, index=df_MCPFx.index)
+	df_MCPFy[""] = Series(index, index=df_MCPFx.index)
+	df_MCPFz[""] = Series(index, index=df_MCPFx.index)
+
+	df_MCPFx = df_MCPFx.set_index("")
+	df_MCPFy = df_MCPFy.set_index("")
+	df_MCPFz = df_MCPFz.set_index("")
+
 
 	# Set the filepath for the target file by appending to path to output
 	# folder

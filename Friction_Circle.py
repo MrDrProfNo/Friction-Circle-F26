@@ -120,8 +120,8 @@ def main():
 	pid = subprocess.Popen(paths.VDosPlus_path).pid
 	print("Generated vDosPlus process with PID:", pid)
 
-	# Run the macro
-	macroMain(dim_force_dfs, paths)
+	# # Run the macro
+	# macroMain(dim_force_dfs, paths)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)
