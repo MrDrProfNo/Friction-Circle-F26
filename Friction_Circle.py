@@ -30,7 +30,7 @@ keyboard: python class to simulate keypresses on the active window. It's used
  Mitchell's. Needs ~.5 seconds between keypressed for them to properly fire.
 
 win32_____: Manipulating open windows so that keyboard targets the correct one
- and managing the system clipboard.
+ and managing the system clipboard.f
 """
 
 import subprocess
