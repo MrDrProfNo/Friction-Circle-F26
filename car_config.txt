@@ -5,25 +5,25 @@
 # and may cause issues.
 
 # Car weight [lbs]
-M=345
+M=375
 
 # Driver weight [lbs]
 D=180
 
 # Weight Distribution [% Front]
-W_d=0.469
+W_d=0.47
 
 # CG height [in]
 CG=11.7
 
 # Wheelbase [in]
-WB=65
+WB=62
 
 # Track Width [in]
 TW=45
 
 # Total Aero Downforce [lb]
-A=465
+A=820
 
 # Aero Distribution [% Front]
 A_d=0.44

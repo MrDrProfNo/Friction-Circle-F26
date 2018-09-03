@@ -1,4 +1,3 @@
-
 from decimal import Decimal
 import decimal
 from pandas import DataFrame
@@ -26,16 +25,16 @@ def createDataframe(car, loadCases):
 
 	# dictionary to store all of the calculations. Order is irrelevant, but
 	# all keys must match the strings in columns array below.
-	datadict = {'r_theta':	[],	'XG':	 	[],	'YG':		[],
-				'RF_Fz':	[],	'LF_Fz': 	[], 'RR_Fz':	[],
+	datadict = {          'r_theta':	[],	'XG':	 	[],	'YG':		[],
+				'RF_Fz':	[],	'LF_Fz': 	[],     'RR_Fz':	[],
 				'LR_Fz': 	[],	'LF_Mu_x':	[],	'RF_Mu_x':	[],
 				'LR_Mu_x':	[],	'RR_Mu_x':	[],	'LF_Mu_y':	[],
 				'RF_Mu_y':	[],	'LR_Mu_y':	[],	'RR_Mu_y':	[],
 				'LF_Fx':	[],	'RF_Fx':	[],	'LR_Fx':	[],
 				'RR_Fx':	[],	'Fx':		[],	'LoG':		[],
 				'LF_Fy':	[],	'RF_Fy':	[],	'LR_Fy':	[],
-				'RR_Fy':	[],	'Fy':		[], 'LaG':		[],
-				'LF_c':		[], 'RF_c':		[], 'LR_c':		[],
+				'RR_Fy':	[],	'Fy':		[],     'LaG':		[],
+				'LF_c':		[],     'RF_c':		[],     'LR_c':		[],
 				'RR_c':		[]}
 
 	# all values of theta coefficient that calculations are run for [0, 1]
@@ -57,8 +56,8 @@ def createDataframe(car, loadCases):
 		# dividing by loadcases ensures we're on range [0, 1];
 		theta_coef = Decimal( case / loadCases )
 
-		# quantize rounds it at the specified digit (8th place currently)
-		theta_coef = theta_coef.quantize( Decimal("0.00000001") )
+		# quantize rounds it at the specified digit (4th place currently)
+		theta_coef = theta_coef.quantize( Decimal("0.0001") )
 		if(theta_coef == Decimal(.5) ):
 			# Special case for theta coef .5 to avoid division by 0 error
 			theta_coef_all.append(theta_coef - ( theta_coef / 1000) )
@@ -95,45 +94,49 @@ def secondaryParams(car):
 	A = car.A
 	A_d = car.A_d
 
+	# Friction values based on tire model from F27 Vehicle Dynamics Group
 	e = Decimal(m.e)
-	C1Long = Decimal(2.24147)
-	C2Long = Decimal(-0.0011860)
 
-	C1Lat = Decimal(1.48337)
-	C2Lat = Decimal(-0.0024767)
-	C3Lat = Decimal(0.40077)
-	C4Lat = Decimal(0.0028038)
-	LatDefault = Decimal(1.6028)
+	# Longitudinal Mu coeff.
+	C1Long = Decimal(3.0343)
+	C2Long = Decimal(-0.0017)
 
+	# Lateral Mu coeff.
+	C1Lat = Decimal(-.285)
+	C2Lat = Decimal(3.6211)
+
+	# Max Normal force for lateral mu before latdefault is used rather than equation
 	maxFn = 224
 
 	# In order for math-related operations to work, Decimal cannot be
 	# multiplied by a float. Separate Decimals are kept around for pi
+	
 	Fz_f = Decimal((W_d * (M + D)) / 2)  # Front Static Corner weight
 	Fz_r = Decimal(((1 - W_d) * (M + D)) / 2)  # Rear Static Corner weight
-	# A and B
-	Fr_A = Decimal(Fz_f * 2 + A * A_d)  # Front Axle Weight
-	Re_A = Decimal(Fz_r * 2 + A * (1 - A_d))  # Rear Axle Weight
+	
+	Fr_A_R = Decimal(Fz_f + ((A * A_d)/2))  # Front Right Normal Force with aero
+	Fr_A_L = Decimal(Fz_f + ((A * A_d)/2))  # Front Left Normal Force with aero
+	Re_A_R = Decimal(Fz_r + ((A * (1 - A_d))/2))  # Rear Right Normal Force with aero
+	Re_A_L = Decimal(Fz_r + ((A * (1 - A_d))/2))  # Rear Normal Force with aero
+	
+	Mux_f_R = C1Long * e ** (abs( Fr_A_R)*C2Long)  # Front Right Mu_x (longitudinal)
+	Mux_f_L	= C1Long * e ** (abs( Fr_A_L)*C2Long)  # Front Left	Mu_x (longitudinal)
+	Mux_r_R = C1Long * e ** (abs( Re_A_R)*C2Long)  # Rear Right Mu_x (longitudinal)
+	Mux_r_L	= C1Long * e ** (abs( Re_A_L)*C2Long)  # Rear Left Mu_x (longitudinal)
 
-	Mux_f = C1Long * e ** (C2Long * Fr_A)  # Front Mu_x
-	Mux_r = C1Long * e ** (C2Long * Re_A)  # Rear Mu_x
+	Muy_f_R = (C1Lat * Decimal.ln (abs(Fr_A_R)) + C2Lat) # Front Right Mu_y (lateral)
+	Muy_f_L = (C1Lat * Decimal.ln (abs(Fr_A_L)) + C2Lat) # Rear Right Mu_y (lateral)
+	Muy_r_R = (C1Lat * Decimal.ln (abs(Re_A_R)) + C2Lat) # Front Left Mu_y (lateral)
+	Muy_r_L = (C1Lat * Decimal.ln (abs(Re_A_L)) + C2Lat) # Rear Left Mu_y (lateral)
 
-	if( Fr_A < maxFn ):
-		Muy_f = C1Lat * e ** (C2Lat * Fr_A) + C3Lat * e ** (C4Lat * Fr_A) # Front Mu_y
-	else:
-		Muy_f = LatDefault
-
-	if( Re_A < maxFn ):
-		Muy_r = C1Lat * e ** (C2Lat * Re_A) + C3Lat * e ** (C4Lat * Re_A)
-	else:
-		Muy_r = LatDefault
-
-	Fr_Fx = Mux_f * Fr_A  # Front Cornering Force (x)
-	Fr_Fy = Muy_f * Fr_A  # Front Cornering Force (y)
-	Re_Fx = Mux_r * Re_A  # Rear Cornering Force (x)
-	Re_Fy = Muy_r * Re_A  # Rear Cornering Force (y)
+	Fr_Fx = (Mux_f_R * Fr_A_R)+(Mux_f_L * Fr_A_L)  # Front Cornering Force (x) [left and right combined]
+	Fr_Fy = (Muy_f_R * Fr_A_R)+(Muy_f_L * Fr_A_L)  # Front Cornering Force (y) [left and right combined]
+	Re_Fx = (Mux_r_R * Re_A_R)+(Mux_r_L * Re_A_L)  # Rear Cornering Force (x) [left and right combined]
+	Re_Fy = (Muy_r_R * Re_A_R)+(Muy_r_L * Re_A_L)  # Rear Cornering Force (y) [left and right combined]
+	
 	Total_x = Fr_Fx + Re_Fx  # Total X Cornering Force
 	Total_y = Fr_Fy + Re_Fy  # Total Y Cornering Force
+	
 	a = Total_x / (M + D)  # Max Long Accel
 	b = Total_y / (M + D)  # Max Lat Accel
 
@@ -182,93 +185,89 @@ def calculateForCaseN(datadict, car, sParams, n):
 
 	### More constants for the Mu... calculations ###
 	e = Decimal(m.e)
-	C1Long = Decimal(2.24147)
-	C2Long = Decimal(-0.0011860)
+	C1Long = Decimal(3.0343)
+	C2Long = Decimal(-.0017)
 
-	C1Lat = Decimal(1.48337)
-	C2Lat = Decimal(-0.0024767)
-	C3Lat = Decimal(0.40077)
-	C4Lat = Decimal(0.0028038)
-	LatDefault = Decimal(1.6028)
-
-	maxFn = 224
-
-
-	# constants that really need a better name but I don't know what they are.
-	# name origin is that this is how they were in the original matlab code.
-	# The 6-position calculation for YG and 1-position for XG were being reused
-	# later in the code as constants with no explanation. Something to do with
-	# their theta coefficients.
-	YG_6 = (a * b) / Decimal(
+	C1Lat = Decimal(-.285)
+	C2Lat = Decimal(3.6211)
+	
+	# Calculation of contact patch forces using an ellipse shape to transition from pure longitudinal to pure lateral acceleration peaks and everywhere in between
+	# X is longitudinal and Y is lateral
+	
+	#Maximum lateral and longitudinal values transcribed on an ellipse which are used later for generating a scaling value for mu values:
+	
+	YG_max = (a * b) / Decimal(
 		m.sqrt((b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
 			   ((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
 		   Decimal(m.sin(0.49 * m.pi))
-	XG_1 = -((a * b) / Decimal(m.sqrt(b ** 2)))
+		   
+	XG_max = -((a * b) / Decimal(m.sqrt(b ** 2)))
 
-	# The main calculations. Again, I don't really have a better label for
-	# any of these variables.
+	# The main calculations to calculate contact patch forces
+
+	# Translastes max long and lat accelerations to an ellipse
 	r_theta_n = (a * b) / Decimal(
 		m.sqrt(((b * cosNPi) ** 2 + ((a * sinNPi)) ** 2))
 		)
+		
+	# Obtains X and Y component of ellipse
 	XG_n = -(r_theta_n * cosNPi)
 	YG_n = r_theta_n * sinNPi
-	RF_Fz_n = Fz_f + (M + D) / 2 * (-Long_WT * XG_n + Lat_WT * YG_n) + (
-		A * A_d / 2)
-	LF_Fz_n = Fz_f + (M + D) / 2 * (-Long_WT * XG_n - Lat_WT * YG_n) + (
-		A * A_d / 2)
-	RR_Fz_n = Fz_r + (M + D) / 2 * (Long_WT * XG_n + Lat_WT * YG_n) + (
-		A * (n - A_d) / 2)
-	LR_Fz_n = Fz_r + (M + D) / 2 * (Long_WT * XG_n - Lat_WT * YG_n) + (
-		A * (1 - A_d) / 2)
+	
+	# Calculates Normal Force on Each Tire using Static loading, load (weight) transfer (WT), and aero forces
+	RF_Fz_n = Fz_f + (((M + D)*(-Long_WT * XG_n))/2) + (((M+D)*(-Lat_WT * YG_n))/2) + ((A * A_d )/ 2)
+		
+	LF_Fz_n = Fz_f + (((M + D)*(-Long_WT * XG_n))/2) + (((M+D)*(Lat_WT * YG_n))/2) + ((A * A_d )/ 2)
+		
+	RR_Fz_n = Fz_r + (((M + D)*(Long_WT * XG_n))/2) + (((M+D)*(-Lat_WT * YG_n))/2) + ((A * (1 - A_d)) / 2)
+		
+	LR_Fz_n = Fz_r + (((M + D)*(Long_WT * XG_n))/2) + (((M+D)*(Lat_WT * YG_n))/2) + ((A * (1 - A_d)) / 2)
+		
 
-	# Long
-	LF_Mu_x_n = C1Long * e ** (C2Long * LF_Fz_n)
-	RF_Mu_x_n = C1Long * e ** (C2Long * RF_Fz_n)
-	LR_Mu_x_n = C1Long * e ** (C2Long * LR_Fz_n)
-	RR_Mu_x_n = C1Long * e ** (C2Long * RR_Fz_n)
-
-	# Lat
-	if( LF_Fz_n < maxFn ):
-		LF_Mu_y_n = C1Lat * e ** (C2Lat * LF_Fz_n) + C3Lat * e ** (C4Lat * LF_Fz_n)
-	else:
-		LF_Mu_y_n = LatDefault
-
-	if( RF_Fz_n < maxFn ):
-		RF_Mu_y_n = C1Lat * e ** (C2Lat * RF_Fz_n) + C3Lat * e ** (C4Lat * RF_Fz_n)
-	else:
-		RF_Mu_y_n = LatDefault
-
-	if( LR_Fz_n < maxFn ):
-		LR_Mu_y_n = C1Lat * e ** (C2Lat * LR_Fz_n) + C3Lat * e ** (C4Lat * LR_Fz_n)
-	else:
-		LR_Mu_y_n = LatDefault
-
-	if( RR_Fz_n < maxFn ):
-		RR_Mu_y_n = C1Lat * e ** (C2Lat * RR_Fz_n) + C3Lat * e ** (C4Lat * RR_Fz_n)
-	else:
-		RR_Mu_y_n = LatDefault
+	# Longitudinal Mu calculations
+	LF_Mu_x_n = (C1Long * e ** (abs( LF_Fz_n)*C2Long)) * (XG_n/XG_max)
+	RF_Mu_x_n = (C1Long * e ** (abs( RF_Fz_n)*C2Long)) * (XG_n/XG_max)
+	LR_Mu_x_n = (C1Long * e ** (abs( LR_Fz_n)*C2Long)) * (XG_n/XG_max)
+	RR_Mu_x_n = (C1Long * e ** (abs( RR_Fz_n)*C2Long)) * (XG_n/XG_max)
 
 
+	# Lateral Mu calculations
+	
+	LF_Mu_y_n = (C1Lat * Decimal.ln (abs(LF_Fz_n)) + C2Lat) * (YG_n/YG_max)
+	RF_Mu_y_n = (C1Lat * Decimal.ln (abs(RF_Fz_n)) + C2Lat) * (YG_n/YG_max)
+	LR_Mu_y_n = (C1Lat * Decimal.ln (abs(LR_Fz_n)) + C2Lat) * (YG_n/YG_max)
+	RR_Mu_y_n = (C1Lat * Decimal.ln (abs(RR_Fz_n)) + C2Lat) * (YG_n/YG_max)
+
+
+	# Calculates Longitudinal force on each tire
 	LFX_n = -LF_Mu_x_n * LF_Fz_n
 	RFX_n = -RF_Mu_x_n * RF_Fz_n
 	LRX_n = -LR_Mu_x_n * LR_Fz_n
 	RRX_n = -RR_Mu_x_n * RR_Fz_n
+	
+	# Calculates total car longitudinal force
 	Fx_n = LFX_n + RFX_n + LRX_n + RRX_n
+	
+	# Calculates total longitudinal G's
 	LoG_n = Fx_n / (M + D)
+	
+	# Calculates Lateral force on each tire
 	LFY_n = LF_Mu_y_n * LF_Fz_n
 	RFY_n = RF_Mu_y_n * RF_Fz_n
 	LRY_n = LR_Mu_y_n * LR_Fz_n
 	RRY_n = RR_Mu_y_n * RR_Fz_n
+	
+	# Calculates total car lateral force
 	Fy_n = LFY_n + RFY_n + LRY_n + RRY_n
+	
+	# Calculates total lateral G's
 	LaG_n = Fy_n / (M + D)
-	LF_c_n = Decimal(
-		m.sqrt(LF_Fz_n ** 2 + LFX_n ** 2 + LFY_n ** 2))
-	RF_c_n = Decimal(
-		m.sqrt(RF_Fz_n ** 2 + RFX_n ** 2 + RFY_n ** 2))
-	LR_c_n = Decimal(
-		m.sqrt(LR_Fz_n ** 2 + LRX_n ** 2 + LRY_n ** 2))
-	RR_c_n = Decimal(
-		m.sqrt(RR_Fz_n ** 2 + RRX_n ** 2 + RRY_n ** 2))
+	
+	# Calculates resultant force on each corner
+	LF_c_n = Decimal(m.sqrt(LF_Fz_n ** 2 + LFX_n ** 2 + LFY_n ** 2))
+	RF_c_n = Decimal(m.sqrt(RF_Fz_n ** 2 + RFX_n ** 2 + RFY_n ** 2))
+	LR_c_n = Decimal(m.sqrt(LR_Fz_n ** 2 + LRX_n ** 2 + LRY_n ** 2))
+	RR_c_n = Decimal(m.sqrt(RR_Fz_n ** 2 + RRX_n ** 2 + RRY_n ** 2))
 
 	# Collect all values of n; used for row labeling later
 	datadict["r_theta"].append(r_theta_n)

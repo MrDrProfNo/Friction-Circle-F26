@@ -2,68 +2,260 @@
      iterate       Options       data          vehicle       or quit
 
 The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -505.671 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     538.666 (Y) Horizontal
-Vertical (Z) location       0.000     force     336.078     TOTAL     811.672
+Fore-Aft (X) location       0.000     force    -653.115 (X) Fore-Aft
+Horizontal (Y) location    22.500     force       0.000 (Y) Horizontal
+Vertical (Z) location       0.000     force     529.441     TOTAL     840.754
 Fore-Aft at CenterLine      9.000     force       0.000
 
 Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     920.830 (X) Fore-Aft
-Horizontal (Y) location    21.247     force   -1342.592 (Y) Horizontal
-Vertical (Z) location       5.507     force    -462.090     TOTAL    1692.339
+Fore-Aft (X) location       0.000     force    1197.322 (X) Fore-Aft
+Horizontal (Y) location    21.247     force    -350.360 (Y) Horizontal
+Vertical (Z) location       5.507     force    -611.700     TOTAL    1389.428
 
 Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -415.074 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     484.866 (Y) Horizontal
-Vertical (Z) location      12.011     force     129.093     TOTAL     651.188
+Fore-Aft (X) location       0.599     force    -544.133 (X) Fore-Aft
+Horizontal (Y) location    20.945     force      71.888 (Y) Horizontal
+Vertical (Z) location      12.011     force      84.948     TOTAL     555.396
 
 The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.086 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     319.061 (Y) Horizontal
-Vertical (Z) location       6.127     force      -3.081     TOTAL     319.076
+Fore-Aft (X) location      -2.503     force      -0.075 (X) Fore-Aft
+Horizontal (Y) location    20.327     force     278.472 (Y) Horizontal
+Vertical (Z) location       6.127     force      -2.689     TOTAL     278.485
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
+Lower A-Arm & Spring     Right Side     F27_FRONT
 
 The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -920.830 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    1342.592 (Y) Horizontal
-Vertical (Z) location       5.507     force     462.090     TOTAL    1692.339
+Fore-Aft (X) location       0.000     force   -1197.322 (X) Fore-Aft
+Horizontal (Y) location    21.247     force     350.360 (Y) Horizontal
+Vertical (Z) location       5.507     force     611.700     TOTAL    1389.428
 
 Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force      18.852 (X) Fore-Aft
-Horizontal (Y) location     8.500     force     241.730 (Y) Horizontal
-Vertical (Z) location       5.825     force      50.908     TOTAL     247.751
+Fore-Aft (X) location      -1.000     force     119.424 (X) Fore-Aft
+Horizontal (Y) location     8.500     force    1524.079 (Y) Horizontal
+Vertical (Z) location       5.825     force      33.263     TOTAL    1529.113
 
 Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     876.505 (X) Fore-Aft
-Horizontal (Y) location     8.500     force   -1887.705 (Y) Horizontal
-Vertical (Z) location       5.825     force      89.468     TOTAL    2083.193
+Fore-Aft (X) location       6.000     force    1046.008 (X) Fore-Aft
+Horizontal (Y) location     8.500     force   -2254.255 (Y) Horizontal
+Vertical (Z) location       5.825     force     109.289     TOTAL    2487.517
 
 The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      25.472 (X) Fore-Aft
-Horizontal (Y) location    18.694     force     303.382 (Y) Horizontal
-Vertical (Z) location       6.404     force    -602.467     TOTAL     675.023
+Fore-Aft (X) location       0.296     force      31.890 (X) Fore-Aft
+Horizontal (Y) location    18.694     force     379.816 (Y) Horizontal
+Vertical (Z) location       6.404     force    -754.251     TOTAL     845.087
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
+Upper A-Arm (free)       Right Side     F27_FRONT
 
 The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     415.074 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -484.866 (Y) Horizontal
-Vertical (Z) location      12.011     force    -129.093     TOTAL     651.188
+Fore-Aft (X) location       0.599     force     544.133 (X) Fore-Aft
+Horizontal (Y) location    20.945     force     -71.888 (Y) Horizontal
+Vertical (Z) location      12.011     force     -84.948     TOTAL     555.396
 
 Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     -73.784 (X) Fore-Aft
-Horizontal (Y) location    11.250     force    -127.762 (Y) Horizontal
-Vertical (Z) location      11.325     force      -9.040     TOTAL     147.813
+Fore-Aft (X) location      -5.000     force    -256.579 (X) Fore-Aft
+Horizontal (Y) location    11.250     force    -444.282 (Y) Horizontal
+Vertical (Z) location      11.325     force     -31.437     TOTAL     514.012
 
 Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force    -341.289 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     612.627 (Y) Horizontal
-Vertical (Z) location       9.825     force     138.133     TOTAL     714.753
+Fore-Aft (X) location       6.000     force    -287.554 (X) Fore-Aft
+Horizontal (Y) location    11.250     force     516.170 (Y) Horizontal
+Vertical (Z) location       9.825     force     116.384     TOTAL     602.216
+
+The Reaction Point is at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
+Horizontal (Y) location    20.945     force      -0.000 (Y) Horizontal
+Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Bell Crank & Spring      Right Side     F27_FRONT
+
+The Force is applied at point 31 Push/Pull Rod    = V
+Fore-Aft (X) location      -0.350     force     -31.890 (X) Fore-Aft
+Horizontal (Y) location    11.000     force    -379.816 (Y) Horizontal
+Vertical (Z) location      21.683     force     754.251     TOTAL     845.087
+
+Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
+Fore-Aft (X) location       1.250     force     576.701 (X) Fore-Aft
+Horizontal (Y) location    11.000     force     443.548 (Y) Horizontal
+Vertical (Z) location      21.683     force    -830.188     TOTAL    1103.871
+
+Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
+Fore-Aft (X) location       1.248     force      48.244 (X) Fore-Aft
+Horizontal (Y) location     9.882     force     -15.978 (Y) Horizontal
+Vertical (Z) location      21.055     force     -10.432     TOTAL      51.881
+
+The Reaction Point is at point 28 Spring/Shock Unit= W
+Fore-Aft (X) location       1.681     force    -593.055 (X) Fore-Aft
+Horizontal (Y) location     9.919     force     -47.754 (Y) Horizontal
+Vertical (Z) location      23.604     force      86.369     TOTAL     601.211
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+
+The Force is applied at point 12 Tire Contact Patch N
+Fore-Aft (X) location       0.000     force    -653.115 (X) Fore-Aft
+Horizontal (Y) location   -22.500     force       0.000 (Y) Horizontal
+Vertical (Z) location       0.000     force     529.441     TOTAL     840.754
+Fore-Aft at CenterLine      9.000     force       0.000
+
+Rotation axis pivot One is at point 2 Lower Ball Joint = B
+Fore-Aft (X) location       0.000     force    1197.322 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force     350.360 (Y) Horizontal
+Vertical (Z) location       5.507     force    -611.700     TOTAL    1389.428
+
+Rotation axis pivot Two is at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force    -544.133 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force     -71.888 (Y) Horizontal
+Vertical (Z) location      12.011     force      84.948     TOTAL     555.396
+
+The Reaction Point is at point 8 Steering Tie Rod = S
+Fore-Aft (X) location      -2.503     force      -0.075 (X) Fore-Aft
+Horizontal (Y) location   -20.327     force    -278.472 (Y) Horizontal
+Vertical (Z) location       6.127     force      -2.689     TOTAL     278.485
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Lower A-Arm & Spring     Left Side      F27_FRONT
+
+The Force is applied at point 2 Lower Ball Joint = B
+Fore-Aft (X) location       0.000     force   -1197.322 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force    -350.360 (Y) Horizontal
+Vertical (Z) location       5.507     force     611.700     TOTAL    1389.428
+
+Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
+Fore-Aft (X) location      -1.000     force     119.424 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force   -1524.079 (Y) Horizontal
+Vertical (Z) location       5.825     force      33.263     TOTAL    1529.113
+
+Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
+Fore-Aft (X) location       6.000     force    1046.008 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force    2254.255 (Y) Horizontal
+Vertical (Z) location       5.825     force     109.289     TOTAL    2487.517
+
+The Reaction Point is at point 32 Push or Pull Rod  MW
+Fore-Aft (X) location       0.296     force      31.890 (X) Fore-Aft
+Horizontal (Y) location   -18.694     force    -379.816 (Y) Horizontal
+Vertical (Z) location       6.404     force    -754.251     TOTAL     845.087
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Upper A-Arm (free)       Left Side      F27_FRONT
+
+The Force is applied at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force     544.133 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force      71.888 (Y) Horizontal
+Vertical (Z) location      12.011     force     -84.948     TOTAL     555.396
+
+Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
+Fore-Aft (X) location      -5.000     force    -256.579 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force     444.282 (Y) Horizontal
+Vertical (Z) location      11.325     force     -31.437     TOTAL     514.012
+
+Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
+Fore-Aft (X) location       6.000     force    -287.554 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force    -516.170 (Y) Horizontal
+Vertical (Z) location       9.825     force     116.384     TOTAL     602.216
+
+The Reaction Point is at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force      -0.000 (Y) Horizontal
+Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Bell Crank & Spring      Left Side      F27_FRONT
+
+The Force is applied at point 31 Push/Pull Rod    = V
+Fore-Aft (X) location      -0.350     force     -31.890 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force     379.816 (Y) Horizontal
+Vertical (Z) location      21.683     force     754.251     TOTAL     845.087
+
+Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
+Fore-Aft (X) location       1.250     force     576.701 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force    -443.548 (Y) Horizontal
+Vertical (Z) location      21.683     force    -830.188     TOTAL    1103.871
+
+Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
+Fore-Aft (X) location       1.248     force      48.244 (X) Fore-Aft
+Horizontal (Y) location    -9.882     force      15.978 (Y) Horizontal
+Vertical (Z) location      21.055     force     -10.432     TOTAL      51.881
+
+The Reaction Point is at point 28 Spring/Shock Unit= W
+Fore-Aft (X) location       1.681     force    -593.055 (X) Fore-Aft
+Horizontal (Y) location    -9.919     force      47.754 (Y) Horizontal
+Vertical (Z) location      23.604     force      86.369     TOTAL     601.211
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+
+The Force is applied at point 12 Tire Contact Patch N
+Fore-Aft (X) location       0.000     force    -603.769 (X) Fore-Aft
+Horizontal (Y) location    22.500     force     218.352 (Y) Horizontal
+Vertical (Z) location       0.000     force     427.102     TOTAL     771.123
+Fore-Aft at CenterLine      9.000     force       0.000
+
+Rotation axis pivot One is at point 2 Lower Ball Joint = B
+Fore-Aft (X) location       0.000     force    1104.437 (X) Fore-Aft
+Horizontal (Y) location    21.247     force    -750.634 (Y) Horizontal
+Vertical (Z) location       5.507     force    -527.528     TOTAL    1435.799
+
+Rotation axis pivot Two is at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force    -500.588 (X) Fore-Aft
+Horizontal (Y) location    20.945     force     234.374 (Y) Horizontal
+Vertical (Z) location      12.011     force     103.303     TOTAL     562.309
+
+The Reaction Point is at point 8 Steering Tie Rod = S
+Fore-Aft (X) location      -2.503     force      -0.080 (X) Fore-Aft
+Horizontal (Y) location    20.327     force     297.907 (Y) Horizontal
+Vertical (Z) location       6.127     force      -2.877     TOTAL     297.921
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Lower A-Arm & Spring     Right Side     F27_FRONT
+
+The Force is applied at point 2 Lower Ball Joint = B
+Fore-Aft (X) location       0.000     force   -1104.437 (X) Fore-Aft
+Horizontal (Y) location    21.247     force     750.634 (Y) Horizontal
+Vertical (Z) location       5.507     force     527.528     TOTAL    1435.799
+
+Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
+Fore-Aft (X) location      -1.000     force      82.595 (X) Fore-Aft
+Horizontal (Y) location     8.500     force    1054.403 (Y) Horizontal
+Vertical (Z) location       5.825     force      36.456     TOTAL    1058.261
+
+Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
+Fore-Aft (X) location       6.000     force     993.766 (X) Fore-Aft
+Horizontal (Y) location     8.500     force   -2139.438 (Y) Horizontal
+Vertical (Z) location       5.825     force     100.081     TOTAL    2361.098
+
+The Reaction Point is at point 32 Push or Pull Rod  MW
+Fore-Aft (X) location       0.296     force      28.077 (X) Fore-Aft
+Horizontal (Y) location    18.694     force     334.402 (Y) Horizontal
+Vertical (Z) location       6.404     force    -664.066     TOTAL     744.040
+
+     Cad or        suspension    Edit          Sketch        eXecute
+     iterate       Options       data          vehicle       or quit
+Upper A-Arm (free)       Right Side     F27_FRONT
+
+The Force is applied at point 5 Upper Ball Joint = E
+Fore-Aft (X) location       0.599     force     500.588 (X) Fore-Aft
+Horizontal (Y) location    20.945     force    -234.374 (Y) Horizontal
+Vertical (Z) location      12.011     force    -103.303     TOTAL     562.309
+
+Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
+Fore-Aft (X) location      -5.000     force    -188.340 (X) Fore-Aft
+Horizontal (Y) location    11.250     force    -326.123 (Y) Horizontal
+Vertical (Z) location      11.325     force     -23.076     TOTAL     377.307
+
+Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
+Fore-Aft (X) location       6.000     force    -312.248 (X) Fore-Aft
+Horizontal (Y) location    11.250     force     560.497 (Y) Horizontal
+Vertical (Z) location       9.825     force     126.379     TOTAL     653.932
 
 The Reaction Point is at point 5 Upper Ball Joint = E
 Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
@@ -72,94 +264,94 @@ Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
+Bell Crank & Spring      Right Side     F27_FRONT
 
 The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -25.472 (X) Fore-Aft
-Horizontal (Y) location    11.000     force    -303.382 (Y) Horizontal
-Vertical (Z) location      21.683     force     602.467     TOTAL     675.023
+Fore-Aft (X) location      -0.350     force     -28.077 (X) Fore-Aft
+Horizontal (Y) location    11.000     force    -334.402 (Y) Horizontal
+Vertical (Z) location      21.683     force     664.066     TOTAL     744.040
 
 Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     460.646 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     354.289 (Y) Horizontal
-Vertical (Z) location      21.683     force    -663.122     TOTAL     881.729
+Fore-Aft (X) location       1.250     force     507.745 (X) Fore-Aft
+Horizontal (Y) location    11.000     force     390.513 (Y) Horizontal
+Vertical (Z) location      21.683     force    -730.923     TOTAL     971.881
 
 Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      38.536 (X) Fore-Aft
-Horizontal (Y) location     9.882     force     -12.762 (Y) Horizontal
-Vertical (Z) location      21.055     force      -8.333     TOTAL      41.440
+Fore-Aft (X) location       1.248     force      42.476 (X) Fore-Aft
+Horizontal (Y) location     9.882     force     -14.067 (Y) Horizontal
+Vertical (Z) location      21.055     force      -9.185     TOTAL      45.677
 
 The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -473.709 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -38.144 (Y) Horizontal
-Vertical (Z) location      23.604     force      68.988     TOTAL     480.224
+Fore-Aft (X) location       1.681     force    -522.144 (X) Fore-Aft
+Horizontal (Y) location     9.919     force     -42.044 (Y) Horizontal
+Vertical (Z) location      23.604     force      76.042     TOTAL     529.324
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
 
 The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -505.671 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force     538.666 (Y) Horizontal
-Vertical (Z) location       0.000     force     336.078     TOTAL     811.672
+Fore-Aft (X) location       0.000     force    -631.641 (X) Fore-Aft
+Horizontal (Y) location   -22.500     force     297.410 (Y) Horizontal
+Vertical (Z) location       0.000     force     615.588     TOTAL     930.790
 Fore-Aft at CenterLine      9.000     force       0.000
 
 Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     933.611 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force    -834.360 (Y) Horizontal
-Vertical (Z) location       5.507     force    -333.430     TOTAL    1295.747
+Fore-Aft (X) location       0.000     force    1161.204 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force    -238.084 (Y) Horizontal
+Vertical (Z) location       5.507     force    -662.437     TOTAL    1357.904
 
 Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -427.912 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     401.184 (Y) Horizontal
-Vertical (Z) location      12.011     force      -1.629     TOTAL     586.566
+Fore-Aft (X) location       0.599     force    -529.506 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force     155.703 (Y) Horizontal
+Vertical (Z) location      12.011     force      48.926     TOTAL     554.088
 
 The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.028 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force    -105.490 (Y) Horizontal
-Vertical (Z) location       6.127     force      -1.019     TOTAL     105.495
+Fore-Aft (X) location      -2.503     force      -0.058 (X) Fore-Aft
+Horizontal (Y) location   -20.327     force    -215.028 (Y) Horizontal
+Vertical (Z) location       6.127     force      -2.077     TOTAL     215.038
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
+Lower A-Arm & Spring     Left Side      F27_FRONT
 
 The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -933.611 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     834.360 (Y) Horizontal
-Vertical (Z) location       5.507     force     333.430     TOTAL    1295.747
+Fore-Aft (X) location       0.000     force   -1161.204 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force     238.084 (Y) Horizontal
+Vertical (Z) location       5.507     force     662.437     TOTAL    1357.904
 
 Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force     175.338 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force   -2235.929 (Y) Horizontal
-Vertical (Z) location       5.825     force     -19.863     TOTAL    2242.882
+Fore-Aft (X) location      -1.000     force     152.202 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force   -1942.003 (Y) Horizontal
+Vertical (Z) location       5.825     force      26.979     TOTAL    1948.145
 
 Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     742.205 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force    1592.944 (Y) Horizontal
-Vertical (Z) location       5.825     force      66.470     TOTAL    1758.624
+Fore-Aft (X) location       6.000     force     975.259 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force    2105.808 (Y) Horizontal
+Vertical (Z) location       5.825     force     108.669     TOTAL    2323.223
 
 The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      16.068 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force    -191.374 (Y) Horizontal
-Vertical (Z) location       6.404     force    -380.037     TOTAL     425.805
+Fore-Aft (X) location       0.296     force      33.743 (X) Fore-Aft
+Horizontal (Y) location   -18.694     force    -401.889 (Y) Horizontal
+Vertical (Z) location       6.404     force    -798.085     TOTAL     894.200
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
+Upper A-Arm (free)       Left Side      F27_FRONT
 
 The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     427.912 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force    -401.184 (Y) Horizontal
-Vertical (Z) location      12.011     force       1.629     TOTAL     586.566
+Fore-Aft (X) location       0.599     force     529.506 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force    -155.703 (Y) Horizontal
+Vertical (Z) location      12.011     force     -48.926     TOTAL     554.088
 
 Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force    -331.567 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     574.127 (Y) Horizontal
-Vertical (Z) location      11.325     force     -40.624     TOTAL     664.236
+Fore-Aft (X) location      -5.000     force    -313.669 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force     543.137 (Y) Horizontal
+Vertical (Z) location      11.325     force     -38.431     TOTAL     628.382
 
 Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force     -96.345 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force    -172.943 (Y) Horizontal
-Vertical (Z) location       9.825     force      38.995     TOTAL     201.773
+Fore-Aft (X) location       6.000     force    -215.836 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force    -387.434 (Y) Horizontal
+Vertical (Z) location       9.825     force      87.358     TOTAL     452.020
 
 The Reaction Point is at point 5 Upper Ball Joint = E
 Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
@@ -168,94 +360,94 @@ Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
+Bell Crank & Spring      Left Side      F27_FRONT
 
 The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -16.068 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force     191.374 (Y) Horizontal
-Vertical (Z) location      21.683     force     380.037     TOTAL     425.805
+Fore-Aft (X) location      -0.350     force     -33.743 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force     401.889 (Y) Horizontal
+Vertical (Z) location      21.683     force     798.085     TOTAL     894.200
 
 Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     290.576 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force    -223.486 (Y) Horizontal
-Vertical (Z) location      21.683     force    -418.298     TOTAL     556.196
+Fore-Aft (X) location       1.250     force     610.216 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force    -469.325 (Y) Horizontal
+Vertical (Z) location      21.683     force    -878.435     TOTAL    1168.023
 
 Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      24.308 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force       8.051 (Y) Horizontal
-Vertical (Z) location      21.055     force      -5.256     TOTAL      26.141
+Fore-Aft (X) location       1.248     force      51.048 (X) Fore-Aft
+Horizontal (Y) location    -9.882     force      16.906 (Y) Horizontal
+Vertical (Z) location      21.055     force     -11.039     TOTAL      54.896
 
 The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -298.817 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force      24.061 (Y) Horizontal
-Vertical (Z) location      23.604     force      43.518     TOTAL     302.926
+Fore-Aft (X) location       1.681     force    -627.521 (X) Fore-Aft
+Horizontal (Y) location    -9.919     force      50.529 (Y) Horizontal
+Vertical (Z) location      23.604     force      91.388     TOTAL     636.151
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
 
 The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -574.144 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     678.057 (Y) Horizontal
-Vertical (Z) location       0.000     force     423.046     TOTAL     984.058
+Fore-Aft (X) location       0.000     force    -471.140 (X) Fore-Aft
+Horizontal (Y) location    22.500     force     327.530 (Y) Horizontal
+Vertical (Z) location       0.000     force     310.637     TOTAL     652.491
 Fore-Aft at CenterLine      9.000     force       0.000
 
 Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    1044.619 (X) Fore-Aft
-Horizontal (Y) location    21.247     force   -1668.298 (Y) Horizontal
-Vertical (Z) location       5.507     force    -575.183     TOTAL    2050.679
+Fore-Aft (X) location       0.000     force     860.024 (X) Fore-Aft
+Horizontal (Y) location    21.247     force    -898.022 (Y) Horizontal
+Vertical (Z) location       5.507     force    -407.154     TOTAL    1308.381
 
 Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -470.374 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     612.933 (Y) Horizontal
-Vertical (Z) location      12.011     force     155.781     TOTAL     788.166
+Fore-Aft (X) location       0.599     force    -388.814 (X) Fore-Aft
+Horizontal (Y) location    20.945     force     307.895 (Y) Horizontal
+Vertical (Z) location      12.011     force      99.053     TOTAL     505.754
 
 The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.101 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     377.308 (Y) Horizontal
-Vertical (Z) location       6.127     force      -3.644     TOTAL     377.326
+Fore-Aft (X) location      -2.503     force      -0.070 (X) Fore-Aft
+Horizontal (Y) location    20.327     force     262.597 (Y) Horizontal
+Vertical (Z) location       6.127     force      -2.536     TOTAL     262.610
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
+Lower A-Arm & Spring     Right Side     F27_FRONT
 
 The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force   -1044.619 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    1668.298 (Y) Horizontal
-Vertical (Z) location       5.507     force     575.183     TOTAL    2050.679
+Fore-Aft (X) location       0.000     force    -860.024 (X) Fore-Aft
+Horizontal (Y) location    21.247     force     898.022 (Y) Horizontal
+Vertical (Z) location       5.507     force     407.154     TOTAL    1308.381
 
 Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force       9.152 (X) Fore-Aft
-Horizontal (Y) location     8.500     force     118.432 (Y) Horizontal
-Vertical (Z) location       5.825     force      67.911     TOTAL     136.828
+Fore-Aft (X) location      -1.000     force      43.046 (X) Fore-Aft
+Horizontal (Y) location     8.500     force     549.941 (Y) Horizontal
+Vertical (Z) location       5.825     force      35.633     TOTAL     552.773
 
 Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force    1003.764 (X) Fore-Aft
-Horizontal (Y) location     8.500     force   -2164.319 (Y) Horizontal
-Vertical (Z) location       5.825     force     106.734     TOTAL    2388.139
+Fore-Aft (X) location       6.000     force     794.899 (X) Fore-Aft
+Horizontal (Y) location     8.500     force   -1710.926 (Y) Horizontal
+Vertical (Z) location       5.825     force      79.413     TOTAL    1888.237
 
 The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      31.703 (X) Fore-Aft
-Horizontal (Y) location    18.694     force     377.589 (Y) Horizontal
-Vertical (Z) location       6.404     force    -749.829     TOTAL     840.132
+Fore-Aft (X) location       0.296     force      22.079 (X) Fore-Aft
+Horizontal (Y) location    18.694     force     262.963 (Y) Horizontal
+Vertical (Z) location       6.404     force    -522.201     TOTAL     585.090
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
+Upper A-Arm (free)       Right Side     F27_FRONT
 
 The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     470.374 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -612.933 (Y) Horizontal
-Vertical (Z) location      12.011     force    -155.781     TOTAL     788.166
+Fore-Aft (X) location       0.599     force     388.814 (X) Fore-Aft
+Horizontal (Y) location    20.945     force    -307.895 (Y) Horizontal
+Vertical (Z) location      12.011     force     -99.053     TOTAL     505.754
 
 Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     -65.618 (X) Fore-Aft
-Horizontal (Y) location    11.250     force    -113.621 (Y) Horizontal
-Vertical (Z) location      11.325     force      -8.040     TOTAL     131.453
+Fore-Aft (X) location      -5.000     force    -110.600 (X) Fore-Aft
+Horizontal (Y) location    11.250     force    -191.510 (Y) Horizontal
+Vertical (Z) location      11.325     force     -13.551     TOTAL     221.567
 
 Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force    -404.756 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     726.553 (Y) Horizontal
-Vertical (Z) location       9.825     force     163.821     TOTAL     847.670
+Fore-Aft (X) location       6.000     force    -278.214 (X) Fore-Aft
+Horizontal (Y) location    11.250     force     499.405 (Y) Horizontal
+Vertical (Z) location       9.825     force     112.604     TOTAL     582.656
 
 The Reaction Point is at point 5 Upper Ball Joint = E
 Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
@@ -264,94 +456,94 @@ Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
+Bell Crank & Spring      Right Side     F27_FRONT
 
 The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -31.703 (X) Fore-Aft
-Horizontal (Y) location    11.000     force    -377.589 (Y) Horizontal
-Vertical (Z) location      21.683     force     749.829     TOTAL     840.132
+Fore-Aft (X) location      -0.350     force     -22.079 (X) Fore-Aft
+Horizontal (Y) location    11.000     force    -262.963 (Y) Horizontal
+Vertical (Z) location      21.683     force     522.201     TOTAL     585.090
 
 Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     573.319 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     440.947 (Y) Horizontal
-Vertical (Z) location      21.683     force    -825.320     TOTAL    1097.398
+Fore-Aft (X) location       1.250     force     399.275 (X) Fore-Aft
+Horizontal (Y) location    11.000     force     307.087 (Y) Horizontal
+Vertical (Z) location      21.683     force    -574.775     TOTAL     764.257
 
 Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      47.961 (X) Fore-Aft
-Horizontal (Y) location     9.882     force     -15.884 (Y) Horizontal
-Vertical (Z) location      21.055     force     -10.371     TOTAL      51.577
+Fore-Aft (X) location       1.248     force      33.401 (X) Fore-Aft
+Horizontal (Y) location     9.882     force     -11.062 (Y) Horizontal
+Vertical (Z) location      21.055     force      -7.223     TOTAL      35.919
 
 The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -589.578 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -47.474 (Y) Horizontal
-Vertical (Z) location      23.604     force      85.862     TOTAL     597.686
+Fore-Aft (X) location       1.681     force    -410.598 (X) Fore-Aft
+Horizontal (Y) location     9.919     force     -33.062 (Y) Horizontal
+Vertical (Z) location      23.604     force      59.797     TOTAL     416.244
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
 
 The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -380.695 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force     353.659 (Y) Horizontal
-Vertical (Z) location       0.000     force     220.644     TOTAL     564.524
+Fore-Aft (X) location       0.000     force    -550.230 (X) Fore-Aft
+Horizontal (Y) location   -22.500     force     637.610 (Y) Horizontal
+Vertical (Z) location       0.000     force     681.603     TOTAL    1083.459
 Fore-Aft at CenterLine      9.000     force       0.000
 
 Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     702.342 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force    -530.841 (Y) Horizontal
-Vertical (Z) location       5.507     force    -223.966     TOTAL     908.426
+Fore-Aft (X) location       0.000     force    1015.637 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force    -938.537 (Y) Horizontal
+Vertical (Z) location       5.507     force    -681.158     TOTAL    1541.541
 
 Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -321.623 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     265.424 (Y) Horizontal
-Vertical (Z) location      12.011     force       4.174     TOTAL     417.024
+Fore-Aft (X) location       0.599     force    -465.375 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force     419.757 (Y) Horizontal
+Vertical (Z) location      12.011     force       0.702     TOTAL     626.714
 
 The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.024 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force     -88.242 (Y) Horizontal
-Vertical (Z) location       6.127     force      -0.852     TOTAL      88.246
+Fore-Aft (X) location      -2.503     force      -0.032 (X) Fore-Aft
+Horizontal (Y) location   -20.327     force    -118.830 (Y) Horizontal
+Vertical (Z) location       6.127     force      -1.148     TOTAL     118.835
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
+Lower A-Arm & Spring     Left Side      F27_FRONT
 
 The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -702.342 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     530.841 (Y) Horizontal
-Vertical (Z) location       5.507     force     223.966     TOTAL     908.426
+Fore-Aft (X) location       0.000     force   -1015.637 (X) Fore-Aft
+Horizontal (Y) location   -21.247     force     938.537 (Y) Horizontal
+Vertical (Z) location       5.507     force     681.158     TOTAL    1541.541
 
 Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force     126.499 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force   -1613.083 (Y) Horizontal
-Vertical (Z) location       5.825     force     -16.031     TOTAL    1618.115
+Fore-Aft (X) location      -1.000     force     178.451 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force   -2276.598 (Y) Horizontal
+Vertical (Z) location       5.825     force      18.775     TOTAL    2283.658
 
 Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     565.012 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force    1211.241 (Y) Horizontal
-Vertical (Z) location       5.825     force      48.235     TOTAL    1337.412
+Fore-Aft (X) location       6.000     force     803.379 (X) Fore-Aft
+Horizontal (Y) location    -8.500     force    1740.713 (Y) Horizontal
+Vertical (Z) location       5.825     force      99.667     TOTAL    1919.748
 
 The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      10.831 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force    -128.999 (Y) Horizontal
-Vertical (Z) location       6.404     force    -256.170     TOTAL     287.021
+Fore-Aft (X) location       0.296     force      33.807 (X) Fore-Aft
+Horizontal (Y) location   -18.694     force    -402.653 (Y) Horizontal
+Vertical (Z) location       6.404     force    -799.601     TOTAL     895.898
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
+Upper A-Arm (free)       Left Side      F27_FRONT
 
 The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     321.623 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force    -265.424 (Y) Horizontal
-Vertical (Z) location      12.011     force      -4.174     TOTAL     417.024
+Fore-Aft (X) location       0.599     force     465.375 (X) Fore-Aft
+Horizontal (Y) location   -20.945     force    -419.757 (Y) Horizontal
+Vertical (Z) location      12.011     force      -0.702     TOTAL     626.714
 
 Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force    -238.970 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     413.790 (Y) Horizontal
-Vertical (Z) location      11.325     force     -29.279     TOTAL     478.734
+Fore-Aft (X) location      -5.000     force    -355.902 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force     616.266 (Y) Horizontal
+Vertical (Z) location      11.325     force     -43.606     TOTAL     712.988
 
 Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force     -82.654 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force    -148.366 (Y) Horizontal
-Vertical (Z) location       9.825     force      33.453     TOTAL     173.099
+Fore-Aft (X) location       6.000     force    -109.473 (X) Fore-Aft
+Horizontal (Y) location   -11.250     force    -196.509 (Y) Horizontal
+Vertical (Z) location       9.825     force      44.308     TOTAL     229.267
 
 The Reaction Point is at point 5 Upper Ball Joint = E
 Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
@@ -360,793 +552,50 @@ Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
+Bell Crank & Spring      Left Side      F27_FRONT
 
 The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -10.831 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force     128.999 (Y) Horizontal
-Vertical (Z) location      21.683     force     256.170     TOTAL     287.021
+Fore-Aft (X) location      -0.350     force     -33.807 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force     402.653 (Y) Horizontal
+Vertical (Z) location      21.683     force     799.601     TOTAL     895.898
 
 Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     195.868 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force    -150.644 (Y) Horizontal
-Vertical (Z) location      21.683     force    -281.960     TOTAL     374.913
+Fore-Aft (X) location       1.250     force     611.375 (X) Fore-Aft
+Horizontal (Y) location   -11.000     force    -470.216 (Y) Horizontal
+Vertical (Z) location      21.683     force    -880.103     TOTAL    1170.241
 
 Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      16.385 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force       5.427 (Y) Horizontal
-Vertical (Z) location      21.055     force      -3.543     TOTAL      17.621
+Fore-Aft (X) location       1.248     force      51.145 (X) Fore-Aft
+Horizontal (Y) location    -9.882     force      16.938 (Y) Horizontal
+Vertical (Z) location      21.055     force     -11.060     TOTAL      55.000
 
 The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -201.422 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force      16.219 (Y) Horizontal
-Vertical (Z) location      23.604     force      29.334     TOTAL     204.192
+Fore-Aft (X) location       1.681     force    -628.713 (X) Fore-Aft
+Horizontal (Y) location    -9.919     force      50.625 (Y) Horizontal
+Vertical (Z) location      23.604     force      91.562     TOTAL     637.359
 
      Cad or        suspension    Edit          Sketch        eXecute
      iterate       Options       data          vehicle       or quit
 
 The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -596.602 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     734.786 (Y) Horizontal
-Vertical (Z) location       0.000     force     458.439     TOTAL    1051.671
+Fore-Aft (X) location       0.000     force    -263.719 (X) Fore-Aft
+Horizontal (Y) location    22.500     force     301.244 (Y) Horizontal
+Vertical (Z) location       0.000     force     184.514     TOTAL     440.842
 Fore-Aft at CenterLine      9.000     force       0.000
 
 Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    1085.072 (X) Fore-Aft
-Horizontal (Y) location    21.247     force   -1798.969 (Y) Horizontal
-Vertical (Z) location       5.507     force    -620.647     TOTAL    2190.633
+Fore-Aft (X) location       0.000     force     479.969 (X) Fore-Aft
+Horizontal (Y) location    21.247     force    -743.396 (Y) Horizontal
+Vertical (Z) location       5.507     force    -252.910     TOTAL     920.310
 
 Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -488.362 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     665.278 (Y) Horizontal
-Vertical (Z) location      12.011     force     166.061     TOTAL     841.824
+Fore-Aft (X) location       0.599     force    -216.203 (X) Fore-Aft
+Horizontal (Y) location    20.945     force     271.309 (Y) Horizontal
+Vertical (Z) location      12.011     force      70.046     TOTAL     353.919
 
 The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.107 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     398.905 (Y) Horizontal
-Vertical (Z) location       6.127     force      -3.852     TOTAL     398.924
+Fore-Aft (X) location      -2.503     force      -0.046 (X) Fore-Aft
+Horizontal (Y) location    20.327     force     170.842 (Y) Horizontal
+Vertical (Z) location       6.127     force      -1.650     TOTAL     170.850
 
      Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force   -1085.072 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    1798.969 (Y) Horizontal
-Vertical (Z) location       5.507     force     620.647     TOTAL    2190.633
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force       3.941 (X) Fore-Aft
-Horizontal (Y) location     8.500     force      52.140 (Y) Horizontal
-Vertical (Z) location       5.825     force      75.163     TOTAL      91.562
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force    1046.924 (X) Fore-Aft
-Horizontal (Y) location     8.500     force   -2258.526 (Y) Horizontal
-Vertical (Z) location       5.825     force     113.251     TOTAL    2491.950
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      34.207 (X) Fore-Aft
-Horizontal (Y) location    18.694     force     407.417 (Y) Horizontal
-Vertical (Z) location       6.404     force    -809.061     TOTAL     906.498
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     488.362 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -665.278 (Y) Horizontal
-Vertical (Z) location      12.011     force    -166.061     TOTAL     841.824
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     -59.931 (X) Fore-Aft
-Horizontal (Y) location    11.250     force    -103.774 (Y) Horizontal
-Vertical (Z) location      11.325     force      -7.343     TOTAL     120.061
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force    -428.432 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     769.051 (Y) Horizontal
-Vertical (Z) location       9.825     force     173.403     TOTAL     897.253
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -34.207 (X) Fore-Aft
-Horizontal (Y) location    11.000     force    -407.417 (Y) Horizontal
-Vertical (Z) location      21.683     force     809.061     TOTAL     906.498
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     618.609 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     475.780 (Y) Horizontal
-Vertical (Z) location      21.683     force    -890.516     TOTAL    1184.087
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      51.750 (X) Fore-Aft
-Horizontal (Y) location     9.882     force     -17.139 (Y) Horizontal
-Vertical (Z) location      21.055     force     -11.190     TOTAL      55.651
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -636.151 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -51.224 (Y) Horizontal
-Vertical (Z) location      23.604     force      92.645     TOTAL     644.900
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force    -159.331 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force     134.232 (Y) Horizontal
-Vertical (Z) location       0.000     force      77.970     TOTAL     222.450
-Fore-Aft at CenterLine      9.000     force       0.000
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     293.825 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force    -197.656 (Y) Horizontal
-Vertical (Z) location       5.507     force     -80.616     TOTAL     363.180
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -134.483 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     102.440 (Y) Horizontal
-Vertical (Z) location      12.011     force       3.023     TOTAL     169.082
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.010 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force     -39.016 (Y) Horizontal
-Vertical (Z) location       6.127     force      -0.377     TOTAL      39.018
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -293.825 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     197.656 (Y) Horizontal
-Vertical (Z) location       5.507     force      80.616     TOTAL     363.180
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force      51.843 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force    -661.055 (Y) Horizontal
-Vertical (Z) location       5.825     force      -7.796     TOTAL     663.131
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     238.092 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force     509.731 (Y) Horizontal
-Vertical (Z) location       5.825     force      19.188     TOTAL     562.922
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force       3.890 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force     -46.332 (Y) Horizontal
-Vertical (Z) location       6.404     force     -92.008     TOTAL     103.089
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     134.483 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force    -102.440 (Y) Horizontal
-Vertical (Z) location      12.011     force      -3.023     TOTAL     169.082
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     -97.500 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     168.827 (Y) Horizontal
-Vertical (Z) location      11.325     force     -11.946     TOTAL     195.324
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force     -36.983 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     -66.386 (Y) Horizontal
-Vertical (Z) location       9.825     force      14.969     TOTAL      77.453
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force      -3.890 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force      46.332 (Y) Horizontal
-Vertical (Z) location      21.683     force      92.008     TOTAL     103.089
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force      70.350 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force     -54.107 (Y) Horizontal
-Vertical (Z) location      21.683     force    -101.271     TOTAL     134.657
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force       5.885 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force       1.949 (Y) Horizontal
-Vertical (Z) location      21.055     force      -1.273     TOTAL       6.329
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force     -72.345 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force       5.825 (Y) Horizontal
-Vertical (Z) location      23.604     force      10.536     TOTAL      73.339
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     597.612 (Y) Horizontal
-Vertical (Z) location       0.000     force     372.855     TOTAL     704.387
-Fore-Aft at CenterLine      9.000     force    -537.063
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     243.446 (X) Fore-Aft
-Horizontal (Y) location    21.247     force   -1565.332 (Y) Horizontal
-Vertical (Z) location       5.507     force    -408.665     TOTAL    1636.013
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     293.732 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     535.353 (Y) Horizontal
-Vertical (Z) location      12.011     force      39.986     TOTAL     611.948
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.116 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     432.368 (Y) Horizontal
-Vertical (Z) location       6.127     force      -4.176     TOTAL     432.388
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -243.446 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    1565.332 (Y) Horizontal
-Vertical (Z) location       5.507     force     408.665     TOTAL    1636.013
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force     -90.729 (X) Fore-Aft
-Horizontal (Y) location     8.500     force   -1155.245 (Y) Horizontal
-Vertical (Z) location       5.825     force      80.259     TOTAL    1161.578
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     311.164 (X) Fore-Aft
-Horizontal (Y) location     8.500     force    -684.166 (Y) Horizontal
-Vertical (Z) location       5.825     force      55.351     TOTAL     753.638
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      23.012 (X) Fore-Aft
-Horizontal (Y) location    18.694     force     274.079 (Y) Horizontal
-Vertical (Z) location       6.404     force    -544.275     TOTAL     609.823
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -293.732 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -535.353 (Y) Horizontal
-Vertical (Z) location      12.011     force     -39.986     TOTAL     611.948
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     301.314 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     521.743 (Y) Horizontal
-Vertical (Z) location      11.325     force      36.918     TOTAL     603.630
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      -7.582 (X) Fore-Aft
-Horizontal (Y) location    11.250     force      13.609 (Y) Horizontal
-Vertical (Z) location       9.825     force       3.069     TOTAL      15.878
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -23.012 (X) Fore-Aft
-Horizontal (Y) location    11.000     force    -274.079 (Y) Horizontal
-Vertical (Z) location      21.683     force     544.275     TOTAL     609.823
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     416.153 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     320.068 (Y) Horizontal
-Vertical (Z) location      21.683     force    -599.072     TOTAL     796.564
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      34.813 (X) Fore-Aft
-Horizontal (Y) location     9.882     force     -11.530 (Y) Horizontal
-Vertical (Z) location      21.055     force      -7.528     TOTAL      37.438
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -427.954 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -34.460 (Y) Horizontal
-Vertical (Z) location      23.604     force      62.325     TOTAL     433.840
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force     -14.497 (Y) Horizontal
-Vertical (Z) location       0.000     force      -7.614     TOTAL      16.375
-Fore-Aft at CenterLine      9.000     force      17.222
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force      -8.218 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force      18.830 (Y) Horizontal
-Vertical (Z) location       5.507     force       4.625     TOTAL      21.059
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force      -9.006 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     -11.329 (Y) Horizontal
-Vertical (Z) location      12.011     force       2.922     TOTAL      14.765
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force       0.002 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force       6.996 (Y) Horizontal
-Vertical (Z) location       6.127     force       0.068     TOTAL       6.996
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force       8.218 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     -18.830 (Y) Horizontal
-Vertical (Z) location       5.507     force      -4.625     TOTAL      21.059
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force      -2.252 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force      28.721 (Y) Horizontal
-Vertical (Z) location       5.825     force       0.239     TOTAL      28.810
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force      -5.752 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force     -12.434 (Y) Horizontal
-Vertical (Z) location       5.825     force      -0.665     TOTAL      13.716
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      -0.214 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force       2.544 (Y) Horizontal
-Vertical (Z) location       6.404     force       5.051     TOTAL       5.659
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       9.006 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force      11.329 (Y) Horizontal
-Vertical (Z) location      12.011     force      -2.922     TOTAL      14.765
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force      -1.372 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force       2.375 (Y) Horizontal
-Vertical (Z) location      11.325     force      -0.168     TOTAL       2.748
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      -7.635 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     -13.704 (Y) Horizontal
-Vertical (Z) location       9.825     force       3.090     TOTAL      15.989
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force       0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force       0.214 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force      -2.544 (Y) Horizontal
-Vertical (Z) location      21.683     force      -5.051     TOTAL       5.659
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force      -3.862 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force       2.970 (Y) Horizontal
-Vertical (Z) location      21.683     force       5.560     TOTAL       7.392
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      -0.323 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force      -0.107 (Y) Horizontal
-Vertical (Z) location      21.055     force       0.070     TOTAL       0.347
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force       3.972 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force      -0.320 (Y) Horizontal
-Vertical (Z) location      23.604     force      -0.578     TOTAL       4.026
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     368.934 (Y) Horizontal
-Vertical (Z) location       0.000     force     230.181     TOTAL     434.852
-Fore-Aft at CenterLine      9.000     force    -392.683
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     178.922 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    -997.217 (Y) Horizontal
-Vertical (Z) location       5.507     force    -247.088     TOTAL    1042.836
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     213.842 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     327.548 (Y) Horizontal
-Vertical (Z) location      12.011     force      19.811     TOTAL     391.674
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.081 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     300.735 (Y) Horizontal
-Vertical (Z) location       6.127     force      -2.904     TOTAL     300.749
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -178.922 (X) Fore-Aft
-Horizontal (Y) location    21.247     force     997.217 (Y) Horizontal
-Vertical (Z) location       5.507     force     247.088     TOTAL    1042.836
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force     -53.796 (X) Fore-Aft
-Horizontal (Y) location     8.500     force    -684.963 (Y) Horizontal
-Vertical (Z) location       5.825     force      48.335     TOTAL     688.771
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     218.739 (X) Fore-Aft
-Horizontal (Y) location     8.500     force    -478.744 (Y) Horizontal
-Vertical (Z) location       5.825     force      35.198     TOTAL     527.524
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force      13.979 (X) Fore-Aft
-Horizontal (Y) location    18.694     force     166.490 (Y) Horizontal
-Vertical (Z) location       6.404     force    -330.621     TOTAL     370.438
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -213.842 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -327.548 (Y) Horizontal
-Vertical (Z) location      12.011     force     -19.811     TOTAL     391.674
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     201.725 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     349.299 (Y) Horizontal
-Vertical (Z) location      11.325     force      24.716     TOTAL     404.121
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      12.117 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     -21.751 (Y) Horizontal
-Vertical (Z) location       9.825     force      -4.904     TOTAL      25.377
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force     -13.979 (X) Fore-Aft
-Horizontal (Y) location    11.000     force    -166.490 (Y) Horizontal
-Vertical (Z) location      21.683     force     330.621     TOTAL     370.438
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     252.793 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     194.426 (Y) Horizontal
-Vertical (Z) location      21.683     force    -363.907     TOTAL     483.874
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      21.147 (X) Fore-Aft
-Horizontal (Y) location     9.882     force      -7.004 (Y) Horizontal
-Vertical (Z) location      21.055     force      -4.573     TOTAL      22.742
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -259.962 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -20.933 (Y) Horizontal
-Vertical (Z) location      23.604     force      37.859     TOTAL     263.537
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force      50.502 (Y) Horizontal
-Vertical (Z) location       0.000     force      27.779     TOTAL      57.638
-Fore-Aft at CenterLine      9.000     force     -60.249
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force      28.743 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     -65.180 (Y) Horizontal
-Vertical (Z) location       5.507     force     -17.377     TOTAL      73.325
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force      31.513 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force      39.246 (Y) Horizontal
-Vertical (Z) location      12.011     force     -10.165     TOTAL      51.348
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.007 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force     -24.568 (Y) Horizontal
-Vertical (Z) location       6.127     force      -0.237     TOTAL      24.569
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     -28.743 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force      65.180 (Y) Horizontal
-Vertical (Z) location       5.507     force      17.377     TOTAL      73.325
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force       7.777 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force     -99.173 (Y) Horizontal
-Vertical (Z) location       5.825     force      -0.664     TOTAL      99.479
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force      20.157 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force      43.635 (Y) Horizontal
-Vertical (Z) location       5.825     force       2.435     TOTAL      48.128
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force       0.810 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force      -9.643 (Y) Horizontal
-Vertical (Z) location       6.404     force     -19.148     TOTAL      21.455
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     -31.513 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     -39.246 (Y) Horizontal
-Vertical (Z) location      12.011     force      10.165     TOTAL      51.348
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force       4.911 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force      -8.505 (Y) Horizontal
-Vertical (Z) location      11.325     force       0.602     TOTAL       9.839
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      26.601 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force      47.750 (Y) Horizontal
-Vertical (Z) location       9.825     force     -10.767     TOTAL      55.710
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force      -0.810 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force       9.643 (Y) Horizontal
-Vertical (Z) location      21.683     force      19.148     TOTAL      21.455
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force      14.641 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force     -11.261 (Y) Horizontal
-Vertical (Z) location      21.683     force     -21.076     TOTAL      28.024
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force       1.225 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force       0.406 (Y) Horizontal
-Vertical (Z) location      21.055     force      -0.265     TOTAL       1.317
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force     -15.056 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force       1.212 (Y) Horizontal
-Vertical (Z) location      23.604     force       2.193     TOTAL      15.263
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    22.500     force     191.545 (Y) Horizontal
-Vertical (Z) location       0.000     force     114.747     TOTAL     223.286
-Fore-Aft at CenterLine      9.000     force    -224.477
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     102.555 (X) Fore-Aft
-Horizontal (Y) location    21.247     force    -527.036 (Y) Horizontal
-Vertical (Z) location       5.507     force    -121.643     TOTAL     550.529
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     121.966 (X) Fore-Aft
-Horizontal (Y) location    20.945     force     168.173 (Y) Horizontal
-Vertical (Z) location      12.011     force       8.512     TOTAL     207.919
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.045 (X) Fore-Aft
-Horizontal (Y) location    20.327     force     167.318 (Y) Horizontal
-Vertical (Z) location       6.127     force      -1.616     TOTAL     167.326
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -102.555 (X) Fore-Aft
-Horizontal (Y) location    21.247     force     527.036 (Y) Horizontal
-Vertical (Z) location       5.507     force     121.643     TOTAL     550.529
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force     -26.885 (X) Fore-Aft
-Horizontal (Y) location     8.500     force    -342.319 (Y) Horizontal
-Vertical (Z) location       5.825     force      24.026     TOTAL     344.213
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force     122.513 (X) Fore-Aft
-Horizontal (Y) location     8.500     force    -267.232 (Y) Horizontal
-Vertical (Z) location       5.825     force      18.192     TOTAL     294.539
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force       6.928 (X) Fore-Aft
-Horizontal (Y) location    18.694     force      82.515 (Y) Horizontal
-Vertical (Z) location       6.404     force    -163.862     TOTAL     183.596
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -121.966 (X) Fore-Aft
-Horizontal (Y) location    20.945     force    -168.173 (Y) Horizontal
-Vertical (Z) location      12.011     force      -8.512     TOTAL     207.919
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force     109.768 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     190.070 (Y) Horizontal
-Vertical (Z) location      11.325     force      13.449     TOTAL     219.901
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      12.198 (X) Fore-Aft
-Horizontal (Y) location    11.250     force     -21.897 (Y) Horizontal
-Vertical (Z) location       9.825     force      -4.937     TOTAL      25.547
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force       0.000 (X) Fore-Aft
-Horizontal (Y) location    20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force       0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Right Side     F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force      -6.928 (X) Fore-Aft
-Horizontal (Y) location    11.000     force     -82.515 (Y) Horizontal
-Vertical (Z) location      21.683     force     163.862     TOTAL     183.596
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force     125.289 (X) Fore-Aft
-Horizontal (Y) location    11.000     force      96.361 (Y) Horizontal
-Vertical (Z) location      21.683     force    -180.359     TOTAL     239.817
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force      10.481 (X) Fore-Aft
-Horizontal (Y) location     9.882     force      -3.471 (Y) Horizontal
-Vertical (Z) location      21.055     force      -2.266     TOTAL      11.271
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force    -128.842 (X) Fore-Aft
-Horizontal (Y) location     9.919     force     -10.375 (Y) Horizontal
-Vertical (Z) location      23.604     force      18.764     TOTAL     130.613
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-
-The Force is applied at point 12 Tire Contact Patch N
-Fore-Aft (X) location       0.000     force       0.000 (X) Fore-Aft
-Horizontal (Y) location   -22.500     force     191.545 (Y) Horizontal
-Vertical (Z) location       0.000     force     114.747     TOTAL     223.286
-Fore-Aft at CenterLine      9.000     force    -224.477
-
-Rotation axis pivot One is at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force     107.100 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force    -247.070 (Y) Horizontal
-Vertical (Z) location       5.507     force     -75.893     TOTAL     279.775
-
-Rotation axis pivot Two is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force     117.401 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force     146.899 (Y) Horizontal
-Vertical (Z) location      12.011     force     -37.972     TOTAL     191.845
-
-The Reaction Point is at point 8 Steering Tie Rod = S
-Fore-Aft (X) location      -2.503     force      -0.025 (X) Fore-Aft
-Horizontal (Y) location   -20.327     force     -91.374 (Y) Horizontal
-Vertical (Z) location       6.127     force      -0.882     TOTAL      91.378
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Lower A-Arm & Spring     Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 2 Lower Ball Joint = B
-Fore-Aft (X) location       0.000     force    -107.100 (X) Fore-Aft
-Horizontal (Y) location   -21.247     force     247.070 (Y) Horizontal
-Vertical (Z) location       5.507     force      75.893     TOTAL     279.775
-
-Rotation axis pivot One is at point 1 Lower/Fwrd A-Arm = A
-Fore-Aft (X) location      -1.000     force      28.760 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force    -366.802 (Y) Horizontal
-Vertical (Z) location       5.825     force      -1.139     TOTAL     367.930
-
-Rotation axis pivot Two is at point 3 Lower/Rear A-Arm = C
-Fore-Aft (X) location       6.000     force      74.756 (X) Fore-Aft
-Horizontal (Y) location    -8.500     force     162.418 (Y) Horizontal
-Vertical (Z) location       5.825     force      10.014     TOTAL     179.076
-
-The Reaction Point is at point 32 Push or Pull Rod  MW
-Fore-Aft (X) location       0.296     force       3.584 (X) Fore-Aft
-Horizontal (Y) location   -18.694     force     -42.686 (Y) Horizontal
-Vertical (Z) location       6.404     force     -84.767     TOTAL      94.976
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Upper A-Arm (free)       Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force    -117.401 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force    -146.899 (Y) Horizontal
-Vertical (Z) location      12.011     force      37.972     TOTAL     191.845
-
-Rotation axis pivot One is at point 4 Upper/Fwrd A-Arm = D
-Fore-Aft (X) location      -5.000     force      18.102 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     -31.345 (Y) Horizontal
-Vertical (Z) location      11.325     force       2.218     TOTAL      36.265
-
-Rotation axis pivot Two is at point 6 Upper/Rear A-Arm = F
-Fore-Aft (X) location       6.000     force      99.299 (X) Fore-Aft
-Horizontal (Y) location   -11.250     force     178.245 (Y) Horizontal
-Vertical (Z) location       9.825     force     -40.190     TOTAL     207.958
-
-The Reaction Point is at point 5 Upper Ball Joint = E
-Fore-Aft (X) location       0.599     force      -0.000 (X) Fore-Aft
-Horizontal (Y) location   -20.945     force      -0.000 (Y) Horizontal
-Vertical (Z) location      12.011     force      -0.000     TOTAL       0.000
-
-     Cad or        suspension    Edit          Sketch        eXecute
-     iterate       Options       data          vehicle       or quit
-Bell Crank & Spring      Left Side      F26_FRONT_STEERING_1
-
-The Force is applied at point 31 Push/Pull Rod    = V
-Fore-Aft (X) location      -0.350     force      -3.584 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force      42.686 (Y) Horizontal
-Vertical (Z) location      21.683     force      84.767     TOTAL      94.976
-
-Rotation axis pivot One is at point 29 Fwrd Crank Pivot = P
-Fore-Aft (X) location       1.250     force      64.813 (X) Fore-Aft
-Horizontal (Y) location   -11.000     force     -49.849 (Y) Horizontal
-Vertical (Z) location      21.683     force     -93.302     TOTAL     124.060
-
-Rotation axis pivot Two is at point 30 Rear Crank Pivot = Q
-Fore-Aft (X) location       1.248     force       5.422 (X) Fore-Aft
-Horizontal (Y) location    -9.882     force       1.796 (Y) Horizontal
-Vertical (Z) location      21.055     force      -1.172     TOTAL       5.831
-
-The Reaction Point is at point 28 Spring/Shock Unit= W
-Fore-Aft (X) location       1.681     force     -66.651 (X) Fore-Aft
-Horizontal (Y) location    -9.919     force       5.367 (Y) Horizontal
-Vertical (Z) location      23.604     force       9.707     TOTAL      67.568
-

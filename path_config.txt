@@ -60,10 +60,10 @@ VDosPlus_path=./Suspension Project/vDosPlus/vDosPlus.exe
 #
 # Spaces can be used, but commas must be the separator
 # If left blank, the first configuration will be selected.
-front_axle_instructions=
+front_axle_instructions=down,down,down,down,down,down,down,right
 
 
 # Keypress sequence to get to the rear axle run configuration in Mitchell's.
 # Same instructions as the front_axle_instructions field.
-rear_axle_instructions=down
+rear_axle_instructions=down,down,down,down,down,down,down,right,down
 
