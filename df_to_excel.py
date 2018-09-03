@@ -30,7 +30,7 @@ def full_dump(dirpath, filename, fullDF):
 			print("Error in makedirs(", dirpath, ")", sep="")
 			raise
 
-	fullDF.to_excel(filename)
+	fullDF.to_excel(dirpath + '/' + filename)
 
 def formatted_dump(dirpath, filename, dataframes):
 	"""
@@ -74,8 +74,10 @@ def formatted_dump(dirpath, filename, dataframes):
 			print("Error in makedirs(", dirpath, ")", sep="")
 			raise
 
+	fullpath = dirpath + "/" + filename
+
 	# Define the pandas ExcelWriter using xlsxwriter as the engine
-	writer = ExcelWriter(filename, engine="xlsxwriter")
+	writer = ExcelWriter(fullpath, engine="xlsxwriter")
 
 	# Dump each of the above dataFrames to the spreadsheet.
 	# NOTE: This will not work if there is a variable currently assigned to

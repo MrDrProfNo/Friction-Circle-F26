@@ -72,6 +72,22 @@ def getDimensionForceDataframes(fullDF):
 	return df_MCPFx, df_MCPFy, df_MCPFz
 
 
+def getInvertedDimensionForceDataframes(fullDF):
+	"""
+	The same as getDimensionForceDataframes, except it inverts values in the X
+	and Y component dataframes. This puts them in the correct form for Mitchell's,
+	which uses a different dimension system than the team, apparently.
+	:param FullDF:
+	:return:
+	"""
+	# Create dataframe for x forces
+	df_MCPFx = -(DataFrame(fullDF.loc[:, ["LF_Fx", "RF_Fx", "LR_Fx", "RR_Fx"] ]))
+
+	# Create dataframe for y forces
+	df_MCPFy = -(DataFrame(fullDF.loc[:, ["LF_Fy", "RF_Fy", "LR_Fy", "RR_Fy"] ]))
+	# Create dataframe for z forces
+	df_MCPFz = DataFrame(fullDF.loc[:, ["LF_Fz", "RF_Fz", "LR_Fz", "RR_Fz"] ])
+	return df_MCPFx, df_MCPFy, df_MCPFz
 
 
 def main():
@@ -110,6 +126,12 @@ def main():
 	full_dump(paths.output_folder, paths.dump_excel_path, fullDF)
 	formatted_dump(paths.output_folder, paths.format_excel_path, dim_force_dfs)
 
+	# Produces and outputs a variant of the data set with the correct signs for
+	# Mitchell's coordinate system
+	dim_force_dfs_CSYS = getInvertedDimensionForceDataframes(fullDF)
+	formatted_dump(paths.output_folder, "formatted_CSYS.xlsx", dim_force_dfs_CSYS)
+
+
 	input("Friction_Circle.py is going to open vDosPlus. While the program is"
 		  " open, do not attempt to change windows. Expected runtime is ~80 sec"
 		  "per load case. \nPress Enter when ready: ")
@@ -121,14 +143,14 @@ def main():
 	print("Generated vDosPlus process with PID:", pid)
 
 	# Run the macro
-	macroMain(dim_force_dfs, paths)
+	macroMain(dim_force_dfs_CSYS, paths)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)
 
 	readParseToExcel(paths.front_parsed,
 					 paths.rear_parsed,
-					 paths.parsed_excel_path,
+					 paths.output_folder + '/' + paths.parsed_excel_path,
 					 fullDF)
 
 

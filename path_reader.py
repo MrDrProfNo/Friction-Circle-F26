@@ -95,17 +95,11 @@ class PathCollection:
 
 		self.car_config_path = pathDict[CAR_CONFIG_PATH_ATTR]
 
-		self.dump_excel_path = self.output_folder + \
-							   "/" + \
-							   pathDict[DUMP_EXCEL_PATH_ATTR]
+		self.dump_excel_path = pathDict[DUMP_EXCEL_PATH_ATTR]
 
-		self.format_excel_path = self.output_folder + \
-							   "/" + \
-							   pathDict[FORMAT_EXCEL_PATH_ATTR]
+		self.format_excel_path = pathDict[FORMAT_EXCEL_PATH_ATTR]
 
-		self.parsed_excel_path = self.output_folder + \
-							   "/" + \
-							   pathDict[PARSED_EXCEL_ATTR]
+		self.parsed_excel_path = pathDict[PARSED_EXCEL_ATTR]
 
 		self.temp_front = pathDict[TEMP_FRONT_ATTR]
 

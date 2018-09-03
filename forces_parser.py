@@ -135,26 +135,26 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 			if (displacement == 0):  # right front wheel
 				displacement = 1
 				titleText += "Right Front "
-				df.loc["Values", "X":"Z"] = caseData["RF_Fx"], \
-											caseData["RF_Fy"], \
-											caseData["RF_Fz"],
+				df.loc["Values", "X":"Z"] = -caseData["RF_Fx"], \
+											-caseData["RF_Fy"], \
+											caseData["RF_Fz"]
 			elif (displacement == 1):  # left front wheel
 				displacement = 0
 				titleText += "Left Front "
-				df.loc["Values", "X":"Z"] = caseData["LF_Fx"], \
-											caseData["LF_Fy"], \
+				df.loc["Values", "X":"Z"] = -caseData["LF_Fx"], \
+											-caseData["LF_Fy"], \
 											caseData["LF_Fz"]
 			elif (displacement == 2):  # right rear wheel
 				displacement = 3
 				titleText += "Right Rear "
-				df.loc["Values", "X":"Z"] = caseData["RR_Fx"], \
-											caseData["RR_Fy"], \
+				df.loc["Values", "X":"Z"] = -caseData["RR_Fx"], \
+											-caseData["RR_Fy"], \
 											caseData["RR_Fz"]
 			elif (displacement == 3):  # left rear wheel
 				displacement = 2
 				titleText += "Left Rear "
-				df.loc["Values", "X":"Z"] = caseData["LR_Fx"], \
-											caseData["LR_Fy"], \
+				df.loc["Values", "X":"Z"] = -caseData["LR_Fx"], \
+											-caseData["LR_Fy"], \
 											caseData["LR_Fz"]
 
 			df.to_excel(writer, sheet_name="Sheet 1",
@@ -217,8 +217,10 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 		else:
 			line[0] = replaceMitchellVariables(line[0], True)
 
-		line[1] = Decimal(line[1])
-		line[2] = Decimal(line[2])
+		# X and Y values are negated to convert back from Mitchell's coordinate
+		# system.
+		line[1] = -Decimal(line[1])
+		line[2] = -Decimal(line[2])
 		line[3] = Decimal(line[3])
 		dataDict[line[0]] = [line[1], line[2], line[3],
 							 "=SQRT(INDIRECT(\"C[-1]\","
