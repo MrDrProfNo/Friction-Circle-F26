@@ -1,6 +1,6 @@
 title Install Modules
 
-python -m pip install keyboard
+python -m pip install keyboard==0.11.0
 python -m pip install pandas
 python -m pip install xlsxwriter
 python -m pip install win32gui
