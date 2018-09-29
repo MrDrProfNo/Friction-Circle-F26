@@ -4,6 +4,7 @@ from pandas import DataFrame
 
 import math as m
 
+
 def createDataframe(car, loadCases):
 	"""
 
@@ -48,24 +49,24 @@ def createDataframe(car, loadCases):
 			"RR_c"]
 
 	# Load case 0 is always included
-	theta_coef_all.append( Decimal(0) )
+	theta_coef_all.append(Decimal(0))
 
 	# Generate list of all theta coefficients
-	for case in range(1, loadCases + 1): # endpoint will be loadcases
+	for case in range(1, loadCases + 1):  # endpoint will be loadcases
 
 		# dividing by loadcases ensures we're on range [0, 1];
-		theta_coef = Decimal( case / loadCases )
+		theta_coef = Decimal(case / loadCases)
 
 		# quantize rounds it at the specified digit (4th place currently)
-		theta_coef = theta_coef.quantize( Decimal("0.0001") )
-		if(theta_coef == Decimal(.5) ):
+		theta_coef = theta_coef.quantize(Decimal("0.0001"))
+		if (theta_coef == Decimal(.5)):
 			# Special case for theta coef .5 to avoid division by 0 error
-			theta_coef_all.append(theta_coef - ( theta_coef / 1000) )
-			theta_coef_all.append(theta_coef + ( theta_coef / 1000) )
+			theta_coef_all.append(theta_coef - (theta_coef / 1000))
+			theta_coef_all.append(theta_coef + (theta_coef / 1000))
 			continue
 
 		# Put the theta coefficient for this case into the array
-		theta_coef_all.append( theta_coef )
+		theta_coef_all.append(theta_coef)
 
 
 
@@ -77,6 +78,7 @@ def createDataframe(car, loadCases):
 	df = DataFrame(data=datadict, index=theta_coef_all, columns=columns)
 
 	return df
+
 
 def secondaryParams(car):
 	"""
@@ -110,33 +112,49 @@ def secondaryParams(car):
 
 	# In order for math-related operations to work, Decimal cannot be
 	# multiplied by a float. Separate Decimals are kept around for pi
-	
+
 	Fz_f = Decimal((W_d * (M + D)) / 2)  # Front Static Corner weight
 	Fz_r = Decimal(((1 - W_d) * (M + D)) / 2)  # Rear Static Corner weight
-	
-	Fr_A_R = Decimal(Fz_f + ((A * A_d)/2))  # Front Right Normal Force with aero
-	Fr_A_L = Decimal(Fz_f + ((A * A_d)/2))  # Front Left Normal Force with aero
-	Re_A_R = Decimal(Fz_r + ((A * (1 - A_d))/2))  # Rear Right Normal Force with aero
-	Re_A_L = Decimal(Fz_r + ((A * (1 - A_d))/2))  # Rear Normal Force with aero
-	
-	Mux_f_R = C1Long * e ** (abs( Fr_A_R)*C2Long)  # Front Right Mu_x (longitudinal)
-	Mux_f_L	= C1Long * e ** (abs( Fr_A_L)*C2Long)  # Front Left	Mu_x (longitudinal)
-	Mux_r_R = C1Long * e ** (abs( Re_A_R)*C2Long)  # Rear Right Mu_x (longitudinal)
-	Mux_r_L	= C1Long * e ** (abs( Re_A_L)*C2Long)  # Rear Left Mu_x (longitudinal)
 
-	Muy_f_R = (C1Lat * Decimal.ln (abs(Fr_A_R)) + C2Lat) # Front Right Mu_y (lateral)
-	Muy_f_L = (C1Lat * Decimal.ln (abs(Fr_A_L)) + C2Lat) # Rear Right Mu_y (lateral)
-	Muy_r_R = (C1Lat * Decimal.ln (abs(Re_A_R)) + C2Lat) # Front Left Mu_y (lateral)
-	Muy_r_L = (C1Lat * Decimal.ln (abs(Re_A_L)) + C2Lat) # Rear Left Mu_y (lateral)
+	Fr_A_R = Decimal(
+		Fz_f + ((A * A_d) / 2))  # Front Right Normal Force with aero
+	Fr_A_L = Decimal(
+		Fz_f + ((A * A_d) / 2))  # Front Left Normal Force with aero
+	Re_A_R = Decimal(
+		Fz_r + ((A * (1 - A_d)) / 2))  # Rear Right Normal Force with aero
+	Re_A_L = Decimal(
+		Fz_r + ((A * (1 - A_d)) / 2))  # Rear Normal Force with aero
 
-	Fr_Fx = (Mux_f_R * Fr_A_R)+(Mux_f_L * Fr_A_L)  # Front Cornering Force (x) [left and right combined]
-	Fr_Fy = (Muy_f_R * Fr_A_R)+(Muy_f_L * Fr_A_L)  # Front Cornering Force (y) [left and right combined]
-	Re_Fx = (Mux_r_R * Re_A_R)+(Mux_r_L * Re_A_L)  # Rear Cornering Force (x) [left and right combined]
-	Re_Fy = (Muy_r_R * Re_A_R)+(Muy_r_L * Re_A_L)  # Rear Cornering Force (y) [left and right combined]
-	
+	Mux_f_R = C1Long * e ** (
+		abs(Fr_A_R) * C2Long)  # Front Right Mu_x (longitudinal)
+	Mux_f_L = C1Long * e ** (
+		abs(Fr_A_L) * C2Long)  # Front Left	Mu_x (longitudinal)
+	Mux_r_R = C1Long * e ** (
+		abs(Re_A_R) * C2Long)  # Rear Right Mu_x (longitudinal)
+	Mux_r_L = C1Long * e ** (
+		abs(Re_A_L) * C2Long)  # Rear Left Mu_x (longitudinal)
+
+	Muy_f_R = (
+		C1Lat * Decimal.ln(abs(Fr_A_R)) + C2Lat)  # Front Right Mu_y (lateral)
+	Muy_f_L = (
+		C1Lat * Decimal.ln(abs(Fr_A_L)) + C2Lat)  # Rear Right Mu_y (lateral)
+	Muy_r_R = (
+		C1Lat * Decimal.ln(abs(Re_A_R)) + C2Lat)  # Front Left Mu_y (lateral)
+	Muy_r_L = (
+		C1Lat * Decimal.ln(abs(Re_A_L)) + C2Lat)  # Rear Left Mu_y (lateral)
+
+	Fr_Fx = (Mux_f_R * Fr_A_R) + (
+		Mux_f_L * Fr_A_L)  # Front Cornering Force (x) [left and right combined]
+	Fr_Fy = (Muy_f_R * Fr_A_R) + (
+		Muy_f_L * Fr_A_L)  # Front Cornering Force (y) [left and right combined]
+	Re_Fx = (Mux_r_R * Re_A_R) + (
+		Mux_r_L * Re_A_L)  # Rear Cornering Force (x) [left and right combined]
+	Re_Fy = (Muy_r_R * Re_A_R) + (
+		Muy_r_L * Re_A_L)  # Rear Cornering Force (y) [left and right combined]
+
 	Total_x = Fr_Fx + Re_Fx  # Total X Cornering Force
 	Total_y = Fr_Fy + Re_Fy  # Total Y Cornering Force
-	
+
 	a = Total_x / (M + D)  # Max Long Accel
 	b = Total_y / (M + D)  # Max Lat Accel
 
@@ -144,6 +162,7 @@ def secondaryParams(car):
 	print("Maximum theoretical lateral acceleration is:", b)
 
 	return a, b, Fz_f, Fz_r
+
 
 def calculateForCaseN(datadict, car, sParams, n):
 	"""
@@ -190,17 +209,17 @@ def calculateForCaseN(datadict, car, sParams, n):
 
 	C1Lat = Decimal(-.285)
 	C2Lat = Decimal(3.6211)
-	
+
 	# Calculation of contact patch forces using an ellipse shape to transition from pure longitudinal to pure lateral acceleration peaks and everywhere in between
 	# X is longitudinal and Y is lateral
-	
-	#Maximum lateral and longitudinal values transcribed on an ellipse which are used later for generating a scaling value for mu values:
-	
+
+	# Maximum lateral and longitudinal values transcribed on an ellipse which are used later for generating a scaling value for mu values:
+
 	YG_max = (a * b) / Decimal(
 		m.sqrt((b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
-			   ((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
-		   Decimal(m.sin(0.49 * m.pi))
-		   
+				((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
+			 	Decimal(m.sin(0.49 * m.pi))
+
 	XG_max = -((a * b) / Decimal(m.sqrt(b ** 2)))
 
 	# The main calculations to calculate contact patch forces
@@ -208,61 +227,62 @@ def calculateForCaseN(datadict, car, sParams, n):
 	# Translastes max long and lat accelerations to an ellipse
 	r_theta_n = (a * b) / Decimal(
 		m.sqrt(((b * cosNPi) ** 2 + ((a * sinNPi)) ** 2))
-		)
-		
+	)
+
 	# Obtains X and Y component of ellipse
 	XG_n = -(r_theta_n * cosNPi)
 	YG_n = r_theta_n * sinNPi
-	
+
 	# Calculates Normal Force on Each Tire using Static loading, load (weight) transfer (WT), and aero forces
-	RF_Fz_n = Fz_f + (((M + D)*(-Long_WT * XG_n))/2) + (((M+D)*(-Lat_WT * YG_n))/2) + ((A * A_d )/ 2)
-		
-	LF_Fz_n = Fz_f + (((M + D)*(-Long_WT * XG_n))/2) + (((M+D)*(Lat_WT * YG_n))/2) + ((A * A_d )/ 2)
-		
-	RR_Fz_n = Fz_r + (((M + D)*(Long_WT * XG_n))/2) + (((M+D)*(-Lat_WT * YG_n))/2) + ((A * (1 - A_d)) / 2)
-		
-	LR_Fz_n = Fz_r + (((M + D)*(Long_WT * XG_n))/2) + (((M+D)*(Lat_WT * YG_n))/2) + ((A * (1 - A_d)) / 2)
-		
+	RF_Fz_n = Fz_f + (((M + D) * (-Long_WT * XG_n)) / 2) + (
+		((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
+
+	LF_Fz_n = Fz_f + (((M + D) * (-Long_WT * XG_n)) / 2) + (
+		((M + D) * (Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
+
+	RR_Fz_n = Fz_r + (((M + D) * (Long_WT * XG_n)) / 2) + (
+		((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
+
+	LR_Fz_n = Fz_r + (((M + D) * (Long_WT * XG_n)) / 2) + (
+		((M + D) * (Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
 
 	# Longitudinal Mu calculations
-	LF_Mu_x_n = (C1Long * e ** (abs( LF_Fz_n)*C2Long)) * (XG_n/XG_max)
-	RF_Mu_x_n = (C1Long * e ** (abs( RF_Fz_n)*C2Long)) * (XG_n/XG_max)
-	LR_Mu_x_n = (C1Long * e ** (abs( LR_Fz_n)*C2Long)) * (XG_n/XG_max)
-	RR_Mu_x_n = (C1Long * e ** (abs( RR_Fz_n)*C2Long)) * (XG_n/XG_max)
-
+	LF_Mu_x_n = (C1Long * e ** (abs(LF_Fz_n) * C2Long)) * (XG_n / XG_max)
+	RF_Mu_x_n = (C1Long * e ** (abs(RF_Fz_n) * C2Long)) * (XG_n / XG_max)
+	LR_Mu_x_n = (C1Long * e ** (abs(LR_Fz_n) * C2Long)) * (XG_n / XG_max)
+	RR_Mu_x_n = (C1Long * e ** (abs(RR_Fz_n) * C2Long)) * (XG_n / XG_max)
 
 	# Lateral Mu calculations
-	
-	LF_Mu_y_n = (C1Lat * Decimal.ln (abs(LF_Fz_n)) + C2Lat) * (YG_n/YG_max)
-	RF_Mu_y_n = (C1Lat * Decimal.ln (abs(RF_Fz_n)) + C2Lat) * (YG_n/YG_max)
-	LR_Mu_y_n = (C1Lat * Decimal.ln (abs(LR_Fz_n)) + C2Lat) * (YG_n/YG_max)
-	RR_Mu_y_n = (C1Lat * Decimal.ln (abs(RR_Fz_n)) + C2Lat) * (YG_n/YG_max)
 
+	LF_Mu_y_n = (C1Lat * Decimal.ln(abs(LF_Fz_n)) + C2Lat) * (YG_n / YG_max)
+	RF_Mu_y_n = (C1Lat * Decimal.ln(abs(RF_Fz_n)) + C2Lat) * (YG_n / YG_max)
+	LR_Mu_y_n = (C1Lat * Decimal.ln(abs(LR_Fz_n)) + C2Lat) * (YG_n / YG_max)
+	RR_Mu_y_n = (C1Lat * Decimal.ln(abs(RR_Fz_n)) + C2Lat) * (YG_n / YG_max)
 
 	# Calculates Longitudinal force on each tire
 	LFX_n = -LF_Mu_x_n * LF_Fz_n
 	RFX_n = -RF_Mu_x_n * RF_Fz_n
 	LRX_n = -LR_Mu_x_n * LR_Fz_n
 	RRX_n = -RR_Mu_x_n * RR_Fz_n
-	
+
 	# Calculates total car longitudinal force
 	Fx_n = LFX_n + RFX_n + LRX_n + RRX_n
-	
+
 	# Calculates total longitudinal G's
 	LoG_n = Fx_n / (M + D)
-	
+
 	# Calculates Lateral force on each tire
 	LFY_n = LF_Mu_y_n * LF_Fz_n
 	RFY_n = RF_Mu_y_n * RF_Fz_n
 	LRY_n = LR_Mu_y_n * LR_Fz_n
 	RRY_n = RR_Mu_y_n * RR_Fz_n
-	
+
 	# Calculates total car lateral force
 	Fy_n = LFY_n + RFY_n + LRY_n + RRY_n
-	
+
 	# Calculates total lateral G's
 	LaG_n = Fy_n / (M + D)
-	
+
 	# Calculates resultant force on each corner
 	LF_c_n = Decimal(m.sqrt(LF_Fz_n ** 2 + LFX_n ** 2 + LFY_n ** 2))
 	RF_c_n = Decimal(m.sqrt(RF_Fz_n ** 2 + RFX_n ** 2 + RFY_n ** 2))
