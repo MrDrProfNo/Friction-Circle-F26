@@ -197,7 +197,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 					raise
 
 				count = 0
-				displacement = 3
+				displacement = 2
 				line = f.readline()
 				# Skip leading newlines
 				while (line == "\n"):
