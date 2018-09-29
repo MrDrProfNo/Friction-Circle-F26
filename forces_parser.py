@@ -97,7 +97,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 					"Push Rod @ Bellcrank",
 					"Front Upper Front @ Chassis",
 					"Front Upper Rear @ Chassis",
-					"Bell Crank Pivot @ Post",
+					"Forward Bell Crank Pivot @ Post",
 					"Bell Crank Pivot @ Post",
 					"Shock @ Chassis"
 				]
