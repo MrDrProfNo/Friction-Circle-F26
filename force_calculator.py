@@ -26,27 +26,27 @@ def createDataframe(car, loadCases):
 
 	# dictionary to store all of the calculations. Order is irrelevant, but
 	# all keys must match the strings in columns array below.
-	datadict = {          'r_theta':	[],	'XG':	 	[],	'YG':		[],
-				'RF_Fz':	[],	'LF_Fz': 	[],     'RR_Fz':	[],
-				'LR_Fz': 	[],	'LF_Mu_x':	[],	'RF_Mu_x':	[],
-				'LR_Mu_x':	[],	'RR_Mu_x':	[],	'LF_Mu_y':	[],
-				'RF_Mu_y':	[],	'LR_Mu_y':	[],	'RR_Mu_y':	[],
-				'LF_Fx':	[],	'RF_Fx':	[],	'LR_Fx':	[],
-				'RR_Fx':	[],	'Fx':		[],	'LoG':		[],
-				'LF_Fy':	[],	'RF_Fy':	[],	'LR_Fy':	[],
-				'RR_Fy':	[],	'Fy':		[],     'LaG':		[],
-				'LF_c':		[],     'RF_c':		[],     'LR_c':		[],
-				'RR_c':		[]}
+	datadict = {'r_theta': [], 'XG': [], 'YG': [],
+				'RF_Fz': [], 'LF_Fz': [], 'RR_Fz': [],
+				'LR_Fz': [], 'LF_Mu_x': [], 'RF_Mu_x': [],
+				'LR_Mu_x': [], 'RR_Mu_x': [], 'LF_Mu_y': [],
+				'RF_Mu_y': [], 'LR_Mu_y': [], 'RR_Mu_y': [],
+				'LF_Fx': [], 'RF_Fx': [], 'LR_Fx': [],
+				'RR_Fx': [], 'Fx': [], 'LoG': [],
+				'LF_Fy': [], 'RF_Fy': [], 'LR_Fy': [],
+				'RR_Fy': [], 'Fy': [], 'LaG': [],
+				'LF_c': [], 'RF_c': [], 'LR_c': [],
+				'RR_c': []}
 
 	# all values of theta coefficient that calculations are run for [0, 1]
 	theta_coef_all = []
 
-	columns = ["r_theta", 	"XG", 		"YG",		"LF_Fz",	"RF_Fz",	"LR_Fz",
-			"RR_Fz",	"LF_Mu_x", 	"RF_Mu_x", 	"LR_Mu_x", 	"RR_Mu_x",	"LF_Mu_y",
-			"RF_Mu_y", 	"LR_Mu_y", 	"RR_Mu_y",	"LF_Fx", 	"RF_Fx", 	"LR_Fx",
-			"RR_Fx", 	"Fx", 		"LoG",		"LF_Fy", 	"RF_Fy", 	"LR_Fy",
-			"RR_Fy", 	"Fy", 		"LaG",		"LF_c", 	"RF_c", 	"LR_c",
-			"RR_c"]
+	columns = ["r_theta", "XG", "YG", "LF_Fz", "RF_Fz", "LR_Fz",
+			   "RR_Fz", "LF_Mu_x", "RF_Mu_x", "LR_Mu_x", "RR_Mu_x", "LF_Mu_y",
+			   "RF_Mu_y", "LR_Mu_y", "RR_Mu_y", "LF_Fx", "RF_Fx", "LR_Fx",
+			   "RR_Fx", "Fx", "LoG", "LF_Fy", "RF_Fy", "LR_Fy",
+			   "RR_Fy", "Fy", "LaG", "LF_c", "RF_c", "LR_c",
+			   "RR_c"]
 
 	# Load case 0 is always included
 	theta_coef_all.append(Decimal(0))
@@ -68,12 +68,9 @@ def createDataframe(car, loadCases):
 		# Put the theta coefficient for this case into the array
 		theta_coef_all.append(theta_coef)
 
-
-
 	# run calculations for all values of theta
 	for coef in theta_coef_all:
 		calculateForCaseN(datadict, car, sParams, coef)
-
 
 	df = DataFrame(data=datadict, index=theta_coef_all, columns=columns)
 
@@ -126,31 +123,31 @@ def secondaryParams(car):
 		Fz_r + ((A * (1 - A_d)) / 2))  # Rear Normal Force with aero
 
 	Mux_f_R = C1Long * e ** (
-		abs(Fr_A_R) * C2Long)  # Front Right Mu_x (longitudinal)
+				abs(Fr_A_R) * C2Long)  # Front Right Mu_x (longitudinal)
 	Mux_f_L = C1Long * e ** (
-		abs(Fr_A_L) * C2Long)  # Front Left	Mu_x (longitudinal)
+				abs(Fr_A_L) * C2Long)  # Front Left	Mu_x (longitudinal)
 	Mux_r_R = C1Long * e ** (
-		abs(Re_A_R) * C2Long)  # Rear Right Mu_x (longitudinal)
+				abs(Re_A_R) * C2Long)  # Rear Right Mu_x (longitudinal)
 	Mux_r_L = C1Long * e ** (
-		abs(Re_A_L) * C2Long)  # Rear Left Mu_x (longitudinal)
+				abs(Re_A_L) * C2Long)  # Rear Left Mu_x (longitudinal)
 
-	Muy_f_R = (
-		C1Lat * Decimal.ln(abs(Fr_A_R)) + C2Lat)  # Front Right Mu_y (lateral)
-	Muy_f_L = (
-		C1Lat * Decimal.ln(abs(Fr_A_L)) + C2Lat)  # Rear Right Mu_y (lateral)
-	Muy_r_R = (
-		C1Lat * Decimal.ln(abs(Re_A_R)) + C2Lat)  # Front Left Mu_y (lateral)
-	Muy_r_L = (
-		C1Lat * Decimal.ln(abs(Re_A_L)) + C2Lat)  # Rear Left Mu_y (lateral)
+	Muy_f_R = (C1Lat * Decimal.ln(
+		abs(Fr_A_R)) + C2Lat)  # Front Right Mu_y (lateral)
+	Muy_f_L = (C1Lat * Decimal.ln(
+		abs(Fr_A_L)) + C2Lat)  # Rear Right Mu_y (lateral)
+	Muy_r_R = (C1Lat * Decimal.ln(
+		abs(Re_A_R)) + C2Lat)  # Front Left Mu_y (lateral)
+	Muy_r_L = (C1Lat * Decimal.ln(
+		abs(Re_A_L)) + C2Lat)  # Rear Left Mu_y (lateral)
 
 	Fr_Fx = (Mux_f_R * Fr_A_R) + (
-		Mux_f_L * Fr_A_L)  # Front Cornering Force (x) [left and right combined]
+				Mux_f_L * Fr_A_L)  # Front Cornering Force (x) [left and right combined]
 	Fr_Fy = (Muy_f_R * Fr_A_R) + (
-		Muy_f_L * Fr_A_L)  # Front Cornering Force (y) [left and right combined]
+				Muy_f_L * Fr_A_L)  # Front Cornering Force (y) [left and right combined]
 	Re_Fx = (Mux_r_R * Re_A_R) + (
-		Mux_r_L * Re_A_L)  # Rear Cornering Force (x) [left and right combined]
+				Mux_r_L * Re_A_L)  # Rear Cornering Force (x) [left and right combined]
 	Re_Fy = (Muy_r_R * Re_A_R) + (
-		Muy_r_L * Re_A_L)  # Rear Cornering Force (y) [left and right combined]
+				Muy_r_L * Re_A_L)  # Rear Cornering Force (y) [left and right combined]
 
 	Total_x = Fr_Fx + Re_Fx  # Total X Cornering Force
 	Total_y = Fr_Fy + Re_Fy  # Total Y Cornering Force
@@ -189,7 +186,6 @@ def calculateForCaseN(datadict, car, sParams, n):
 	cosNPi = Decimal(m.cos(n * pi))
 	sinNPi = Decimal(m.sin(n * pi))
 
-
 	# define variables for car constants to make code easier to read
 	a = sParams[0]
 	b = sParams[1]
@@ -217,8 +213,8 @@ def calculateForCaseN(datadict, car, sParams, n):
 
 	YG_max = (a * b) / Decimal(
 		m.sqrt((b * Decimal(m.cos(0.49 * m.pi))) ** 2 + \
-				((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
-			 	Decimal(m.sin(0.49 * m.pi))
+			   ((a * Decimal(m.sin(0.49 * m.pi)))) ** 2)) * \
+			 Decimal(m.sin(0.49 * m.pi))
 
 	XG_max = -((a * b) / Decimal(m.sqrt(b ** 2)))
 
@@ -235,16 +231,16 @@ def calculateForCaseN(datadict, car, sParams, n):
 
 	# Calculates Normal Force on Each Tire using Static loading, load (weight) transfer (WT), and aero forces
 	RF_Fz_n = Fz_f + (((M + D) * (-Long_WT * XG_n)) / 2) + (
-		((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
+				((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
 
 	LF_Fz_n = Fz_f + (((M + D) * (-Long_WT * XG_n)) / 2) + (
-		((M + D) * (Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
+				((M + D) * (Lat_WT * YG_n)) / 2) + ((A * A_d) / 2)
 
 	RR_Fz_n = Fz_r + (((M + D) * (Long_WT * XG_n)) / 2) + (
-		((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
+				((M + D) * (-Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
 
 	LR_Fz_n = Fz_r + (((M + D) * (Long_WT * XG_n)) / 2) + (
-		((M + D) * (Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
+				((M + D) * (Lat_WT * YG_n)) / 2) + ((A * (1 - A_d)) / 2)
 
 	# Longitudinal Mu calculations
 	LF_Mu_x_n = (C1Long * e ** (abs(LF_Fz_n) * C2Long)) * (XG_n / XG_max)
@@ -322,4 +318,4 @@ def calculateForCaseN(datadict, car, sParams, n):
 	datadict["LR_c"].append(LR_c_n)
 	datadict["RR_c"].append(RR_c_n)
 
-	# no return, data is all stored in passed dictionary
+# no return, data is all stored in passed dictionary
