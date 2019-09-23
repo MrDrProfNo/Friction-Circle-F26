@@ -132,7 +132,7 @@ def main():
 				if (useExcel.lower() == "n" or  # n or no answered
 						useExcel.lower() == "no"):
 					fullDF = None
-					break;
+					break
 				elif (not (useExcel.lower() == "y" or  # not y or yes
 						   useExcel.lower() == "yes")):
 					print("Unrecognized answer. Try again?\n")
