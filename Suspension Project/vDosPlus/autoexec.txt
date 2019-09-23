@@ -1,7 +1,7 @@
 rem This is essentially the DOS autoexec.bat.
 rem =========================================
 
-USE c: C:\Users\Arthur Heiles\PycharmProjects\Friction Circle\Suspension Project\vDosPlus\Mitchell\F26
+USE c: D:\Users\Arthur\Downloads\Friction_Circle_F26_Sep18_2019\Suspension Project\vDosPlus\Mitchell\F26
 freebody.exe
 
 

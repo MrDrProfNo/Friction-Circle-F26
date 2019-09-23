@@ -3,7 +3,7 @@
 import argparse
 import os.path
 import re
-from decimal import Decimal
+from numpy import float64
 from pandas import ExcelWriter, DataFrame, Series
 
 def parse(path, output_name):
@@ -130,7 +130,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 
 			addPositionColumn(caseIDX + 1, df)	# normal people don't 0 index
 
-			# case = Decimal(case)
+			# case = float64(case)
 			# case = round(case, 1)
 			if (displacement == 0):  # right front wheel
 				displacement = 1
@@ -171,7 +171,7 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 			headerText = headers[caseIDX]
 
 			titleText += headerText
-			titleText += case_theta_coef.to_eng_string()
+			titleText += str(case_theta_coef)
 
 
 			ws = writer.sheets["Sheet 1"]
@@ -219,9 +219,9 @@ def readParseToExcel(fromFileFront, fromFileRear, toFile, df_full):
 
 		# X and Y values are negated to convert back from Mitchell's coordinate
 		# system.
-		line[1] = -Decimal(line[1])
-		line[2] = -Decimal(line[2])
-		line[3] = Decimal(line[3])
+		line[1] = -float64(line[1])
+		line[2] = -float64(line[2])
+		line[3] = float64(line[3])
 		dataDict[line[0]] = [line[1], line[2], line[3],
 							 "=SQRT(INDIRECT(\"C[-1]\","
 							 " FALSE)^2 +INDIRECT(\"C[-2]\", FALSE)^2 + "

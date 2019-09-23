@@ -175,7 +175,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 				keyboard.send("x")
 
 			sleep(STANDARD_DELAY)
-			keyboard.write(xField.to_eng_string())
+			keyboard.write(str(xField))
 			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
 			sleep(STANDARD_DELAY)
@@ -184,7 +184,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 
 			keyboard.send("y")
 			sleep(STANDARD_DELAY)
-			keyboard.write(yField.to_eng_string())
+			keyboard.write(str(yField))
 			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
 			sleep(STANDARD_DELAY)
@@ -193,7 +193,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 
 			keyboard.send("z")
 			sleep(STANDARD_DELAY)
-			keyboard.write(zField.to_eng_string())
+			keyboard.write(str(zField))
 			sleep(STANDARD_DELAY)
 			keyboard.send("enter")
 			sleep(STANDARD_DELAY)

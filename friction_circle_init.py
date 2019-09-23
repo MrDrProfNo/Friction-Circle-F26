@@ -1,6 +1,7 @@
-from decimal import Decimal # special import because I hate writing decimal.Decimal
-import decimal				# But want to keep the decimal reference for readability
+from decimal import Decimal
+import decimal
 from path_reader import PathCollection
+from numpy import float64
 import math
 
 class Car:
@@ -34,12 +35,12 @@ class Car:
 			if line.startswith("#") or line == "\n":
 				continue  # Skip comments and empty lines
 			param, value = map(str.strip, line.split("="))
-			params[param] = Decimal(value)
+			params[param] = float64(value)
 		CG = params["CG"]
 		WB = params["WB"]
 		TW = params["TW"]
-		params["Long_WT"] = Decimal(CG / WB)
-		params["Lat_WT"] = Decimal(CG / TW)
+		params["Long_WT"] = float64(CG / WB)
+		params["Lat_WT"] = float64(CG / TW)
 		return params
 
 		# Doesn't work because current version of python does not support format strings
@@ -68,14 +69,14 @@ def init(pathConfigFile):
 	as the second element.
 	"""
 
-	# Get the decimal library's context object
-	decimal_context = decimal.getcontext()
-
-	# Set the decimal library's precision to 20 places
-	decimal_context.prec = 15
-
-	# set rounding to work like most people use it
-	decimal_context.rounding = decimal.ROUND_HALF_UP
+	# # Get the decimal library's context object
+	# decimal_context = decimal.getcontext()
+	#
+	# # Set the decimal library's precision to 20 places
+	# decimal_context.prec = 15
+	#
+	# # set rounding to work like most people use it
+	# decimal_context.rounding = decimal.ROUND_HALF_UP
 
 	# load the PathCollection object with filepaths to use.
 	paths = PathCollection(pathConfigFile)
