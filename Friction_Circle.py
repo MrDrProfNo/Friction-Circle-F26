@@ -113,14 +113,35 @@ def main():
 
 	fullDF = None
 
+	# We're gonna try to load the input from excel first, since that's the new
+	# main use of the program.
 	try:
+		# empty input path is the main signifier to do the calculations yourself
 		if not (paths.excel_input_path == ""):
 			# will throw error on fail; handled down below
 			fullDF = pd.read_excel(paths.excel_input_path)
-			print("Found Excel file to draw input from: " + paths.excel_input_path)
+			print("Found Excel file to draw input from: "
+				  + paths.excel_input_path + "\n")
+			print("Do you want to use this data? Entering n will use the"
+				  + " program's internal calculations for input forces instead. \n"
+				  + " (MAY BE OUT OF DATE; this is a legacy testing feature"
+				  + " maintained at Jake's request) (y/n)")
+			while True:
+				useExcel = input()
+
+				if (useExcel.lower() == "n" or  # n or no answered
+						useExcel.lower() == "no"):
+					fullDF = None
+					break;
+				elif (not (useExcel.lower() == "y" or  # not y or yes
+						   useExcel.lower() == "yes")):
+					print("Unrecognized answer. Try again?\n")
+					continue
+				else:  # y or yes answered
+					break  # exit the input request loop and set values
 
 		else:
-			print("No input Excel path given; defaulting to program calculations"
+			print("No input Excel path given; defaulting to program calculations \n"
 				  + " (MAY BE OUT OF DATE; this is a legacy testing feature"
 				  + " maintained at Jake's request)")
 	except FileNotFoundError:
