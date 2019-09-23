@@ -36,6 +36,7 @@ win32_____: Manipulating open windows so that keyboard targets the correct one
 import subprocess
 
 from pandas import DataFrame
+import pandas as pd
 
 from df_to_excel import full_dump, formatted_dump
 from force_calculator import createDataframe
@@ -110,15 +111,38 @@ def main():
 	# init returns a Car object with attr. loaded from config
 	car, paths = init(PATH_CONFIG_FILE)
 
-	loadCases = int(input("Number of load cases to distribute evenly on the "
-						  "range [0, pi]. 0 Case will be added, but not counted  \n"
-						  "Estimated runtime of the program is ~50sec per load case\n"
-						  "Enter # Load cases: "))
-	fullDF = createDataframe(car, loadCases)
+	fullDF = None
 
-	print("Resulting dataframe will contain", fullDF.shape[0], " load cases." +
-		" Number was increased by 1 to add case 0, and may have been increased by" +
-		" an additional 1 if the .5 case was split into 2 cases.")
+	try:
+		if not (paths.excel_input_path == ""):
+			# will throw error on fail; handled down below
+			fullDF = pd.read_excel(paths.excel_input_path)
+			print("Found Excel file to draw input from: " + paths.excel_input_path)
+
+		else:
+			print("No input Excel path given; defaulting to program calculations"
+				  + " (MAY BE OUT OF DATE; this is a legacy testing feature"
+				  + " maintained at Jake's request)")
+	except FileNotFoundError:
+		print("Invalid path given for Excel input file; defaulting to program"
+			  	  + " calculations (MAY BE OUT OF DATE; this is a legacy testing"
+				  + " feature maintained at Jake's request)")
+
+	if(fullDF is None):
+		loadCases = int(
+			input("Number of load cases to distribute evenly on the "
+				  "range [0, pi]. 0 Case will be added, but not counted  \n"
+				  "Estimated runtime of the program is ~50sec per load case\n"
+				  "Enter # Load cases: "))
+
+		fullDF = createDataframe(car, loadCases)
+
+
+		print("Resulting dataframe will contain", fullDF.shape[0], " load cases." +
+			" Number was increased by 1 to add case 0, and may have been increased by" +
+			" an additional 1 if the .5 case was split into 2 cases.")
+	else:
+		print("Input dataframe contains", fullDF.shape[0], " load cases.")
 
 	dim_force_dfs = getDimensionForceDataframes(fullDF)
 
@@ -134,7 +158,7 @@ def main():
 
 	input("Friction_Circle.py is going to open vDosPlus. While the program is"
 		  " open, do not attempt to change windows. Expected runtime is ~80 sec"
-		  "per load case. \nPress Enter when ready: ")
+		  " per load case. \nPress Enter when ready: ")
 
 	print("--- Opening vDosPlus, give me a minute ---")
 

@@ -24,6 +24,12 @@ output_folder=./Friction_Circle_F26_Output/
 # must exist, or the program will not execute.
 car_config_path=car_config.txt
 
+# Input excel file. Replaces the program's calculations of the input forces
+# with data from an excel spreadsheet. If this field is left empty, it will be
+# ignored. If the file cannot be found, the program will offer to run the
+# calculations itself.
+excel_input_path=./Contact_Patch_Forces.xlsx
+
 # Dump excel filename (goes in Output Folder from above)
 dump_excel_path=dump.xlsx
 

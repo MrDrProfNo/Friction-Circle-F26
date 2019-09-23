@@ -27,6 +27,7 @@ TEMP_REAR_ATTR = "temp_rear"
 FRONT_PARSED_ATTR = "front_parsed"
 REAR_PARSED_ATTR = "rear_parsed"
 VDOSPLUS_PATH_ATTR = "VDosPlus_path"
+EXCEL_INPUT_ATTR = "excel_input_path"
 
 FRONT_AXLE_INST_ATTR = "front_axle_instructions"
 REAR_AXLE_INST_ATTR = "rear_axle_instructions"
@@ -45,14 +46,15 @@ class PathCollection:
 		expectedAttr = [OUTPUT_FOLDER_ATTR, CAR_CONFIG_PATH_ATTR, DUMP_EXCEL_PATH_ATTR,
 						FORMAT_EXCEL_PATH_ATTR, PARSED_EXCEL_ATTR, TEMP_FRONT_ATTR,
 						TEMP_REAR_ATTR, FRONT_PARSED_ATTR, REAR_PARSED_ATTR,
-						VDOSPLUS_PATH_ATTR, FRONT_AXLE_INST_ATTR, REAR_AXLE_INST_ATTR]
+						VDOSPLUS_PATH_ATTR, FRONT_AXLE_INST_ATTR, REAR_AXLE_INST_ATTR,
+						EXCEL_INPUT_ATTR]
 
-		# declare empty dictionary for the path
+		# declare empty dictionary for the paths
 		pathDict = {}
 
 		# initialize all elements to their defaults
 
-		missedAttr = self.parseFile(configFile, pathDict, expectedAttr)
+		missedAttr = self.parsePathFile(configFile, pathDict, expectedAttr)
 
 		# if any attributes are missing
 		if( len(missedAttr) > 0 ):
@@ -111,6 +113,8 @@ class PathCollection:
 
 		self.VDosPlus_path = pathDict[VDOSPLUS_PATH_ATTR]
 
+		self.excel_input_path = pathDict[EXCEL_INPUT_ATTR]
+
 		self.front_axle_inst = pathDict[FRONT_AXLE_INST_ATTR].replace(" ", "").split(",")
 
 		self.rear_axle_inst = pathDict[REAR_AXLE_INST_ATTR].replace(" ", "").split(",")
@@ -119,7 +123,7 @@ class PathCollection:
 
 
 
-	def parseFile(self, configFile, pathDict, expectedAttr):
+	def parsePathFile(self, configFile, pathDict, expectedAttr):
 		"""
 		Reads the contents of configFile, assuming they are of the correct format,
 		and puts them into the dictionary, mapping the attribute to the value
@@ -189,11 +193,14 @@ class PathCollection:
 			return PARSED_OUTPUT_R
 		elif(key == VDOSPLUS_PATH_ATTR):
 			return VDOSPLUS_PATH
-		elif(key == FRONT_AXLE_INST_ATTR):
+		elif (key == EXCEL_INPUT_ATTR):
+			return
+		elif(key == FRONT_AXLE_INST_ATTR): # I'm not even gonna guess what the default would be
 			raise ValueError("Unable to provide a default value for attribute:",
 							 FRONT_AXLE_INST_ATTR)
 		elif(key == FRONT_AXLE_INST_ATTR):
 			raise ValueError("Unable to provide a default value for attribute:",
 							 REAR_AXLE_INST_ATTR)
+
 		else:
 			raise ValueError("Unrecognized attribute passed to PathCollection.defaultValue()")

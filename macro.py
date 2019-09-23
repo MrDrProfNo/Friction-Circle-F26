@@ -163,7 +163,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 
 			print("x:", xField)
 			print("y:", yField)
-			print("z:", zField, "\n")
+			print("z:", zField)
 
 
 			### Enter dim data ###
@@ -226,7 +226,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 		keyboard.send("y")
 
 		sleep(STANDARD_DELAY)
-		print("Complete", wheel, "run", case + 1)
+		print("Complete", wheel, "run", case + 1, "\n")
 
 
 
