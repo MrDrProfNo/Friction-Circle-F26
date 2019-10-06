@@ -10,7 +10,7 @@ from decimal import Decimal
 
 STANDARD_DELAY = .75
 
-def macroMain(dim_force_dfs, paths):
+def macroMain(dim_force_dfs, paths, car):
 	"""
 	Runs the macro for Racing by the Numbers, inputting data drawn from the
 	partial dataframes. dim_force_dfs must be a 3-tuple of Dataframes, otherwise
@@ -73,8 +73,11 @@ def macroMain(dim_force_dfs, paths):
 
 	# Setup with the rear profile
 	macroSetup(paths.rear_axle_inst)
+	if car.use_outboard_breaks:
+		macroRunAxle(dim_force_dfs, "R", paths.temp_rear, 0, dataSize // 2, False)
+	else:
+		macroRunAxle(dim_force_dfs, "R", paths.temp_rear, 0, dataSize // 2, True)
 
-	macroRunAxle(dim_force_dfs, "R", paths.temp_rear, 0, dataSize // 2, True)
 	macroRunAxle(dim_force_dfs, "R", paths.temp_rear, dataSize // 2, dataSize, True)
 
 	macroQuit()
@@ -146,7 +149,7 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 	file = open(outputFile, "a")
 
 	for case in range(dataRangeStart, dataRangeEnd):
-		for wheel in ["R" + axle, "L" + axle]: # Creates FR, FL, RR, RL as needed
+		for wheel in ["R" + axle, "L" + axle]: # Creates FR, FL RR, RL as needed
 
 			# simple using <dataframe>[index1][index2] causes it to try and
 			# use the case number (position) as the dataframe index (associated label)
@@ -160,8 +163,10 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 			if(yField < Decimal(.5) and yField > Decimal(-.5)):
 				yField = Decimal(0)
 
-
-			print("x:", xField)
+			if useAxleForce:
+				print("a:", xField)
+			else:
+				print("x:", xField)
 			print("y:", yField)
 			print("z:", zField)
 
@@ -219,14 +224,13 @@ def macroRunAxle(dim_force_dfs, axle, outputFile, dataRangeStart, dataRangeEnd, 
 				sleep(STANDARD_DELAY)
 
 			keyboard.send("c")
-
+			print("Complete", wheel, "run", case + 1, "\n")
 
 		sleep(1)
 		# Run another case?
 		keyboard.send("y")
 
 		sleep(STANDARD_DELAY)
-		print("Complete", wheel, "run", case + 1, "\n")
 
 
 

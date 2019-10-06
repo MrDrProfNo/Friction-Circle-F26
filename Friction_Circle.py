@@ -115,6 +115,22 @@ def main():
 
 	# We're gonna try to load the input from excel first, since that's the new
 	# main use of the program.
+
+	print("Are you using outboard breaking? This "
+		   "setting will determine whether rear axle forces are put "
+		   "into Mitchell using the Force-At-Axle field for both"
+		   "halves of the load cases, or just the second half.")
+	while True:
+		useOutboardStr = input("Type \"y\" for outboard, or \"n\" for inboard:\n")
+		if useOutboardStr.lower() == "y" or useOutboardStr.lower() == "yes":
+			car.use_outboard_breaks = True
+			break
+		elif useOutboardStr.lower() == "n" or useOutboardStr.lower() == "no":
+			car.use_outboard_breaks = False
+			break
+		else:
+			print("Unrecognized input.")
+
 	try:
 		# empty input path is the main signifier to do the calculations yourself
 		if not (paths.excel_input_path == ""):
@@ -146,7 +162,7 @@ def main():
 				  + " maintained at Jake's request)")
 	except FileNotFoundError:
 		print("Invalid path given for Excel input file; defaulting to program"
-			  	  + " calculations (MAY BE OUT OF DATE; this is a legacy testing"
+			  	  + " caclculations (MAY BE OUT OF DATE; this is a legacy testing"
 				  + " feature maintained at Jake's request)")
 
 	if(fullDF is None):
@@ -188,7 +204,7 @@ def main():
 	print("Generated vDosPlus process with PID:", pid)
 
 	# Run the macro
-	macroMain(dim_force_dfs_CSYS, paths)
+	macroMain(dim_force_dfs_CSYS, paths, car)
 
 	parse(paths.temp_front, paths.front_parsed)
 	parse(paths.temp_rear, paths.rear_parsed)

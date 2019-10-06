@@ -20,6 +20,11 @@ class Car:
 		self.Long_WT = params["Long_WT"]  # Longitudinal Weight Transfer
 		self.Lat_WT = params["Lat_WT"]  # Lateral Weight Transfer
 
+		# setting determines whether Mitchell's uses Force at Axle or X Axis Force
+		# for first half of rear axle input. If True, uses X Axis Force
+		# Setting is based on user input during program startup by request.
+		self.use_outboard_breaks = None
+
 		print("Parsed car data from config: ", cfg)
 
 	@staticmethod
