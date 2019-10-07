@@ -116,7 +116,7 @@ def main():
 	# We're gonna try to load the input from excel first, since that's the new
 	# main use of the program.
 
-	print("Are you using outboard breaking? This "
+	print("Are you using outboard braking? This "
 		   "setting will determine whether rear axle forces are put "
 		   "into Mitchell using the Force-At-Axle field for both"
 		   "halves of the load cases, or just the second half.")
