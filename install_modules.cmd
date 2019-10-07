@@ -1,5 +1,6 @@
 title Install Modules
 
+:: necessary old version; more recent ones cannot write() into Mitchell's
 py -m pip install keyboard==0.11.0
 py -m pip install pandas==0.25.1
 py -m pip install xlsxwriter==1.2.1

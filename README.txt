@@ -2,6 +2,10 @@ Forces_Parser.py
 
 Authors: Arthur Heiles, Phillip Kelner, Ian Clare
 
+Note: recently updated to 3.7.4; I'm sure I'll be finding issues in here for
+a while. Trying to catch them all, but if something seems off... it might be off
+
+
 ### Introduction ###
 
 Python program to automate the process of data entry and retrieval from
@@ -18,16 +22,23 @@ copies the information on screen directly into the system clipboard, to retrieve
 data. The result of the copy-paste is parsed for the useful values, which are
 then exported into an MS Excel table.
 
+Useful files:
+car_config.txt - contains numeric stats for the car used only for internal calculations
+
+path_config.txt - allows users to specify output paths. Make sure all options here
+are correct, ESPECIALLY VDosPlus_path, front_axle_instructions and rear_axle_instructions
+
+
 ### Installation Instructions ###
 
-The code was designed to run on a Windows OS and python 3.5.2; I make no guarantee
+The code was designed to run on a Windows OS and python 3.7.4; I make no guarantee
 that it will work elsewhere.
 
 
-Step 1: Install Python 3.5.2
+Step 1: Install Python 3.7.4
 
-At this time, the following link contains all downloads for this version:
-https://www.python.org/downloads/release/python-352/
+At time of writing, the following link contains all downloads for this version:
+https://www.python.org/downloads/release/python-374/
 
     - Download the version appropriate to your operating system (these instructions
     assume the executable installer)
@@ -41,6 +52,7 @@ bad for this.
 
     - Install Now (should include everything we need by default)
 
+
 Step 2: Add python to your PATH environment variable
 
 This was probably handled automatically, but let's check anyways
@@ -50,10 +62,10 @@ This was probably handled automatically, but let's check anyways
 
     - At the bottom of the window that pops up, click the Environment Variables button
 
-    - One of them will be called "Path". Click on it, and click "Edit"
+    - One of them will be called "PATH". Click on it, and click "Edit"
 
     - It will give you a list of file-paths; two of them should lead to the Python
-    folder; one will end at Python\Python35, the other at Python\Python35\Scripts.
+    folder; one will end at Python\Python37, the other at Python\Python37\Scripts.
     The name of the folders may be slightly different; as long as it matches the actual
     filepath we're good.
 
@@ -64,7 +76,8 @@ This was probably handled automatically, but let's check anyways
     - To test that it all works, open the windows command prompt and type "python",
     then press Enter. You should get a python interactive prompt, with each
     line beginning in ">>>". If you do, then everything is set up correctly so far.
-    Close the command prompt.
+    You may close the window.
+
 
 Step 3: Install necessary python modules
 
@@ -83,6 +96,7 @@ Step 3: Install necessary python modules
     if you can't, find someone who can. I can't imagine what else would come up,
     but I guarantee something will.
 
+
 Step 4: Necessary path modifications
 
     - If you changed any of the project's directories up to this point, you may
@@ -98,19 +112,36 @@ The program is run by executing Friction_Circle.py; this should be doable by
 double clicking on it, or right clicking, Open With > Python. It will open
 in a command prompt style window, and begin.
 
+It will ask if you are using Outboard or Inboard braking; I am led to understand
+that if you are using inboard, you have made a terrible mistake, but I'm not an
+engineer so have fun.
+
+It will try to detect an excel input file containing force vectors. If one is
+found, you will be asked if you want to use it or default to the program's
+internal calculations. These MAY BE OUT OF DATE; this is a legacy testing
+feature maintained at Jake's request, and were accurate for 2018's car
+
+Skip the following section unless the above failed (no input excel file or
+entered 'n' when asked):
+------------------------------------------------------------
 Enter the number of load cases. This is the number of angles that forces will
 be calculated for, evenly distributed across the range (0, pi]. Estimated runtime
 is ~50 seconds per load case.
 
 ***
 Note: The 0 case is not included in this count and is added to the dataset
-automatically; entering 5 will produce coefficients of pi 0, 0.2, 0.4, 0.6, 0.8, 1.0***
+automatically; for example, entering 5 will produce coefficients of pi:
+ 0, 0.2, 0.4, 0.6, 0.8, 1.0
+
+***
 
 Note: The .5 case causes issues (division by cos( .5pi ) = 0). If this case is
 encountered, values very close to it on either side are run instead; this produces
 an additional load case. Entering 10 will produce 12 coefficients, with .1 between
 each, except for the two center values which will receive very close to .5 values
 ***
+
+
 
 The program will read filepaths from path_config.txt and any information about the
 car's physical attributes from the car config file specified therein.
@@ -120,6 +151,7 @@ forces, and a fair few more on top of that, for every load case. This data is
 exported in its raw form to the dump excel file specified within path_config.txt,
 and a formatted version of it with the forces used for Mitchell's is exported
 to the formatted excel file specified within path_config.txt
+-------------------------------------------------------------
 
 You will then be prompted to to press Enter when ready.
 
