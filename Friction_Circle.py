@@ -1,5 +1,5 @@
 """Friction_Circle_F26.py
-@author Arthur Heiles ; amh8850@g.rit.edu
+@author MrDrProfNo
 
 
 Calculates Centripetal force applied on the car as it goes through a turn.
