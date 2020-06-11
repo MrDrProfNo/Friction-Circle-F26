@@ -1,6 +1,8 @@
 """Friction_Circle_F26.py
 @author MrDrProfNo
 
+z
+
 
 Calculates Centripetal force applied on the car as it goes through a turn.
 Takes specs of the car, theta-step (0-1), and runs calculations.
