@@ -1,6 +1,6 @@
 Forces_Parser.py
 
-Authors: Arthur Heiles, Phillip Kelner, Ian Clare
+Authors: MrDrProfNo, Phillip Kelner, Ian Clare
 
 Note: recently updated to 3.7.4; I'm sure I'll be finding issues in here for
 a while. Trying to catch them all, but if something seems off... it might be off
